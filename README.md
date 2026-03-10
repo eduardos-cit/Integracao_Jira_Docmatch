@@ -24,7 +24,7 @@ Este projeto oferece quatro scripts principais:
 # Clone o repositório
 
 git clone <repo>
-cd "Integracao Jira"
+cd "Integracao_Jira_Docmatch"
 
 # Instale dependências
 
