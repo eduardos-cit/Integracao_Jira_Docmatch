@@ -1,0 +1,33 @@
+
+======================================================================
+    RELATÓRIO DE PROCESSAMENTO CSV → JIRA
+======================================================================
+Data/Hora: 10/03/2026 14:47:32
+
+======================================================================
+RESUMO
+======================================================================
+Total de arquivos processados: 1
+Total de issues criadas: 9
+Total de erros: 0
+
+======================================================================
+ISSUES CRIADAS COM SUCESSO
+======================================================================
+
+Arquivo: [pltfat]_docmatch_-_import-jira_csv_1773164529999.csv
+Issues criadas: 9
+Erros durante criação: 0
+
+Issue Keys:
+  - PLTFAT-13122: https://jira.bradesco.com.br:8443/browse/PLTFAT-13122
+  - PLTFAT-13123: https://jira.bradesco.com.br:8443/browse/PLTFAT-13123
+  - PLTFAT-13124: https://jira.bradesco.com.br:8443/browse/PLTFAT-13124
+  - PLTFAT-13125: https://jira.bradesco.com.br:8443/browse/PLTFAT-13125
+  - PLTFAT-13126: https://jira.bradesco.com.br:8443/browse/PLTFAT-13126
+  - PLTFAT-13127: https://jira.bradesco.com.br:8443/browse/PLTFAT-13127
+  - PLTFAT-13128: https://jira.bradesco.com.br:8443/browse/PLTFAT-13128
+  - PLTFAT-13129: https://jira.bradesco.com.br:8443/browse/PLTFAT-13129
+  - PLTFAT-13130: https://jira.bradesco.com.br:8443/browse/PLTFAT-13130
+
+----------------------------------------------------------------------

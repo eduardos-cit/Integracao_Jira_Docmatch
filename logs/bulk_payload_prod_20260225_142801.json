@@ -1,0 +1,175 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "Preparar artefato velocity",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12459"
+        },
+        "summary": "Preparar artefato velocity",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12459"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "parent": {
+          "key": "PLTFAT-12459"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Criar repositorio e pipeline do serviço docm-srv-orquestracao-portal",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-12460"
+        },
+        "summary": "Criar repositorio e pipeline do serviço docm-srv-orquestracao-portal",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Criar estrutura base do serviço",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-12460"
+        },
+        "summary": "Criar estrutura base do serviço",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Criar endpoint de histórico de fluxos",
+        "timetracking": {
+          "originalEstimate": "16h",
+          "remainingEstimate": "16h"
+        },
+        "parent": {
+          "key": "PLTFAT-12460"
+        },
+        "summary": "Criar endpoint de histórico de fluxos",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12460"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "parent": {
+          "key": "PLTFAT-12460"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    }
+  ]
+}

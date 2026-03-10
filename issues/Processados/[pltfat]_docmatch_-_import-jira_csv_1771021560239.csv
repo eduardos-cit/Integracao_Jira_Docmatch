@@ -1,0 +1,46 @@
+Issue Type,Summary,Description,Original Estimate,Assignee,Epic Link,Issue Id,Parent Id,Labels,Development Phase,Sprint ID,Team,Theme
+Sub-Imp,[DEV] Criar query detempo médio conforme regra acima,[DEV] Criar query detempo médio conforme regra acima,1728000,,,,PLTFAT-11467,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV] Incluir indicador no Dashboard utilizando a query criada,[DEV] Incluir indicador no Dashboard utilizando a query criada,864000,,,,PLTFAT-11467,,DEV,,DocMatch,Consentimento
+Sub-Env and SCM,[DEV] Promover código entre os ambientes,[DEV] Promover código entre os ambientes,864000,,,,PLTFAT-11467,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA] Montar plano de testes,[QA] Montar plano de testes,864000,,,,PLTFAT-11467,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA] Executar plano de testes,[QA] Executar plano de testes,2592000,,,,PLTFAT-11467,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Migração de interface e implementação,[DEV]Migração de interface e implementação,864000,,,,PLTFAT-11433,,DEV,,DocMatch,Consentimento
+Sub-Imp,"[DEV]Migração de utilitários (Validation, RequestBuilder)","[DEV]Migração de utilitários (Validation, RequestBuilder)",864000,,,,PLTFAT-11433,,DEV,,DocMatch,Consentimento
+Sub-Imp,"[DEV]Testes (unitários, integração)","[DEV]Testes (unitários, integração)",864000,,,,PLTFAT-11433,,DEV,,DocMatch,Consentimento
+Sub-Env and SCM,[DEV]Configuração de ambientes e validação,[DEV]Configuração de ambientes e validação,864000,,,,PLTFAT-11433,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,864000,,,,PLTFAT-11433,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,2592000,,,,PLTFAT-11433,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Análise e ajuste de SerasaDocMatchApiClientImpl,[DEV]Análise e ajuste de SerasaDocMatchApiClientImpl,864000,,,,PLTFAT-12468,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Criação/Ajuste de ExceptionHandler,[DEV]Criação/Ajuste de ExceptionHandler,864000,,,,PLTFAT-12468,,DEV,,DocMatch,Consentimento
+Sub-Imp,"[DEV]Testes (unitários, integração)","[DEV]Testes (unitários, integração)",864000,,,,PLTFAT-12468,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Documentação e validação,[DEV]Documentação e validação,864000,,,,PLTFAT-12468,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,864000,,,,PLTFAT-12468,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,2592000,,,,PLTFAT-12468,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Setup e Estrutura Base,[DEV]Setup e Estrutura Base,3456000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Camada de Domínio e Aplicação,[DEV]Camada de Domínio e Aplicação,3456000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Endpoints REST,[DEV]Endpoints REST,1728000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Integração com Microserviços,[DEV]Integração com Microserviços,1728000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Configuração Axway e APIM,[DEV]Configuração Axway e APIM,3456000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Testes e Documentação,[DEV]Testes e Documentação,1728000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,864000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,2592000,,,,PLTFAT-11438,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Setup e Estrutura Base,[DEV]Setup e Estrutura Base,1728000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Configuração MSAL e LoginService,[DEV]Configuração MSAL e LoginService,3456000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Tela de Login e Logout,[DEV]Tela de Login e Logout,1728000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Guards e Interceptors,[DEV]Guards e Interceptors,1728000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Shell do Portal,[DEV]Shell do Portal,3456000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Testes e Documentação,[DEV]Testes e Documentação,1728000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,864000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,2592000,,,,PLTFAT-11439,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Setup e Preparação,[DEV]Setup e Preparação,864000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Endpoints srv-config,[DEV]Endpoints srv-config,2592000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Camada de persistência srv-config,[DEV]Camada de persistência srv-config,1728000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]DTOs e validações BFF,[DEV]DTOs e validações BFF,1728000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Controller e Service BFF,[DEV]Controller e Service BFF,1728000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Integração BFF → srv-config,[DEV]Integração BFF → srv-config,1728000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Auditoria e logs,[DEV]Auditoria e logs,864000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Imp,[DEV]Swagger e documentação,[DEV]Swagger e documentação,864000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,864000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Testes de integração,[QA]Testes de integração,864000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Testes E2E,[QA]Testes E2E,864000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,864000,,,,PLTFAT-12457,,DEV,,DocMatch,Consentimento

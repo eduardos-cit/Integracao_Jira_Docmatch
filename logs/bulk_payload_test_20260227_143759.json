@@ -1,0 +1,192 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Criar/validar arquivos sintéticos (frente/verso + selfie).\nArmazenar no repositório de QA com a convenção de nomes.\nCritério: documentos disponíveis e versionados.",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12868"
+        },
+        "summary": "Preparar documentos de teste (RG antigo + selfie)",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Expor função de comparação com limiar configurável.\nRetornar score e flag de aprovação.",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-12868"
+        },
+        "summary": "Implementação do código – FaceMatch",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Parser/validador dos campos obrigatórios (nome, RG, data nasc., órgão emissor, UF).\nRetornar estrutura padronizada com status/erros.",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-12868"
+        },
+        "summary": "Implementação do código – Análise de Documento",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Encadear etapas: frente → verso → análise → FaceMatch → assert de sucesso/erro.\nCritério: teste executa localmente e em CI.",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "parent": {
+          "key": "PLTFAT-12868"
+        },
+        "summary": "Criar teste automatizado e2e do cenário RG (formato antigo)",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Cobrir cenários de sucesso/erro, limiar do FaceMatch e campos faltantes.\nCritério: pipeline exibe cobertura mínima acordada.",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "parent": {
+          "key": "PLTFAT-12868"
+        },
+        "summary": "Testes unitários e mocks/stubs",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Instalar dependências, executar testes, publicar relatórios (JUnit/Allure).\nCritério: job automatizado em PR e job agendado diário.",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "parent": {
+          "key": "PLTFAT-12868"
+        },
+        "summary": "Configuração da esteira (CI/CD)",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Documentar toda jornada num Diário de bordo\" no Confluence (caso necessite",
+        "summary": "Docummentação e Validação final - Dashboard Qualidade",
+        "customfield_10401": "solicitar apoio SM e/ou PO) exemplo: https://confluence.bradesco.com.br:8443/pages/viewpage.action?pageId=2512814531"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Revisão do QA"
+        },
+        "summary": "anexar logs e screenshots/artefatos."
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Verificação se o teste reflete no Dashboard Qualidade no Power BI\""
+        },
+        "description": "8h",
+        "timetracking": {
+          "originalEstimate": "PLTFAT-12868",
+          "remainingEstimate": "PLTFAT-12868"
+        },
+        "summary": "DocMatch",
+        "customfield_10401": "M586590"
+      },
+      "update": {}
+    }
+  ]
+}

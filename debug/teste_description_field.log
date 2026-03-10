@@ -1,0 +1,36 @@
+2026-02-07 00:16:06,432 - INFO - 🔍 === TESTE DE VALIDAÇÃO DO CAMPO DESCRIPTION ===
+2026-02-07 00:16:06,433 - INFO - 
+[BUG_TEST] === INICIANDO TESTE ===
+2026-02-07 00:16:06,434 - INFO - [BUG_TEST] Tipo de issue: Bug
+2026-02-07 00:16:06,434 - INFO - [BUG_TEST] Summary: 'Sistema não está permitindo acesso à funcionalidade X do AgentIX após atualização.'
+2026-02-07 00:16:06,434 - INFO - [BUG_TEST] === VALIDAÇÃO DO CAMPO DESCRIPTION ===
+2026-02-07 00:16:06,434 - INFO - [BUG_TEST] Description no payload existe: ✅
+2026-02-07 00:16:06,434 - INFO - [BUG_TEST] Tamanho do description: 692 caracteres
+2026-02-07 00:16:06,435 - INFO - [BUG_TEST] Tamanho do raw_content: 692 caracteres
+2026-02-07 00:16:06,435 - INFO - [BUG_TEST] ✅ Description = raw_content (CORRETO)
+2026-02-07 00:16:06,436 - INFO - [BUG_TEST] Campos no payload: ['project', 'summary', 'description', 'issuetype', 'labels', 'priority', 'customfield_20700', 'customfield_13402', 'customfield_13403', 'customfield_13901', 'customfield_13900', 'customfield_13401', 'customfield_10401']
+2026-02-07 00:16:06,436 - INFO - [BUG_TEST] ✅ TESTE CONCLUÍDO
+2026-02-07 00:16:06,437 - INFO - 
+[STORY_TEST] === INICIANDO TESTE ===
+2026-02-07 00:16:06,437 - INFO - [STORY_TEST] Tipo de issue: Story
+2026-02-07 00:16:06,437 - INFO - [STORY_TEST] Summary: 'Solicito implementação de novos tipos de relatórios no painel do AgentIX para melhor acompanhamento.'
+2026-02-07 00:16:06,437 - INFO - [STORY_TEST] === VALIDAÇÃO DO CAMPO DESCRIPTION ===
+2026-02-07 00:16:06,438 - INFO - [STORY_TEST] Description no payload existe: ✅
+2026-02-07 00:16:06,438 - INFO - [STORY_TEST] Tamanho do description: 743 caracteres
+2026-02-07 00:16:06,438 - INFO - [STORY_TEST] Tamanho do raw_content: 743 caracteres
+2026-02-07 00:16:06,439 - INFO - [STORY_TEST] ✅ Description = raw_content (CORRETO)
+2026-02-07 00:16:06,439 - INFO - [STORY_TEST] Campos no payload: ['project', 'summary', 'description', 'issuetype', 'labels', 'priority', 'customfield_13401', 'customfield_10401']
+2026-02-07 00:16:06,439 - INFO - [STORY_TEST] ✅ TESTE CONCLUÍDO
+2026-02-07 00:16:06,440 - INFO - 
+📊 === RESUMO DOS TESTES DE DESCRIPTION ===
+2026-02-07 00:16:06,440 - INFO - ✅ Testes válidos: 2
+2026-02-07 00:16:06,440 - INFO - ❌ Testes inválidos: 0
+2026-02-07 00:16:06,440 - INFO -   ✅ BUG_TEST: Bug - Description OK
+2026-02-07 00:16:06,441 - INFO -   ✅ STORY_TEST: Story - Description OK
+2026-02-07 00:16:06,441 - INFO - 
+🎉 === CAMPO DESCRIPTION VÁLIDO ===
+2026-02-07 00:16:06,441 - INFO - ✅ Campo description preenchido corretamente em todos os payloads
+2026-02-07 00:16:06,441 - INFO - ✅ Description = raw_content do arquivo BEX
+2026-02-07 00:16:06,441 - INFO - ✅ Conteúdo completo preservado
+2026-02-07 00:16:06,441 - INFO - 
+📄 Log salvo em: teste_description_field.log

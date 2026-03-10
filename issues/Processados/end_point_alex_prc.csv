@@ -1,0 +1,9 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,"Preparar artefato velocity","Preparar artefato velocity",DocMatch,4h,I453044,PLTFAT-12459,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-12459,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,12h,,PLTFAT-12459,,,
+Sub-Imp,"Criar repositorio e pipeline do serviço docm-srv-orquestracao-portal","Criar repositorio e pipeline do serviço docm-srv-orquestracao-portal",DocMatch,8h,,PLTFAT-12460,,,
+Sub-Imp,"Criar estrutura base do serviço","Criar estrutura base do serviço",DocMatch,8h,,PLTFAT-12460,,,
+Sub-Imp,"Criar endpoint de histórico de fluxos","Criar endpoint de histórico de fluxos",DocMatch,16h,,PLTFAT-12460,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-12460,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,12h,,PLTFAT-12460,,

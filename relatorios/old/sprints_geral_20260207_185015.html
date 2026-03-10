@@ -1,0 +1,1754 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint atual - DocMatch-RT1_Platafo-S3</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <!-- Bradesco Design System Liquid -->
+    <link href="https://cdn.jsdelivr.net/npm/@bradesco/liquid-design-system@latest/dist/liquid.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Design System Liquid Bradesco */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #cc092f, #e31837);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(204, 9, 47, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .bradesco-logo {
+            width: 160px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .brad-logo__bradesco-bbi-vertical-white {
+            width: 100%;
+            height: 100%;
+            max-width: 160px;
+            max-height: 50px;
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-header {
+            background-color: #cc092f;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .collapse-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .collapse-toggle.collapsed {
+            transform: rotate(180deg);
+        }
+        
+        .section-content {
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .section-content.collapsed {
+            max-height: 0 !important;
+            opacity: 0;
+        }
+        
+        .section-content.expanded {
+            opacity: 1;
+        }
+        
+        .section-header.homologacao {
+            background-color: #f39c12;
+        }
+        
+        .section-header.deploy {
+            background-color: #e67e22;
+        }
+        
+        .section-header.producao {
+            background-color: #27ae60;
+        }
+        
+        .section-header.progresso {
+            background-color: #3498db;
+        }
+        
+        .section-header.aguardando {
+            background-color: #95a5a6;
+        }
+        
+        .filter-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .filter-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .filter-button.active {
+            background: white;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .filter-button .count {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+        }
+        
+        .filter-button.active .count {
+            background: #3498db;
+            color: white;
+        }
+        
+        .issue-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+        }
+        
+        .issue-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .issue-item:last-child {
+            border-bottom: none;
+        }
+        
+        .issue-key {
+            font-weight: bold;
+            color: #cc092f;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        
+        .issue-key:hover {
+            color: #e31837;
+            text-decoration: underline;
+        }
+        
+        .issue-key:after {
+            content: "↗";
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-left: 4px;
+        }
+        
+        .issue-type {
+            display: inline-block;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 8px;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .issue-type.story {
+            background-color: #09ab47;
+        }
+        
+        .issue-type.tech-solution {
+            background-color: #ffbc01;
+            color: #333;
+        }
+        
+        .issue-type.bug {
+            background-color: #b00f2f;
+        }
+        
+        .issue-type.incidente {
+            background-color: #b00f2f;
+        }
+        
+        .issue-summary {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+        
+        .issue-status {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .company-tag {
+            display: inline-block;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        
+        .company-tag.mckinsey {
+            background-color: #3b69ff;
+        }
+        
+        .company-tag.cit {
+            background-color: #e1173f;
+        }
+        
+        .company-tag.default {
+            background-color: #ff6b35;
+        }
+        
+        .age-tag {
+            background-color: #f39c12;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+            display: inline-block;
+        }
+        
+        .age-tag.old {
+            background-color: #e74c3c;
+        }
+        
+        .age-tag.very-old {
+            background-color: #8b0000;
+        }
+        
+        .points-tag {
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-left: 6px;
+            display: inline-block;
+        }
+        
+        .points-tag.pf-metricas {
+            background-color: #9b59b6;  /* Roxo */
+        }
+        
+        .points-tag.pf {
+            background-color: #3498db;  /* Azul */
+        }
+        
+        .points-tag.sp {
+            background-color: #e67e22;  /* Laranja */
+        }
+        
+        .counter {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        .summary-stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 15px;
+            border-left: 4px solid #cc092f;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #cc092f;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        
+        .metrics-section {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metrics-title {
+            color: #cc092f;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-family: 'Nunito Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .chart-row-full {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .charts-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            height: 350px;
+        }
+        
+        .chart-container-large {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            height: 450px;
+        }
+        
+        .chart-container-small {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            height: 320px;
+        }
+        
+        .chart-canvas {
+            position: relative;
+            height: 280px;
+            width: 100%;
+        }
+        
+        .chart-canvas-large {
+            position: relative;
+            height: 380px;
+            width: 100%;
+        }
+        
+        .chart-canvas-small {
+            position: relative;
+            height: 250px;
+            width: 100%;
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 15px;
+            text-align: center;
+            font-family: 'Nunito Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .chart-icon {
+            width: 20px;
+            height: 20px;
+            fill: #cc092f;
+        }
+        
+        .metrics-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #cc092f, #e31837);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1>Relatório geral das sprints</h1>
+                <div class="subtitle">Sprint atual - DocMatch-RT1_Platafo-S3</div>
+                <div class="subtitle">Período: 02/02/2026 a 15/02/2026</div>
+                <div class="subtitle">Gerado em: 07/02/2026 às 18:50</div>
+            </div>
+            <div class="bradesco-logo">
+                <div class="brad-logo__bradesco-bbi-vertical-white"></div>
+            </div>
+        </div>
+        
+        <div class="metrics-section">
+            <h2 class="metrics-title">
+                <svg class="chart-icon" viewBox="0 0 24 24">
+                    <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-6h2v20h-2V1zm4 8h2v12h-2V9zm4-4h2v16h-2V5z"/>
+                </svg>
+                Métricas Ágeis da Sprint
+            </h2>
+            
+            <div class="metrics-highlight">
+                <div class="metric-card">
+                    <div class="metric-value">9</div>
+                    <div class="metric-label">Throughput</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">21.4d</div>
+                    <div class="metric-label">Lead Time Médio</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">7</div>
+                    <div class="metric-label">WIP Atual</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">10.6%</div>
+                    <div class="metric-label">Eficiência</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">43.3d</div>
+                    <div class="metric-label">Tempo no Status</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">214,5</div>
+                    <div class="metric-label">PF (Métricas)</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">342,5</div>
+                    <div class="metric-label">Pontos de Função</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">0,0</div>
+                    <div class="metric-label">Story Points</div>
+                </div>
+            </div>
+            
+            <!-- Gráfico de Cycle Time em linha completa -->
+            <div class="chart-row-full">
+                <div class="chart-container-large">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Cycle Time por Status (Itens Entregues)
+                    </div>
+                    <canvas id="cycleTimeChart" class="chart-canvas-large"></canvas>
+                </div>
+            </div>
+            
+            <!-- Gráficos de distribuição em duas colunas -->
+            <div class="charts-grid-2">
+                <div class="chart-container-small">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M11 2v20c-5.07-.5-9-4.79-9-10s3.93-9.5 9-10zm2.03 0v8.99H22c-.47-4.74-4.24-8.52-8.97-8.99zm0 11.01V22c4.74-.47 8.5-4.25 8.97-8.99h-8.97z"/>
+                        </svg>
+                        Distribuição por Tipo (Itens Entregues)
+                    </div>
+                    <canvas id="deliveredTypesChart" class="chart-canvas-small"></canvas>
+                </div>
+                <div class="chart-container-small">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M11 2v20c-5.07-.5-9-4.79-9-10s3.93-9.5 9-10zm2.03 0v8.99H22c-.47-4.74-4.24-8.52-8.97-8.99zm0 11.01V22c4.74-.47 8.5-4.25 8.97-8.99h-8.97z"/>
+                        </svg>
+                        Distribuição por Tipo (Geral)
+                    </div>
+                    <canvas id="issueTypesChart" class="chart-canvas-small"></canvas>
+                </div>
+            </div>
+            
+            <!-- Gráficos de análise em grade -->
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Pipeline de Desenvolvimento
+                    </div>
+                    <canvas id="pipelineChart" class="chart-canvas"></canvas>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19v2h-1.5v17.5c0 .83-.67 1.5-1.5 1.5H8c-.83 0-1.5-.67-1.5-1.5V4H5V2h4.5V.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5V2h4.5z"/>
+                        </svg>
+                        Bugs vs Features
+                    </div>
+                    <canvas id="bugsVsFeaturesChart" class="chart-canvas"></canvas>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
+                        </svg>
+                        Bugs por Company
+                    </div>
+                    <canvas id="bugsByCompanyChart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="summary-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">Itens Entregues</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Em Homologação</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Deploy Produção</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">49</div>
+                    <div class="stat-label">Em Produção</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Em Progresso</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header entregues" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Itens Entregues
+                    <span class="counter">9 itens</span>
+                <div class="filter-container">
+                    <button class="filter-button active" data-filter="all" onclick="event.stopPropagation()">
+                        Todos <span class="count">9</span>
+                    </button>
+                    <button class="filter-button" data-filter="story" onclick="event.stopPropagation()">
+                        Story <span class="count">1</span>
+                    </button>
+                    <button class="filter-button" data-filter="tech-solution" onclick="event.stopPropagation()">
+                        Tech Solution <span class="count">8</span>
+                    </button>
+                </div>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11469" class="issue-key" target="_blank" rel="noopener">PLTFAT-11469</a>
+                <div class="issue-summary">Captar e apresentar taxa de erro por tipo de documento</div>
+                <span class="issue-status">Em homologação</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10188" class="issue-key" target="_blank" rel="noopener">PLTFAT-10188</a>
+                <div class="issue-summary">Estudo sobre os testes funcionais e automatizados e sobre documentação</div>
+                <span class="issue-status">Fechado</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10092" class="issue-key" target="_blank" rel="noopener">PLTFAT-10092</a>
+                <div class="issue-summary">Logs de negócio e rastreabilidas, e preparação de schema </div>
+                <span class="issue-status">Fechado</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10091" class="issue-key" target="_blank" rel="noopener">PLTFAT-10091</a>
+                <div class="issue-summary">Tratativas de modelagem </div>
+                <span class="issue-status">Fechado</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10090" class="issue-key" target="_blank" rel="noopener">PLTFAT-10090</a>
+                <div class="issue-summary">Preparação da estrutura do microserviço do Docmatch</div>
+                <span class="issue-status">Fechado</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10093" class="issue-key" target="_blank" rel="noopener">PLTFAT-10093</a>
+                <div class="issue-summary">Estudo de configuração do MongoDB no ambiente local</div>
+                <span class="issue-status">Fechado</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10112" class="issue-key" target="_blank" rel="noopener">PLTFAT-10112</a>
+                <div class="issue-summary">Mapeamento das alterações necessárias no entidade externas</div>
+                <span class="issue-status">Fechado</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10113" class="issue-key" target="_blank" rel="noopener">PLTFAT-10113</a>
+                <div class="issue-summary">Definição das configurações para expor o DOcMatch no Gateway da Axway </div>
+                <span class="issue-status">Fechado</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12185" class="issue-key" target="_blank" rel="noopener">PLTFAT-12185</a>
+                <div class="issue-summary">Preparação do módulo de entidade-externa DocMatch</div>
+                <span class="issue-status">Fechado</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header producao" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Itens em Produção
+                    <span class="counter">49 itens</span>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11429" class="issue-key" target="_blank" rel="noopener">PLTFAT-11429</a>
+                <div class="issue-summary">Captar e apresentar tempo médio de jornada do cliente final</div>
+                <span class="issue-status">Em produção</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11465" class="issue-key" target="_blank" rel="noopener">PLTFAT-11465</a>
+                <div class="issue-summary">Captar e apresentar dados de redução de fraudes documentais</div>
+                <span class="issue-status">Em produção</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11427" class="issue-key" target="_blank" rel="noopener">PLTFAT-11427</a>
+                <div class="issue-summary">Estruturar Dashboard para apresentação de dados de negócio</div>
+                <span class="issue-status">Em produção</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11049" class="issue-key" target="_blank" rel="noopener">PLTFAT-11049</a>
+                <div class="issue-summary">Desenvolver tipificação de frente e verso de documento</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11558" class="issue-key" target="_blank" rel="noopener">PLTFAT-11558</a>
+                <div class="issue-summary">Adaptação de códigos de canais integrados ao DocMatch para armazenamento correto de logs</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11068" class="issue-key" target="_blank" rel="noopener">PLTFAT-11068</a>
+                <div class="issue-summary">Reservar/Marcar e Validar Key Requests</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11093" class="issue-key" target="_blank" rel="noopener">PLTFAT-11093</a>
+                <div class="issue-summary">Criar e Validar Regras de Management Zone - DEV</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11092" class="issue-key" target="_blank" rel="noopener">PLTFAT-11092</a>
+                <div class="issue-summary">Reservar/Marcar e Validar Key Requests -DEV</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11091" class="issue-key" target="_blank" rel="noopener">PLTFAT-11091</a>
+                <div class="issue-summary">Criar e Validar Regras de TAG’s - DEV</div>
+                <span class="issue-status">Ativada</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11090" class="issue-key" target="_blank" rel="noopener">PLTFAT-11090</a>
+                <div class="issue-summary">Criar Dashboard - DEV</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11055" class="issue-key" target="_blank" rel="noopener">PLTFAT-11055</a>
+                <div class="issue-summary">Desenvolver Dashboard de Jornada no Dynatrace para monitorar chamadas de upload e análise de documentos em HML</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 22,08</span><span class="points-tag pf">PF: 22,08</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11127" class="issue-key" target="_blank" rel="noopener">PLTFAT-11127</a>
+                <div class="issue-summary">Teste de conexão com o Bureau Serasa ao subir o serviço de orquestração da plataforma DocMatch</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10649" class="issue-key" target="_blank" rel="noopener">PLTFAT-10649</a>
+                <div class="issue-summary">Desenvolver serviço para registrar o tipo de documento enviado à plataforma</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10648" class="issue-key" target="_blank" rel="noopener">PLTFAT-10648</a>
+                <div class="issue-summary">Desenvolver serviço para registrar informações de falhas na análise documental</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10647" class="issue-key" target="_blank" rel="noopener">PLTFAT-10647</a>
+                <div class="issue-summary">Desenvolver serviço para capturar, calcular e armazenar tempo de execução de jornada do cliente </div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10291" class="issue-key" target="_blank" rel="noopener">PLTFAT-10291</a>
+                <div class="issue-summary">Armazenar dados de jornada do cliente na tabela MongoDB para futuras investigações e tomadas de decisão</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 12,73</span><span class="points-tag pf">PF: 12,73</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10343" class="issue-key" target="_blank" rel="noopener">PLTFAT-10343</a>
+                <div class="issue-summary">Implementar funcionalidade de logs de rastreabilidade no serviço de Facematch sem mock</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10058" class="issue-key" target="_blank" rel="noopener">PLTFAT-10058</a>
+                <div class="issue-summary">Modelar schema de rastreabilidade para eventos do sistema</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 7,21</span><span class="points-tag pf">PF: 7,21</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10061" class="issue-key" target="_blank" rel="noopener">PLTFAT-10061</a>
+                <div class="issue-summary">Desenvolver comunicação entre DocMatch e Serasa para serviço de Facematch</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10060" class="issue-key" target="_blank" rel="noopener">PLTFAT-10060</a>
+                <div class="issue-summary">Desenvolver comunicação entre DocMatch e Serasa para serviço de OCR</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,92</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10056" class="issue-key" target="_blank" rel="noopener">PLTFAT-10056</a>
+                <div class="issue-summary">Implementar orquestração para integração do serviço DocMatch e extração documental</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10055" class="issue-key" target="_blank" rel="noopener">PLTFAT-10055</a>
+                <div class="issue-summary">Desenvolver serviço de orquestração para fluxo de validação DocMatch</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 4,63</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10059" class="issue-key" target="_blank" rel="noopener">PLTFAT-10059</a>
+                <div class="issue-summary">Implementar funcionalidade de logs de rastreabilidade no serviço de extração de caracteres do documento</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 6,34</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10096" class="issue-key" target="_blank" rel="noopener">PLTFAT-10096</a>
+                <div class="issue-summary">Criar repositório interno no Axway para expor serviços DocMatch</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10097" class="issue-key" target="_blank" rel="noopener">PLTFAT-10097</a>
+                <div class="issue-summary">Configurar repositório para integração DocMatch e GACB Light</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11168" class="issue-key" target="_blank" rel="noopener">PLTFAT-11168</a>
+                <div class="issue-summary">Criação de queries para captação e tratamento dos indicadores de negócio da plataforma DocMatch</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 44,16</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11130" class="issue-key" target="_blank" rel="noopener">PLTFAT-11130</a>
+                <div class="issue-summary">Criação de serviço de virtualização para execução de testes de carga na plataforma DocMatch</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 1,32</span><span class="points-tag pf">PF: 1,32</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10802" class="issue-key" target="_blank" rel="noopener">PLTFAT-10802</a>
+                <div class="issue-summary">Adequar contratos do DocMatch para utilização de arquivos em base64</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10567" class="issue-key" target="_blank" rel="noopener">PLTFAT-10567</a>
+                <div class="issue-summary">Adaptar orquestrador da plataforma para inclusão de diferentes tipos de uploads na jornada</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10541" class="issue-key" target="_blank" rel="noopener">PLTFAT-10541</a>
+                <div class="issue-summary">Implementar orquestração para integração para serviço de configurações da plataforma</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10554" class="issue-key" target="_blank" rel="noopener">PLTFAT-10554</a>
+                <div class="issue-summary">Implementar funcionalidade de logs de rastreabilidade no armazenamento de imagens</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11064" class="issue-key" target="_blank" rel="noopener">PLTFAT-11064</a>
+                <div class="issue-summary">Criar key requests em HML para monitorar chamadas de upload e análise de documentos</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11062" class="issue-key" target="_blank" rel="noopener">PLTFAT-11062</a>
+                <div class="issue-summary">Criar regras de TAGs em HML para monitorar chamadas de upload e análise de documentos</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11067" class="issue-key" target="_blank" rel="noopener">PLTFAT-11067</a>
+                <div class="issue-summary">Ajustar e Validar Regras de TAG’s - PRD</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 11,04</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11066" class="issue-key" target="_blank" rel="noopener">PLTFAT-11066</a>
+                <div class="issue-summary">Criar Dashboard de Jornada em PRD</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10738" class="issue-key" target="_blank" rel="noopener">PLTFAT-10738</a>
+                <div class="issue-summary">Criação de scripts jmeter para execução de upload e analise de documento</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10500" class="issue-key" target="_blank" rel="noopener">PLTFAT-10500</a>
+                <div class="issue-summary">PRD - Management Zone</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10489" class="issue-key" target="_blank" rel="noopener">PLTFAT-10489</a>
+                <div class="issue-summary">HML - Management Zone</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10488" class="issue-key" target="_blank" rel="noopener">PLTFAT-10488</a>
+                <div class="issue-summary">HML - TAG’s</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10487" class="issue-key" target="_blank" rel="noopener">PLTFAT-10487</a>
+                <div class="issue-summary">HML - Dashboard</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 4,14</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10491" class="issue-key" target="_blank" rel="noopener">PLTFAT-10491</a>
+                <div class="issue-summary">HML - Threshold e Alertas</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 1,38</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10490" class="issue-key" target="_blank" rel="noopener">PLTFAT-10490</a>
+                <div class="issue-summary">HML - Key Request</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 1,38</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10499" class="issue-key" target="_blank" rel="noopener">PLTFAT-10499</a>
+                <div class="issue-summary">PRD - TAG’s</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10498" class="issue-key" target="_blank" rel="noopener">PLTFAT-10498</a>
+                <div class="issue-summary">PRD - Dashboard</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 4,14</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10502" class="issue-key" target="_blank" rel="noopener">PLTFAT-10502</a>
+                <div class="issue-summary">PRD - Threshold e Alertas</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 1,38</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10057" class="issue-key" target="_blank" rel="noopener">PLTFAT-10057</a>
+                <div class="issue-summary">Implementar orquestração para integração para serviço de comparação de documento e selfie do cliente</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10348" class="issue-key" target="_blank" rel="noopener">PLTFAT-10348</a>
+                <div class="issue-summary">Implementar serviço de consulta ao canal para validar acesso a plataforma</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10347" class="issue-key" target="_blank" rel="noopener">PLTFAT-10347</a>
+                <div class="issue-summary">Desenvolver serviço de configuração para fluxo de validação DocMatch</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-10351" class="issue-key" target="_blank" rel="noopener">PLTFAT-10351</a>
+                <div class="issue-summary">Disponibilizar tabelas de dados do serviço de configuração da plataforma</div>
+                <span class="issue-status">Ativada</span><span class="points-tag pf-metricas">PF(M): 7,21</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header deploy" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Em Deploy para Produção
+                    <span class="counter">1 itens</span>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11428" class="issue-key" target="_blank" rel="noopener">PLTFAT-11428</a>
+                <div class="issue-summary">Captar e apresentar taxa de conversão da jornada com DocMatch</div>
+                <span class="issue-status">Em deploy para produção</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header homologacao" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Itens em Homologação
+                    <span class="counter">2 itens</span>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11466" class="issue-key" target="_blank" rel="noopener">PLTFAT-11466</a>
+                <div class="issue-summary">Captar e apresentar taxa de sucesso do OCR</div>
+                <span class="issue-status">Em deploy para homologação</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11469" class="issue-key" target="_blank" rel="noopener">PLTFAT-11469</a>
+                <div class="issue-summary">Captar e apresentar taxa de erro por tipo de documento</div>
+                <span class="issue-status">Em homologação</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header progresso" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Em Progresso
+                    <span class="counter">7 itens</span>
+                <div class="filter-container">
+                    <button class="filter-button active" data-filter="all" onclick="event.stopPropagation()">
+                        Todos <span class="count">7</span>
+                    </button>
+                    <button class="filter-button" data-filter="story" onclick="event.stopPropagation()">
+                        Story <span class="count">4</span>
+                    </button>
+                    <button class="filter-button" data-filter="tech-solution" onclick="event.stopPropagation()">
+                        Tech Solution <span class="count">3</span>
+                    </button>
+                </div>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11470" class="issue-key" target="_blank" rel="noopener">PLTFAT-11470</a>
+                <div class="issue-summary">Captar e apresentar volume de documentos processados</div>
+                <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">18 dias</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12162" class="issue-key" target="_blank" rel="noopener">PLTFAT-12162</a>
+                <div class="issue-summary">[QA] Análise de Testes Automatizados: Avaliação da Cobertura, Estrutura e Documentação dos Testes já existentes</div>
+                <span class="issue-status">Em Validação</span><span class="age-tag">17 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11432" class="issue-key" target="_blank" rel="noopener">PLTFAT-11432</a>
+                <div class="issue-summary">Migrar credenciais da plataforma de Biometria para plataforma DocMatch</div>
+                <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">5 dias</span><span class="points-tag pf-metricas">PF(M): 3,31</span><span class="points-tag pf">PF: 3,31</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11431" class="issue-key" target="_blank" rel="noopener">PLTFAT-11431</a>
+                <div class="issue-summary">Criar novo repositório para comunicação com entidades externas</div>
+                <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">5 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12247" class="issue-key" target="_blank" rel="noopener">PLTFAT-12247</a>
+                <div class="issue-summary">Agrupar frente e verso de documento, gerando arquivo PDF de documento completo</div>
+                <span class="issue-status">Em teste</span><span class="age-tag">5 dias</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11624" class="issue-key" target="_blank" rel="noopener">PLTFAT-11624</a>
+                <div class="issue-summary">Preparação da Estrutura - Portal DocMatch (Storage account)</div>
+                <span class="issue-status">Em Progresso</span><span class="age-tag">4 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11623" class="issue-key" target="_blank" rel="noopener">PLTFAT-11623</a>
+                <div class="issue-summary">Preparação da estrutura - Portal DocMatch ( EntraID)</div>
+                <span class="issue-status">Em Progresso</span><span class="age-tag">4 dias</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header aguardando" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Aguardando Desenvolvimento
+                    <span class="counter">18 itens</span>
+                <div class="filter-container">
+                    <button class="filter-button active" data-filter="all" onclick="event.stopPropagation()">
+                        Todos <span class="count">18</span>
+                    </button>
+                    <button class="filter-button" data-filter="story" onclick="event.stopPropagation()">
+                        Story <span class="count">18</span>
+                    </button>
+                </div>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11434" class="issue-key" target="_blank" rel="noopener">PLTFAT-11434</a>
+                <div class="issue-summary">Desenvolver serviço para análise Facematch</div>
+                <span class="issue-status">Pronta para Desenvolvimento</span><span class="points-tag pf-metricas">PF(M): 5,52</span><span class="points-tag pf">PF: 5,52</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11441" class="issue-key" target="_blank" rel="noopener">PLTFAT-11441</a>
+                <div class="issue-summary">Desenvolver tela de consulta de histórico de operações</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11444" class="issue-key" target="_blank" rel="noopener">PLTFAT-11444</a>
+                <div class="issue-summary">Habilitar e configurar dependências ao serviço de configurações para biblioteca de segurança PEP</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11443" class="issue-key" target="_blank" rel="noopener">PLTFAT-11443</a>
+                <div class="issue-summary">Habilitar e configurar dependências ao serviço de orquestração para biblioteca de segurança PEP</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11685" class="issue-key" target="_blank" rel="noopener">PLTFAT-11685</a>
+                <div class="issue-summary">Desenvolver painel DAM para monitoramento de negócio</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11467" class="issue-key" target="_blank" rel="noopener">PLTFAT-11467</a>
+                <div class="issue-summary">Captar e apresentar taxa de sucesso do Facematch</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12248" class="issue-key" target="_blank" rel="noopener">PLTFAT-12248</a>
+                <div class="issue-summary">Ajustar serviço de comunicação com entidades externas para utilizar serviço de documentoscopia do bureau</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11438" class="issue-key" target="_blank" rel="noopener">PLTFAT-11438</a>
+                <div class="issue-summary">Criar BFF para portal administrativo</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11442" class="issue-key" target="_blank" rel="noopener">PLTFAT-11442</a>
+                <div class="issue-summary">Desenvolver tela de bilhetagem</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11440" class="issue-key" target="_blank" rel="noopener">PLTFAT-11440</a>
+                <div class="issue-summary">Desenvolver tela de configuração de canais</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11439" class="issue-key" target="_blank" rel="noopener">PLTFAT-11439</a>
+                <div class="issue-summary">Desenvolver integração entre login e EntraID</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12469" class="issue-key" target="_blank" rel="noopener">PLTFAT-12469</a>
+                <div class="issue-summary">Integrar serviço de entidade externa com biblioteca de segurança PEP</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12457" class="issue-key" target="_blank" rel="noopener">PLTFAT-12457</a>
+                <div class="issue-summary">Construir endpoints para realizar cadastro de canal via Portal Administrativo</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12468" class="issue-key" target="_blank" rel="noopener">PLTFAT-12468</a>
+                <div class="issue-summary">Ajuste de retorno em caso de timeout do fornecedor</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12249" class="issue-key" target="_blank" rel="noopener">PLTFAT-12249</a>
+                <div class="issue-summary">Enviar arquivo PDF com documento completo ao fornecedor via API de documentoscopia</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12459" class="issue-key" target="_blank" rel="noopener">PLTFAT-12459</a>
+                <div class="issue-summary">Construir endpoints para realizar edição de canal existente via Portal Administrativo</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12460" class="issue-key" target="_blank" rel="noopener">PLTFAT-12460</a>
+                <div class="issue-summary">Construir endpoints para apresentação de canais via Portal Administrativo</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11433" class="issue-key" target="_blank" rel="noopener">PLTFAT-11433</a>
+                <div class="issue-summary">Desenvolver serviço para captação de OCR</div>
+                <span class="issue-status">Product Backlog</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Relatório gerado automaticamente pelo sistema de integração Jira</p>
+        </div>
+    </div>
+    
+    <script>
+        // Aguardar carregamento da página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Registrar o plugin datalabels
+            Chart.register(ChartDataLabels);
+            
+            // Cores do Bradesco
+            const bradescoCores = ['#cc092f', '#e31837', '#f39c12', '#e67e22', '#27ae60', '#3498db', '#9b59b6', '#1abc9c'];
+            
+            // Gráfico de Cycle Time por Status (Itens Entregues)
+            const cycleTimeLabels = ["SELECIONADO PARA GROOMING", "EM AN\u00c1LISE", "PRONTA PARA DESENVOLVIMENTO", "EM DESENVOLVIMENTO", "DESENVOLVIDA", "EM DEPLOY PARA TESTE", "DISPONIVEL PARA TESTE", "EM TESTE", "TESTADA", "EM DEPLOY PARA HOMOLOGA\u00c7\u00c3O", "DISPONIVEL PARA HOMOLOGA\u00c7\u00c3O", "EM HOMOLOGA\u00c7\u00c3O", "EM PROGRESSO", "EM VALIDA\u00c7\u00c3O", "FECHADO"];
+            const cycleTimeValues = [0.0, 0.0, 0.5, 4.0, 0.0, 0.0, 7.2, 0.0, 0.8, 0.0, 0.0, 1.4, 7.2, 0.4, 106.5];
+            
+            new Chart(document.getElementById('cycleTimeChart'), {
+                type: 'bar',
+                data: {
+                    labels: cycleTimeLabels,
+                    datasets: [{
+                        label: 'Tempo Médio (dias)',
+                        data: cycleTimeValues,
+                        backgroundColor: '#09ab47',
+                        borderColor: '#078a3a',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#fff',
+                            font: {
+                                weight: 'bold'
+                            },
+                            formatter: (value, context) => {
+                                return value > 0 ? value + 'd' : "";
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Dias'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Gráfico de Distribuição por Tipo (Itens Entregues)
+            const deliveredTypesLabels = ["Story", "Tech Solution"];
+            const deliveredTypesValues = [1, 8];
+            
+            // Cores específicas para cada tipo de issue (itens entregues)
+            const deliveredTypeColors = deliveredTypesLabels.map(type => {
+                if (type.toLowerCase() === 'story') {
+                    return '#09ab47';
+                } else if (type.toLowerCase() === 'tech solution') {
+                    return '#ffbc01';
+                } else if (type.toLowerCase() === 'bug' || type.toLowerCase() === 'incidente') {
+                    return '#b00f2f';
+                } else {
+                    return '#6c757d'; // Cor padrão para outros tipos
+                }
+            });
+            
+            new Chart(document.getElementById('deliveredTypesChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: deliveredTypesLabels,
+                    datasets: [{
+                        data: deliveredTypesValues,
+                        backgroundColor: deliveredTypeColors,
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#fff',
+                            font: {
+                                weight: 'bold',
+                                size: 12
+                            },
+                            formatter: (value, context) => {
+                                return value > 0 ? value : "";
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Gráfico de Distribuição por Tipo (Geral)
+            const issueTypesData = ["Tech Solution", "Story"];
+            const issueTypesValues = [11, 74];
+            
+            // Cores específicas para cada tipo de issue
+            const issueTypeColors = issueTypesData.map(type => {
+                if (type.toLowerCase() === 'story') {
+                    return '#09ab47';
+                } else if (type.toLowerCase() === 'tech solution') {
+                    return '#ffbc01';
+                } else if (type.toLowerCase() === 'bug' || type.toLowerCase() === 'incidente') {
+                    return '#b00f2f';
+                } else {
+                    return '#6c757d'; // Cor padrão para outros tipos
+                }
+            });
+        
+        new Chart(document.getElementById('issueTypesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: issueTypesData,
+                datasets: [{
+                    data: issueTypesValues,
+                    backgroundColor: issueTypeColors,
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 11
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 12
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Gráfico do Pipeline
+        const pipelineLabels = ["Desenvolvendo", "Testando", "Homologando", "Deploy Prod", "Produ\u00e7\u00e3o"];
+        const pipelineValues = [4, 1, 2, 1, 49];
+        
+        // Cores específicas para cada estágio do pipeline
+        const pipelineColors = ['#3498db', '#f39c12', '#e67e22', '#cc092f', '#27ae60']; // Azul, Laranja, Laranja escuro, Vermelho Bradesco, Verde
+        
+        new Chart(document.getElementById('pipelineChart'), {
+            type: 'bar',
+            data: {
+                labels: pipelineLabels,
+                datasets: [{
+                    label: 'Itens por Estágio',
+                    data: pipelineValues,
+                    backgroundColor: pipelineColors,
+                    borderColor: pipelineColors.map(color => color),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Gráfico Bugs vs Features
+        new Chart(document.getElementById('bugsVsFeaturesChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Features', 'Bugs'],
+                datasets: [{
+                    data: [85, 0],
+                    backgroundColor: ['#27ae60', '#e74c3c'],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Gráfico Bugs por Company
+        const bugsByCompanyLabels = ["Nenhum Bug"];
+        const bugsByCompanyValues = [0];
+        
+        // Definir cores específicas para cada company
+        const bugsByCompanyColors = bugsByCompanyLabels.map(company => {
+            if (company.toLowerCase().includes('mckinsey') || company.toLowerCase().includes('mackinsey')) {
+                return '#3b69ff'; // Azul para McKinsey
+            } else if (company.toLowerCase().includes('ci&t') || company.toLowerCase().includes('cit')) {
+                return '#e1173f'; // Vermelho para CI&T
+            } else {
+                return '#ff6b35'; // Cor padrão para outras companies
+            }
+        });
+        
+        new Chart(document.getElementById('bugsByCompanyChart'), {
+            type: 'doughnut',
+            data: {
+                labels: bugsByCompanyLabels,
+                datasets: [{
+                    data: bugsByCompanyValues,
+                    backgroundColor: bugsByCompanyColors,
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '50%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Funcionalidade dos filtros de issue type para "Em Progresso"
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', function(event) {
+                // Impedir que o evento suba para o header (evita colapso indesejado)
+                event.stopPropagation();
+                
+                const filterValue = this.getAttribute('data-filter');
+                const section = this.closest('.section');
+                const issues = section.querySelectorAll('.issue-item');
+                
+                // Verificar se a seção está colapsada e expandir se necessário
+                const content = section.querySelector('.section-content');
+                const toggle = section.querySelector('.collapse-toggle');
+                
+                if (content && content.classList.contains('collapsed')) {
+                    // Expandir a seção automaticamente
+                    content.classList.remove('collapsed');
+                    content.classList.add('expanded');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if (toggle) {
+                        toggle.classList.remove('collapsed');
+                        toggle.innerHTML = '▼';
+                    }
+                }
+                
+                // Remover classe active de todos os botões da mesma seção
+                section.querySelectorAll('.filter-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Adicionar classe active ao botão clicado
+                this.classList.add('active');
+                
+                // Mostrar/esconder issues baseado no filtro
+                issues.forEach(issue => {
+                    if (filterValue === 'all') {
+                        issue.style.display = 'block';
+                    } else {
+                        const issueType = issue.getAttribute('data-issue-type');
+                        if (issueType === filterValue) {
+                            issue.style.display = 'block';
+                        } else {
+                            issue.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        });
+        
+        // Função para controlar colapso das seções (global)
+        function toggleSection(header) {
+            const section = header.parentElement;
+            const content = section.querySelector('.section-content');
+            const toggle = section.querySelector('.collapse-toggle');
+            
+            if (content.classList.contains('collapsed')) {
+                // Expandir
+                content.classList.remove('collapsed');
+                content.classList.add('expanded');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                toggle.classList.remove('collapsed');
+                toggle.innerHTML = '▼';
+            } else {
+                // Colapsar
+                content.classList.add('collapsed');
+                content.classList.remove('expanded');
+                content.style.maxHeight = '0px';
+                toggle.classList.add('collapsed');
+                toggle.innerHTML = '▲';
+            }
+        }
+    </script>
+</body>
+</html>

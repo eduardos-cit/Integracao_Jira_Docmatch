@@ -1,0 +1,1180 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Review - DocMatch-RT1_Platafo-S3</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <!-- Bradesco Design System Liquid -->
+    <link href="https://cdn.jsdelivr.net/npm/@bradesco/liquid-design-system@latest/dist/liquid.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Design System Liquid Bradesco */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #cc092f, #e31837);
+            color: white;
+            padding: 30px 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(204, 9, 47, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+        
+        .header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 400;
+        }
+        
+        .bradesco-logo {
+            width: 160px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .brad-logo__bradesco-bbi-vertical-white {
+            width: 100%;
+            height: 100%;
+            max-width: 160px;
+            max-height: 50px;
+        }
+        
+        .section {
+            background: white;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-header {
+            background-color: #cc092f;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.3rem;
+            font-weight: 500;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .collapse-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .collapse-toggle.collapsed {
+            transform: rotate(180deg);
+        }
+        
+        .section-content {
+            transition: max-height 0.3s ease, opacity 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .section-content.collapsed {
+            max-height: 0 !important;
+            opacity: 0;
+        }
+        
+        .section-content.expanded {
+            opacity: 1;
+        }
+        
+        .section-header.homologacao {
+            background-color: #f39c12;
+        }
+        
+        .section-header.deploy {
+            background-color: #e67e22;
+        }
+        
+        .section-header.producao {
+            background-color: #27ae60;
+        }
+        
+        .section-header.progresso {
+            background-color: #3498db;
+        }
+        
+        .section-header.aguardando {
+            background-color: #95a5a6;
+        }
+        
+        .filter-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-left: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .filter-button {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .filter-button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .filter-button.active {
+            background: white;
+            color: #3498db;
+            font-weight: 600;
+        }
+        
+        .filter-button .count {
+            background: rgba(0, 0, 0, 0.1);
+            padding: 1px 6px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+        }
+        
+        .filter-button.active .count {
+            background: #3498db;
+            color: white;
+        }
+        
+        .issue-item {
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+        }
+        
+        .issue-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .issue-item:last-child {
+            border-bottom: none;
+        }
+        
+        .issue-key {
+            font-weight: bold;
+            color: #cc092f;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        
+        .issue-key:hover {
+            color: #e31837;
+            text-decoration: underline;
+        }
+        
+        .issue-key:after {
+            content: "↗";
+            font-size: 0.8rem;
+            opacity: 0.6;
+            margin-left: 4px;
+        }
+        
+        .issue-type {
+            display: inline-block;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            margin-right: 8px;
+            min-width: 50px;
+            text-align: center;
+        }
+        
+        .issue-type.story {
+            background-color: #09ab47;
+        }
+        
+        .issue-type.tech-solution {
+            background-color: #ffbc01;
+            color: #333;
+        }
+        
+        .issue-type.bug {
+            background-color: #b00f2f;
+        }
+        
+        .issue-type.incidente {
+            background-color: #b00f2f;
+        }
+        
+        .issue-summary {
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+        
+        .issue-status {
+            display: inline-block;
+            background-color: #e9ecef;
+            color: #495057;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .company-tag {
+            display: inline-block;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+        
+        .company-tag.mckinsey {
+            background-color: #3b69ff;
+        }
+        
+        .company-tag.cit {
+            background-color: #e1173f;
+        }
+        
+        .company-tag.default {
+            background-color: #ff6b35;
+        }
+        
+        .age-tag {
+            background-color: #f39c12;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+            display: inline-block;
+        }
+        
+        .age-tag.old {
+            background-color: #e74c3c;
+        }
+        
+        .age-tag.very-old {
+            background-color: #8b0000;
+        }
+        
+        .counter {
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-left: 10px;
+        }
+        
+        .summary-stats {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .stat-card {
+            text-align: center;
+            padding: 15px;
+            border-left: 4px solid #cc092f;
+        }
+        
+        .stat-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #cc092f;
+        }
+        
+        .stat-label {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 40px;
+            padding: 20px;
+        }
+        
+        .metrics-section {
+            background: white;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metrics-title {
+            color: #cc092f;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-family: 'Nunito Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+        
+        .chart-row-full {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .charts-grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .chart-container {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            height: 350px;
+        }
+        
+        .chart-container-large {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            height: 450px;
+        }
+        
+        .chart-container-small {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            height: 320px;
+        }
+        
+        .chart-canvas {
+            position: relative;
+            height: 280px;
+            width: 100%;
+        }
+        
+        .chart-canvas-large {
+            position: relative;
+            height: 380px;
+            width: 100%;
+        }
+        
+        .chart-canvas-small {
+            position: relative;
+            height: 250px;
+            width: 100%;
+        }
+        
+        .chart-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 15px;
+            text-align: center;
+            font-family: 'Nunito Sans', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .chart-icon {
+            width: 20px;
+            height: 20px;
+            fill: #cc092f;
+        }
+        
+        .metrics-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #cc092f, #e31837);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .metric-value {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1>Sprint Review</h1>
+                <div class="subtitle">Sprint Review - DocMatch-RT1_Platafo-S3</div>
+                <div class="subtitle">Período: 02/02/2026 a 15/02/2026</div>
+                <div class="subtitle">Gerado em: 07/02/2026 às 18:00</div>
+            </div>
+            <div class="bradesco-logo">
+                <div class="brad-logo__bradesco-bbi-vertical-white"></div>
+            </div>
+        </div>
+        
+        <div class="metrics-section">
+            <h2 class="metrics-title">
+                <svg class="chart-icon" viewBox="0 0 24 24">
+                    <path d="M3 13h2v8H3v-8zm4-6h2v14H7V7zm4-6h2v20h-2V1zm4 8h2v12h-2V9zm4-4h2v16h-2V5z"/>
+                </svg>
+                Métricas Ágeis da Sprint
+            </h2>
+            
+            <div class="metrics-highlight">
+                <div class="metric-card">
+                    <div class="metric-value">1</div>
+                    <div class="metric-label">Throughput</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">8.7d</div>
+                    <div class="metric-label">Lead Time Médio</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">6</div>
+                    <div class="metric-label">WIP Atual</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">10.0%</div>
+                    <div class="metric-label">Eficiência</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">2.1d</div>
+                    <div class="metric-label">Tempo no Status</div>
+                </div>
+            </div>
+            
+            <!-- Gráfico de Cycle Time em linha completa -->
+            <div class="chart-row-full">
+                <div class="chart-container-large">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        Cycle Time por Status (Itens Entregues)
+                    </div>
+                    <canvas id="cycleTimeChart" class="chart-canvas-large"></canvas>
+                </div>
+            </div>
+            
+            <!-- Gráficos de distribuição em duas colunas -->
+            <div class="charts-grid-2">
+                <div class="chart-container-small">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M11 2v20c-5.07-.5-9-4.79-9-10s3.93-9.5 9-10zm2.03 0v8.99H22c-.47-4.74-4.24-8.52-8.97-8.99zm0 11.01V22c4.74-.47 8.5-4.25 8.97-8.99h-8.97z"/>
+                        </svg>
+                        Distribuição por Tipo (Itens Entregues)
+                    </div>
+                    <canvas id="deliveredTypesChart" class="chart-canvas-small"></canvas>
+                </div>
+                <div class="chart-container-small">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M11 2v20c-5.07-.5-9-4.79-9-10s3.93-9.5 9-10zm2.03 0v8.99H22c-.47-4.74-4.24-8.52-8.97-8.99zm0 11.01V22c4.74-.47 8.5-4.25 8.97-8.99h-8.97z"/>
+                        </svg>
+                        Distribuição por Tipo (Geral)
+                    </div>
+                    <canvas id="issueTypesChart" class="chart-canvas-small"></canvas>
+                </div>
+            </div>
+            
+            <!-- Gráficos de análise em grade -->
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Pipeline de Desenvolvimento
+                    </div>
+                    <canvas id="pipelineChart" class="chart-canvas"></canvas>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M9 11H7v6h2v-6zm4 0h-2v6h2v-6zm4 0h-2v6h2v-6zm2.5-9H19v2h-1.5v17.5c0 .83-.67 1.5-1.5 1.5H8c-.83 0-1.5-.67-1.5-1.5V4H5V2h4.5V.5c0-.28.22-.5.5-.5h5c.28 0 .5.22.5.5V2h4.5z"/>
+                        </svg>
+                        Bugs vs Features
+                    </div>
+                    <canvas id="bugsVsFeaturesChart" class="chart-canvas"></canvas>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">
+                        <svg class="chart-icon" viewBox="0 0 24 24">
+                            <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10z"/>
+                        </svg>
+                        Bugs por Company
+                    </div>
+                    <canvas id="bugsByCompanyChart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="summary-stats">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Itens Entregues</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Em Homologação</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">Deploy Produção</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">0</div>
+                    <div class="stat-label">Em Produção</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Em Progresso</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header entregues" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Itens Entregues
+                    <span class="counter">1 itens</span>
+                <div class="filter-container">
+                    <button class="filter-button active" data-filter="all" onclick="event.stopPropagation()">
+                        Todos <span class="count">1</span>
+                    </button>
+                    <button class="filter-button" data-filter="story" onclick="event.stopPropagation()">
+                        Story <span class="count">1</span>
+                    </button>
+                </div>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11469" class="issue-key" target="_blank" rel="noopener">PLTFAT-11469</a>
+                <div class="issue-summary">Captar e apresentar taxa de erro por tipo de documento</div>
+                <span class="issue-status">Em homologação</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header deploy" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Em Deploy para Produção
+                    <span class="counter">1 itens</span>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11428" class="issue-key" target="_blank" rel="noopener">PLTFAT-11428</a>
+                <div class="issue-summary">Captar e apresentar taxa de conversão da jornada com DocMatch</div>
+                <span class="issue-status">Em deploy para produção</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header homologacao" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Itens em Homologação
+                    <span class="counter">2 itens</span>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11466" class="issue-key" target="_blank" rel="noopener">PLTFAT-11466</a>
+                <div class="issue-summary">Captar e apresentar taxa de sucesso do OCR</div>
+                <span class="issue-status">Em deploy para homologação</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11469" class="issue-key" target="_blank" rel="noopener">PLTFAT-11469</a>
+                <div class="issue-summary">Captar e apresentar taxa de erro por tipo de documento</div>
+                <span class="issue-status">Em homologação</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header progresso" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Em Progresso
+                    <span class="counter">6 itens</span>
+                <div class="filter-container">
+                    <button class="filter-button active" data-filter="all" onclick="event.stopPropagation()">
+                        Todos <span class="count">6</span>
+                    </button>
+                    <button class="filter-button" data-filter="story" onclick="event.stopPropagation()">
+                        Story <span class="count">4</span>
+                    </button>
+                    <button class="filter-button" data-filter="tech-solution" onclick="event.stopPropagation()">
+                        Tech Solution <span class="count">2</span>
+                    </button>
+                </div>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11432" class="issue-key" target="_blank" rel="noopener">PLTFAT-11432</a>
+                <div class="issue-summary">Migrar credenciais da plataforma de Biometria para plataforma DocMatch</div>
+                <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">5 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11431" class="issue-key" target="_blank" rel="noopener">PLTFAT-11431</a>
+                <div class="issue-summary">Criar novo repositório para comunicação com entidades externas</div>
+                <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">5 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11470" class="issue-key" target="_blank" rel="noopener">PLTFAT-11470</a>
+                <div class="issue-summary">Captar e apresentar volume de documentos processados</div>
+                <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">18 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12247" class="issue-key" target="_blank" rel="noopener">PLTFAT-12247</a>
+                <div class="issue-summary">Agrupar frente e verso de documento, gerando arquivo PDF de documento completo</div>
+                <span class="issue-status">Em teste</span><span class="age-tag">5 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11624" class="issue-key" target="_blank" rel="noopener">PLTFAT-11624</a>
+                <div class="issue-summary">Preparação da Estrutura - Portal DocMatch (Storage account)</div>
+                <span class="issue-status">Em Progresso</span><span class="age-tag">4 dias</span>
+            </div>
+
+            <div class="issue-item" data-issue-type="tech-solution">
+                <span class="issue-type tech-solution">Tech Solution</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11623" class="issue-key" target="_blank" rel="noopener">PLTFAT-11623</a>
+                <div class="issue-summary">Preparação da estrutura - Portal DocMatch ( EntraID)</div>
+                <span class="issue-status">Em Progresso</span><span class="age-tag">4 dias</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header aguardando" onclick="toggleSection(this)">
+                <div class="header-content">
+                    Aguardando Desenvolvimento
+                    <span class="counter">1 itens</span>
+                <div class="filter-container">
+                    <button class="filter-button active" data-filter="all" onclick="event.stopPropagation()">
+                        Todos <span class="count">1</span>
+                    </button>
+                    <button class="filter-button" data-filter="story" onclick="event.stopPropagation()">
+                        Story <span class="count">1</span>
+                    </button>
+                </div>
+                </div>
+                <button class="collapse-toggle collapsed" onclick="event.stopPropagation()">▲</button>
+            </div>
+            <div class="section-content collapsed">
+
+            <div class="issue-item" data-issue-type="story">
+                <span class="issue-type story">Story</span>
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11434" class="issue-key" target="_blank" rel="noopener">PLTFAT-11434</a>
+                <div class="issue-summary">Desenvolver serviço para análise Facematch</div>
+                <span class="issue-status">Pronta para Desenvolvimento</span>
+            </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Relatório gerado automaticamente pelo sistema de integração Jira</p>
+        </div>
+    </div>
+    
+    <script>
+        // Aguardar carregamento da página
+        document.addEventListener('DOMContentLoaded', function() {
+            // Registrar o plugin datalabels
+            Chart.register(ChartDataLabels);
+            
+            // Cores do Bradesco
+            const bradescoCores = ['#cc092f', '#e31837', '#f39c12', '#e67e22', '#27ae60', '#3498db', '#9b59b6', '#1abc9c'];
+            
+            // Gráfico de Cycle Time por Status (Itens Entregues)
+            const cycleTimeLabels = ["SELECIONADO PARA GROOMING", "EM AN\u00c1LISE", "PRONTA PARA DESENVOLVIMENTO", "EM DESENVOLVIMENTO", "DESENVOLVIDA", "EM DEPLOY PARA TESTE", "DISPONIVEL PARA TESTE", "EM TESTE", "TESTADA", "EM DEPLOY PARA HOMOLOGA\u00c7\u00c3O", "DISPONIVEL PARA HOMOLOGA\u00c7\u00c3O", "EM HOMOLOGA\u00c7\u00c3O"];
+            const cycleTimeValues = [0.0, 0.0, 0.5, 4.0, 0.0, 0.0, 7.2, 0.0, 0.8, 0.0, 0.0, 1.3];
+            
+            new Chart(document.getElementById('cycleTimeChart'), {
+                type: 'bar',
+                data: {
+                    labels: cycleTimeLabels,
+                    datasets: [{
+                        label: 'Tempo Médio (dias)',
+                        data: cycleTimeValues,
+                        backgroundColor: '#09ab47',
+                        borderColor: '#078a3a',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        datalabels: {
+                            color: '#fff',
+                            font: {
+                                weight: 'bold'
+                            },
+                            formatter: (value, context) => {
+                                return value > 0 ? value + 'd' : "";
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Dias'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Gráfico de Distribuição por Tipo (Itens Entregues)
+            const deliveredTypesLabels = ["Story"];
+            const deliveredTypesValues = [1];
+            
+            // Cores específicas para cada tipo de issue (itens entregues)
+            const deliveredTypeColors = deliveredTypesLabels.map(type => {
+                if (type.toLowerCase() === 'story') {
+                    return '#09ab47';
+                } else if (type.toLowerCase() === 'tech solution') {
+                    return '#ffbc01';
+                } else if (type.toLowerCase() === 'bug' || type.toLowerCase() === 'incidente') {
+                    return '#b00f2f';
+                } else {
+                    return '#6c757d'; // Cor padrão para outros tipos
+                }
+            });
+            
+            new Chart(document.getElementById('deliveredTypesChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: deliveredTypesLabels,
+                    datasets: [{
+                        data: deliveredTypesValues,
+                        backgroundColor: deliveredTypeColors,
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '60%',
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 11
+                                }
+                            }
+                        },
+                        datalabels: {
+                            color: '#fff',
+                            font: {
+                                weight: 'bold',
+                                size: 12
+                            },
+                            formatter: (value, context) => {
+                                return value > 0 ? value : "";
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Gráfico de Distribuição por Tipo (Geral)
+            const issueTypesData = ["Tech Solution", "Story"];
+            const issueTypesValues = [2, 8];
+            
+            // Cores específicas para cada tipo de issue
+            const issueTypeColors = issueTypesData.map(type => {
+                if (type.toLowerCase() === 'story') {
+                    return '#09ab47';
+                } else if (type.toLowerCase() === 'tech solution') {
+                    return '#ffbc01';
+                } else if (type.toLowerCase() === 'bug' || type.toLowerCase() === 'incidente') {
+                    return '#b00f2f';
+                } else {
+                    return '#6c757d'; // Cor padrão para outros tipos
+                }
+            });
+        
+        new Chart(document.getElementById('issueTypesChart'), {
+            type: 'doughnut',
+            data: {
+                labels: issueTypesData,
+                datasets: [{
+                    data: issueTypesValues,
+                    backgroundColor: issueTypeColors,
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '60%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 11
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 12
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Gráfico do Pipeline
+        const pipelineLabels = ["Desenvolvendo", "Testando", "Homologando", "Deploy Prod", "Produ\u00e7\u00e3o"];
+        const pipelineValues = [4, 1, 2, 1, 0];
+        
+        // Cores específicas para cada estágio do pipeline
+        const pipelineColors = ['#3498db', '#f39c12', '#e67e22', '#cc092f', '#27ae60']; // Azul, Laranja, Laranja escuro, Vermelho Bradesco, Verde
+        
+        new Chart(document.getElementById('pipelineChart'), {
+            type: 'bar',
+            data: {
+                labels: pipelineLabels,
+                datasets: [{
+                    label: 'Itens por Estágio',
+                    data: pipelineValues,
+                    backgroundColor: pipelineColors,
+                    borderColor: pipelineColors.map(color => color),
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold'
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Gráfico Bugs vs Features
+        new Chart(document.getElementById('bugsVsFeaturesChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Features', 'Bugs'],
+                datasets: [{
+                    data: [10, 0],
+                    backgroundColor: ['#27ae60', '#e74c3c'],
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Gráfico Bugs por Company
+        const bugsByCompanyLabels = ["Nenhum Bug"];
+        const bugsByCompanyValues = [0];
+        
+        // Definir cores específicas para cada company
+        const bugsByCompanyColors = bugsByCompanyLabels.map(company => {
+            if (company.toLowerCase().includes('mckinsey') || company.toLowerCase().includes('mackinsey')) {
+                return '#3b69ff'; // Azul para McKinsey
+            } else if (company.toLowerCase().includes('ci&t') || company.toLowerCase().includes('cit')) {
+                return '#e1173f'; // Vermelho para CI&T
+            } else {
+                return '#ff6b35'; // Cor padrão para outras companies
+            }
+        });
+        
+        new Chart(document.getElementById('bugsByCompanyChart'), {
+            type: 'doughnut',
+            data: {
+                labels: bugsByCompanyLabels,
+                datasets: [{
+                    data: bugsByCompanyValues,
+                    backgroundColor: bugsByCompanyColors,
+                    borderWidth: 2,
+                    borderColor: '#fff'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '50%',
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: {
+                                size: 12
+                            }
+                        }
+                    },
+                    datalabels: {
+                        color: '#fff',
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        },
+                        formatter: (value, context) => {
+                            return value > 0 ? value : "";
+                        }
+                    }
+                }
+            }
+        });
+        
+        // Funcionalidade dos filtros de issue type para "Em Progresso"
+        document.querySelectorAll('.filter-button').forEach(button => {
+            button.addEventListener('click', function(event) {
+                // Impedir que o evento suba para o header (evita colapso indesejado)
+                event.stopPropagation();
+                
+                const filterValue = this.getAttribute('data-filter');
+                const section = this.closest('.section');
+                const issues = section.querySelectorAll('.issue-item');
+                
+                // Verificar se a seção está colapsada e expandir se necessário
+                const content = section.querySelector('.section-content');
+                const toggle = section.querySelector('.collapse-toggle');
+                
+                if (content && content.classList.contains('collapsed')) {
+                    // Expandir a seção automaticamente
+                    content.classList.remove('collapsed');
+                    content.classList.add('expanded');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    if (toggle) {
+                        toggle.classList.remove('collapsed');
+                        toggle.innerHTML = '▼';
+                    }
+                }
+                
+                // Remover classe active de todos os botões da mesma seção
+                section.querySelectorAll('.filter-button').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                
+                // Adicionar classe active ao botão clicado
+                this.classList.add('active');
+                
+                // Mostrar/esconder issues baseado no filtro
+                issues.forEach(issue => {
+                    if (filterValue === 'all') {
+                        issue.style.display = 'block';
+                    } else {
+                        const issueType = issue.getAttribute('data-issue-type');
+                        if (issueType === filterValue) {
+                            issue.style.display = 'block';
+                        } else {
+                            issue.style.display = 'none';
+                        }
+                    }
+                });
+            });
+        });
+        
+        });
+        
+        // Função para controlar colapso das seções (global)
+        function toggleSection(header) {
+            const section = header.parentElement;
+            const content = section.querySelector('.section-content');
+            const toggle = section.querySelector('.collapse-toggle');
+            
+            if (content.classList.contains('collapsed')) {
+                // Expandir
+                content.classList.remove('collapsed');
+                content.classList.add('expanded');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                toggle.classList.remove('collapsed');
+                toggle.innerHTML = '▼';
+            } else {
+                // Colapsar
+                content.classList.add('collapsed');
+                content.classList.remove('expanded');
+                content.style.maxHeight = '0px';
+                toggle.classList.add('collapsed');
+                toggle.innerHTML = '▲';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,Criar estruturas de domínio e DTOs - FASE 1 - Estrutura Base,"
+Criar interface DocumentoscopiaPort no módulo docm-srv-entidades-externas.
+Criar DTOs DocumentoscopiaRequest e DocumentoscopiaResponse conforme contrato Serasa.
+Implementar exceção customizada DocumentoscopiaException.",DocMatch,2h,,PLTFAT-12248,,,
+Sub-Imp,Configurar DocumentoscopiaConfig - FASE 1 - Estrutura Base,"
+Criar classe DocumentoscopiaConfig usando @ConfigurationProperties.
+Propriedades: url, endpoint, apiKey, timeoutConnect, timeoutRead.
+",DocMatch,2h,,PLTFAT-12248,,,
+Sub-Imp,Implementar DocumentoscopiaApiAdapter - FASE 2 - Implementação do Adapter,"
+Criar adapter implementando DocumentoscopiaPort.
+Configurar WebClient com timeouts (connect 8s / read 60s).
+Implementar método analisarQualidadeImagem() chamando o endpoint Serasa.
+",DocMatch,2h,,PLTFAT-12248,,,
+Sub-Imp,"Implementar headers, logs e tratamento de erros - FASE 2 - Implementação do Adapter","
+Adicionar headers X-API-Key e X-Correlation-ID.
+Implementar mapeamento de exceções HTTP.
+Adicionar logs estruturados (início, sucesso, falha).
+Mascarar informações sensíveis (especialmente pdfBase64).
+",DocMatch,2h,,PLTFAT-12248,,,
+Sub-Imp,Configurar Retry com Resilience4j - FASE 3 - Resiliência e Retry,"
+Configurar retry (máx. 2 tentativas, delay de 1s).
+Aplicar retry no adapter.
+Adicionar logs em cada tentativa.
+Realizar teste manual para validar comportamento.
+",DocMatch,2h,,PLTFAT-12248,,,
+Sub-Imp,Criar testes unitários do Adapter - FASE 4 - Testes Unitários,"
+Mockar WebClient com Mockito.
+Criar cenários de teste: sucesso APTO, sucesso NAO_APTO, timeout, erros 4xx, erros 5xx.
+Validar envio de headers.
+Garantir cobertura mínima de 85%.
+",DocMatch,4h,,PLTFAT-12248,,,
+Sub-Imp,Configurar WireMock e criar testes de integração - FASE 5 - Testes de Integração,"
+Configurar WireMock simulando o endpoint Serasa.
+Criar stubs para:
+200 OK (rank = 1)
+200 OK (rank > 1, com informações adicionais)
+Timeout (> 60s)
+401 API Key inválida
+503 serviço indisponível
+
+Validar contrato completo da resposta.
+Executar todo o conjunto de testes.
+",DocMatch,4h,,PLTFAT-12248,,,
+Sub-Imp,"Revisão, documentação e deploy - FASE 6 - Finalização","
+Executar análise SonarQube e corrigir issues.
+Realizar code review interno.
+Atualizar documentação (README + Javadoc).
+Validar application.yml.
+Realizar deploy em ambiente de desenvolvimento.
+Executar teste exploratório manual (se PDF disponível).
+Validar Definition of Done.
+",DocMatch,4h,,PLTFAT-12248,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-12248,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,12h,,PLTFAT-12248,,,

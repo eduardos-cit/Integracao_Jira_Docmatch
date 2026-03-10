@@ -1,0 +1,1473 @@
+2026-02-25 14:28:01,780 - INFO - 
+======================================================================
+2026-02-25 14:28:01,780 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-02-25 14:28:01,781 - INFO - ======================================================================
+2026-02-25 14:28:01,782 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-02-25 14:28:01,782 - INFO - Projeto: PLTFAT
+2026-02-25 14:28:01,783 - INFO - Team configurado: DocMatch
+2026-02-25 14:28:01,783 - INFO - Pasta CSV: issues
+2026-02-25 14:28:01,784 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-02-25 14:28:01,784 - INFO - Projeto configurado: PLTFAT
+2026-02-25 14:28:01,785 - INFO - 
+Processando arquivos da pasta: issues
+2026-02-25 14:28:01,785 - INFO - 📋 Arquivos template ignorados: 3
+2026-02-25 14:28:01,786 - INFO -    ↳ template_issues.csv
+2026-02-25 14:28:01,786 - INFO -    ↳ template_issues_completo.csv
+2026-02-25 14:28:01,786 - INFO -    ↳ template_vazio.csv
+2026-02-25 14:28:01,786 - INFO - Encontrados 1 arquivos .csv para processar
+2026-02-25 14:28:01,787 - INFO - 
+============================================================
+2026-02-25 14:28:01,787 - INFO - Processando arquivo: end_point_alex.csv
+2026-02-25 14:28:01,787 - INFO - ============================================================
+2026-02-25 14:28:01,788 - INFO - Arquivo issues\end_point_alex.csv: 8 issues mapeadas
+2026-02-25 14:28:01,789 - INFO - Preparando criação em lote de 8 issues
+2026-02-25 14:28:01,791 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260225_142801.json
+2026-02-25 14:28:41,577 - INFO - ✓ Bulk create concluído: 8 issues criadas
+2026-02-25 14:28:41,578 - INFO - ✓ Issue criada: PLTFAT-12822
+2026-02-25 14:28:41,579 - INFO - ✓ Issue criada: PLTFAT-12823
+2026-02-25 14:28:41,579 - INFO - ✓ Issue criada: PLTFAT-12824
+2026-02-25 14:28:41,579 - INFO - ✓ Issue criada: PLTFAT-12825
+2026-02-25 14:28:41,579 - INFO - ✓ Issue criada: PLTFAT-12826
+2026-02-25 14:28:41,579 - INFO - ✓ Issue criada: PLTFAT-12827
+2026-02-25 14:28:41,579 - INFO - ✓ Issue criada: PLTFAT-12828
+2026-02-25 14:28:41,579 - INFO - ✓ Issue criada: PLTFAT-12829
+2026-02-25 14:28:41,580 - INFO - ✓ Arquivo movido para Processados/ como: end_point_alex_prc.csv
+2026-02-25 14:28:41,582 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-02-25 14:28:41,582 - INFO - 
+======================================================================
+2026-02-25 14:28:41,583 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-02-25 14:28:41,583 - INFO - ======================================================================
+2026-02-25 14:28:41,583 - INFO - Total de arquivos: 1
+2026-02-25 14:28:41,584 - INFO - Issues criadas: 8
+2026-02-25 14:28:41,584 - INFO - Erros: 0
+2026-02-27 14:37:59,861 - INFO - 
+======================================================================
+2026-02-27 14:37:59,861 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-02-27 14:37:59,862 - INFO - ======================================================================
+2026-02-27 14:37:59,862 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-02-27 14:37:59,863 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-02-27 14:37:59,864 - INFO - Projeto: PLTFAT
+2026-02-27 14:37:59,864 - INFO - Team configurado: DocMatch
+2026-02-27 14:37:59,865 - INFO - Pasta CSV: issues
+2026-02-27 14:37:59,866 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-02-27 14:37:59,866 - INFO - Projeto configurado: PLTFAT
+2026-02-27 14:37:59,866 - INFO - 
+Processando arquivos da pasta: issues
+2026-02-27 14:37:59,867 - INFO - 📋 Arquivos template ignorados: 3
+2026-02-27 14:37:59,867 - INFO -    ↳ template_issues.csv
+2026-02-27 14:37:59,867 - INFO -    ↳ template_issues_completo.csv
+2026-02-27 14:37:59,868 - INFO -    ↳ template_vazio.csv
+2026-02-27 14:37:59,868 - INFO - Encontrados 1 arquivos .csv para processar
+2026-02-27 14:37:59,868 - INFO - 
+============================================================
+2026-02-27 14:37:59,869 - INFO - Processando arquivo: teste_aut_rg_ant.csv
+2026-02-27 14:37:59,869 - INFO - ============================================================
+2026-02-27 14:37:59,870 - INFO - Arquivo issues\teste_aut_rg_ant.csv: 9 issues mapeadas
+2026-02-27 14:37:59,870 - INFO - Preparando criação em lote de 9 issues
+2026-02-27 14:37:59,872 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260227_143759.json
+2026-02-27 14:37:59,873 - INFO - 
+======================================================================
+2026-02-27 14:37:59,873 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-02-27 14:37:59,874 - INFO - ======================================================================
+2026-02-27 14:37:59,875 - INFO - 
+======================================================================
+2026-02-27 14:37:59,876 - INFO - 📊 Total de issues no payload: 9
+2026-02-27 14:37:59,876 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-02-27 14:37:59,876 - INFO - ======================================================================
+2026-02-27 14:37:59,878 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-02-27 14:37:59,878 - INFO - 
+======================================================================
+2026-02-27 14:37:59,879 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-02-27 14:37:59,879 - INFO - ======================================================================
+2026-02-27 14:37:59,880 - INFO - Total de arquivos: 1
+2026-02-27 14:37:59,880 - INFO - Issues criadas: 9
+2026-02-27 14:37:59,880 - INFO - Erros: 0
+2026-02-27 14:40:17,949 - INFO - 
+======================================================================
+2026-02-27 14:40:17,949 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-02-27 14:40:17,950 - INFO - ======================================================================
+2026-02-27 14:40:17,950 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-02-27 14:40:17,951 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-02-27 14:40:17,951 - INFO - Projeto: PLTFAT
+2026-02-27 14:40:17,951 - INFO - Team configurado: DocMatch
+2026-02-27 14:40:17,951 - INFO - Pasta CSV: issues
+2026-02-27 14:40:17,951 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-02-27 14:40:17,951 - INFO - Projeto configurado: PLTFAT
+2026-02-27 14:40:17,952 - INFO - 
+Processando arquivos da pasta: issues
+2026-02-27 14:40:17,952 - INFO - 📋 Arquivos template ignorados: 3
+2026-02-27 14:40:17,953 - INFO -    ↳ template_issues.csv
+2026-02-27 14:40:17,953 - INFO -    ↳ template_issues_completo.csv
+2026-02-27 14:40:17,953 - INFO -    ↳ template_vazio.csv
+2026-02-27 14:40:17,953 - INFO - Encontrados 1 arquivos .csv para processar
+2026-02-27 14:40:17,953 - INFO - 
+============================================================
+2026-02-27 14:40:17,954 - INFO - Processando arquivo: teste_aut_rg_ant.csv
+2026-02-27 14:40:17,954 - INFO - ============================================================
+2026-02-27 14:40:17,955 - INFO - Arquivo issues\teste_aut_rg_ant.csv: 7 issues mapeadas
+2026-02-27 14:40:17,955 - INFO - Preparando criação em lote de 7 issues
+2026-02-27 14:40:17,958 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260227_144017.json
+2026-02-27 14:40:17,958 - INFO - 
+======================================================================
+2026-02-27 14:40:17,958 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-02-27 14:40:17,959 - INFO - ======================================================================
+2026-02-27 14:40:17,960 - INFO - 
+======================================================================
+2026-02-27 14:40:17,961 - INFO - 📊 Total de issues no payload: 7
+2026-02-27 14:40:17,961 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-02-27 14:40:17,961 - INFO - ======================================================================
+2026-02-27 14:40:17,963 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-02-27 14:40:17,963 - INFO - 
+======================================================================
+2026-02-27 14:40:17,964 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-02-27 14:40:17,964 - INFO - ======================================================================
+2026-02-27 14:40:17,964 - INFO - Total de arquivos: 1
+2026-02-27 14:40:17,965 - INFO - Issues criadas: 7
+2026-02-27 14:40:17,965 - INFO - Erros: 0
+2026-02-27 14:41:15,071 - INFO - 
+======================================================================
+2026-02-27 14:41:15,072 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-02-27 14:41:15,072 - INFO - ======================================================================
+2026-02-27 14:41:15,072 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-02-27 14:41:15,073 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-02-27 14:41:15,073 - INFO - Projeto: PLTFAT
+2026-02-27 14:41:15,074 - INFO - Team configurado: DocMatch
+2026-02-27 14:41:15,074 - INFO - Pasta CSV: issues
+2026-02-27 14:41:15,074 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-02-27 14:41:15,074 - INFO - Projeto configurado: PLTFAT
+2026-02-27 14:41:15,075 - INFO - 
+Processando arquivos da pasta: issues
+2026-02-27 14:41:15,075 - INFO - 📋 Arquivos template ignorados: 3
+2026-02-27 14:41:15,075 - INFO -    ↳ template_issues.csv
+2026-02-27 14:41:15,075 - INFO -    ↳ template_issues_completo.csv
+2026-02-27 14:41:15,075 - INFO -    ↳ template_vazio.csv
+2026-02-27 14:41:15,076 - INFO - Encontrados 1 arquivos .csv para processar
+2026-02-27 14:41:15,076 - INFO - 
+============================================================
+2026-02-27 14:41:15,076 - INFO - Processando arquivo: teste_aut_rg_ant.csv
+2026-02-27 14:41:15,076 - INFO - ============================================================
+2026-02-27 14:41:15,077 - INFO - Arquivo issues\teste_aut_rg_ant.csv: 7 issues mapeadas
+2026-02-27 14:41:15,077 - INFO - Preparando criação em lote de 7 issues
+2026-02-27 14:41:15,078 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260227_144115.json
+2026-02-27 14:41:15,079 - INFO - 
+======================================================================
+2026-02-27 14:41:15,079 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-02-27 14:41:15,079 - INFO - ======================================================================
+2026-02-27 14:41:15,081 - INFO - 
+======================================================================
+2026-02-27 14:41:15,081 - INFO - 📊 Total de issues no payload: 7
+2026-02-27 14:41:15,081 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-02-27 14:41:15,082 - INFO - ======================================================================
+2026-02-27 14:41:15,083 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-02-27 14:41:15,084 - INFO - 
+======================================================================
+2026-02-27 14:41:15,084 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-02-27 14:41:15,084 - INFO - ======================================================================
+2026-02-27 14:41:15,085 - INFO - Total de arquivos: 1
+2026-02-27 14:41:15,085 - INFO - Issues criadas: 7
+2026-02-27 14:41:15,085 - INFO - Erros: 0
+2026-02-27 14:42:03,918 - INFO - 
+======================================================================
+2026-02-27 14:42:03,918 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-02-27 14:42:03,919 - INFO - ======================================================================
+2026-02-27 14:42:03,920 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-02-27 14:42:03,920 - INFO - Projeto: PLTFAT
+2026-02-27 14:42:03,920 - INFO - Team configurado: DocMatch
+2026-02-27 14:42:03,921 - INFO - Pasta CSV: issues
+2026-02-27 14:42:03,921 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-02-27 14:42:03,922 - INFO - Projeto configurado: PLTFAT
+2026-02-27 14:42:03,922 - INFO - 
+Processando arquivos da pasta: issues
+2026-02-27 14:42:03,922 - INFO - 📋 Arquivos template ignorados: 3
+2026-02-27 14:42:03,923 - INFO -    ↳ template_issues.csv
+2026-02-27 14:42:03,923 - INFO -    ↳ template_issues_completo.csv
+2026-02-27 14:42:03,923 - INFO -    ↳ template_vazio.csv
+2026-02-27 14:42:03,923 - INFO - Encontrados 1 arquivos .csv para processar
+2026-02-27 14:42:03,924 - INFO - 
+============================================================
+2026-02-27 14:42:03,924 - INFO - Processando arquivo: teste_aut_rg_ant.csv
+2026-02-27 14:42:03,924 - INFO - ============================================================
+2026-02-27 14:42:03,925 - INFO - Arquivo issues\teste_aut_rg_ant.csv: 7 issues mapeadas
+2026-02-27 14:42:03,926 - INFO - Preparando criação em lote de 7 issues
+2026-02-27 14:42:03,928 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260227_144203.json
+2026-02-27 14:43:04,012 - ERROR - ✗ Timeout ao criar issues - servidor demorou muito para responder
+2026-02-27 14:43:04,014 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-02-27 14:43:04,015 - INFO - 
+======================================================================
+2026-02-27 14:43:04,015 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-02-27 14:43:04,016 - INFO - ======================================================================
+2026-02-27 14:43:04,016 - INFO - Total de arquivos: 1
+2026-02-27 14:43:04,016 - INFO - Issues criadas: 0
+2026-02-27 14:43:04,016 - INFO - Erros: 1
+2026-03-03 08:38:52,185 - INFO - 
+======================================================================
+2026-03-03 08:38:52,185 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-03 08:38:52,185 - INFO - ======================================================================
+2026-03-03 08:38:52,186 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-03 08:38:52,186 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:38:52,187 - INFO - Projeto: PLTFAT
+2026-03-03 08:38:52,187 - INFO - Team configurado: DocMatch
+2026-03-03 08:38:52,187 - INFO - Pasta CSV: issues
+2026-03-03 08:38:52,188 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:38:52,188 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:38:52,188 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:38:52,189 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:38:52,189 - INFO -    ↳ template_issues.csv
+2026-03-03 08:38:52,189 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:38:52,189 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:38:52,190 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:38:52,190 - INFO - 
+============================================================
+2026-03-03 08:38:52,190 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:38:52,190 - INFO - ============================================================
+2026-03-03 08:38:52,191 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:38:52,191 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:38:52,193 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260303_083852.json
+2026-03-03 08:38:52,193 - INFO - 
+======================================================================
+2026-03-03 08:38:52,194 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-03 08:38:52,194 - INFO - ======================================================================
+2026-03-03 08:38:52,195 - INFO - 
+======================================================================
+2026-03-03 08:38:52,196 - INFO - 📊 Total de issues no payload: 9
+2026-03-03 08:38:52,196 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-03 08:38:52,197 - INFO - ======================================================================
+2026-03-03 08:38:52,199 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:38:52,199 - INFO - 
+======================================================================
+2026-03-03 08:38:52,199 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:38:52,199 - INFO - ======================================================================
+2026-03-03 08:38:52,200 - INFO - Total de arquivos: 1
+2026-03-03 08:38:52,200 - INFO - Issues criadas: 9
+2026-03-03 08:38:52,200 - INFO - Erros: 0
+2026-03-03 08:39:33,074 - INFO - 
+======================================================================
+2026-03-03 08:39:33,074 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-03 08:39:33,075 - INFO - ======================================================================
+2026-03-03 08:39:33,076 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:39:33,076 - INFO - Projeto: PLTFAT
+2026-03-03 08:39:33,077 - INFO - Team configurado: DocMatch
+2026-03-03 08:39:33,077 - INFO - Pasta CSV: issues
+2026-03-03 08:39:33,077 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:39:33,078 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:39:33,078 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:39:33,078 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:39:33,079 - INFO -    ↳ template_issues.csv
+2026-03-03 08:39:33,079 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:39:33,079 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:39:33,079 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:39:33,080 - INFO - 
+============================================================
+2026-03-03 08:39:33,080 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:39:33,080 - INFO - ============================================================
+2026-03-03 08:39:33,081 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:39:33,082 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:39:33,083 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260303_083933.json
+2026-03-03 08:39:33,203 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-03 08:39:33,204 - ERROR - Resposta: {"issues":[],"errors":[{"status":400,"elementErrors":{"errorMessages":[],"errors":{"summary":"Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10401":"Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.","description":"Field 'description' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10100":"Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.","...
+2026-03-03 08:39:33,204 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 1
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 2
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 3
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 4
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 5
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 6
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 7
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 8
+    }
+  ]
+}
+2026-03-03 08:39:33,207 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:39:33,207 - INFO - 
+======================================================================
+2026-03-03 08:39:33,208 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:39:33,208 - INFO - ======================================================================
+2026-03-03 08:39:33,208 - INFO - Total de arquivos: 1
+2026-03-03 08:39:33,208 - INFO - Issues criadas: 0
+2026-03-03 08:39:33,208 - INFO - Erros: 1
+2026-03-03 08:40:17,142 - INFO - 
+======================================================================
+2026-03-03 08:40:17,143 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-03 08:40:17,143 - INFO - ======================================================================
+2026-03-03 08:40:17,143 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-03 08:40:17,144 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:40:17,144 - INFO - Projeto: PLTFAT
+2026-03-03 08:40:17,144 - INFO - Team configurado: DocMatch
+2026-03-03 08:40:17,145 - INFO - Pasta CSV: issues
+2026-03-03 08:40:17,145 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:40:17,145 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:40:17,145 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:40:17,146 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:40:17,146 - INFO -    ↳ template_issues.csv
+2026-03-03 08:40:17,147 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:40:17,147 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:40:17,147 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:40:17,147 - INFO - 
+============================================================
+2026-03-03 08:40:17,148 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:40:17,148 - INFO - ============================================================
+2026-03-03 08:40:17,149 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:40:17,149 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:40:17,150 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260303_084017.json
+2026-03-03 08:40:17,151 - INFO - 
+======================================================================
+2026-03-03 08:40:17,151 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-03 08:40:17,151 - INFO - ======================================================================
+2026-03-03 08:40:17,152 - INFO - 
+======================================================================
+2026-03-03 08:40:17,152 - INFO - 📊 Total de issues no payload: 9
+2026-03-03 08:40:17,152 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-03 08:40:17,153 - INFO - ======================================================================
+2026-03-03 08:40:17,154 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:40:17,155 - INFO - 
+======================================================================
+2026-03-03 08:40:17,155 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:40:17,155 - INFO - ======================================================================
+2026-03-03 08:40:17,155 - INFO - Total de arquivos: 1
+2026-03-03 08:40:17,156 - INFO - Issues criadas: 9
+2026-03-03 08:40:17,156 - INFO - Erros: 0
+2026-03-03 08:42:02,706 - INFO - 
+======================================================================
+2026-03-03 08:42:02,707 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-03 08:42:02,707 - INFO - ======================================================================
+2026-03-03 08:42:02,707 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-03 08:42:02,708 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:42:02,708 - INFO - Projeto: PLTFAT
+2026-03-03 08:42:02,708 - INFO - Team configurado: DocMatch
+2026-03-03 08:42:02,708 - INFO - Pasta CSV: issues
+2026-03-03 08:42:02,708 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:42:02,709 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:42:02,709 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:42:02,709 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:42:02,710 - INFO -    ↳ template_issues.csv
+2026-03-03 08:42:02,710 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:42:02,711 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:42:02,711 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:42:02,711 - INFO - 
+============================================================
+2026-03-03 08:42:02,711 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:42:02,711 - INFO - ============================================================
+2026-03-03 08:42:02,712 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:42:02,712 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:42:02,714 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260303_084202.json
+2026-03-03 08:42:02,715 - INFO - 
+======================================================================
+2026-03-03 08:42:02,715 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-03 08:42:02,716 - INFO - ======================================================================
+2026-03-03 08:42:02,717 - INFO - 
+======================================================================
+2026-03-03 08:42:02,718 - INFO - 📊 Total de issues no payload: 9
+2026-03-03 08:42:02,718 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-03 08:42:02,718 - INFO - ======================================================================
+2026-03-03 08:42:02,721 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:42:02,721 - INFO - 
+======================================================================
+2026-03-03 08:42:02,722 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:42:02,722 - INFO - ======================================================================
+2026-03-03 08:42:02,722 - INFO - Total de arquivos: 1
+2026-03-03 08:42:02,722 - INFO - Issues criadas: 9
+2026-03-03 08:42:02,723 - INFO - Erros: 0
+2026-03-03 08:42:59,778 - INFO - 
+======================================================================
+2026-03-03 08:42:59,778 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-03 08:42:59,779 - INFO - ======================================================================
+2026-03-03 08:42:59,779 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-03 08:42:59,779 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:42:59,780 - INFO - Projeto: PLTFAT
+2026-03-03 08:42:59,780 - INFO - Team configurado: DocMatch
+2026-03-03 08:42:59,780 - INFO - Pasta CSV: issues
+2026-03-03 08:42:59,781 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:42:59,781 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:42:59,781 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:42:59,782 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:42:59,782 - INFO -    ↳ template_issues.csv
+2026-03-03 08:42:59,782 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:42:59,783 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:42:59,783 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:42:59,783 - INFO - 
+============================================================
+2026-03-03 08:42:59,783 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:42:59,784 - INFO - ============================================================
+2026-03-03 08:42:59,785 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:42:59,785 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:42:59,788 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260303_084259.json
+2026-03-03 08:42:59,789 - INFO - 
+======================================================================
+2026-03-03 08:42:59,789 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-03 08:42:59,790 - INFO - ======================================================================
+2026-03-03 08:42:59,793 - INFO - 
+======================================================================
+2026-03-03 08:42:59,793 - INFO - 📊 Total de issues no payload: 9
+2026-03-03 08:42:59,794 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-03 08:42:59,794 - INFO - ======================================================================
+2026-03-03 08:42:59,797 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:42:59,797 - INFO - 
+======================================================================
+2026-03-03 08:42:59,798 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:42:59,798 - INFO - ======================================================================
+2026-03-03 08:42:59,799 - INFO - Total de arquivos: 1
+2026-03-03 08:42:59,799 - INFO - Issues criadas: 9
+2026-03-03 08:42:59,799 - INFO - Erros: 0
+2026-03-03 08:43:37,041 - INFO - 
+======================================================================
+2026-03-03 08:43:37,042 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-03 08:43:37,042 - INFO - ======================================================================
+2026-03-03 08:43:37,043 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:43:37,043 - INFO - Projeto: PLTFAT
+2026-03-03 08:43:37,043 - INFO - Team configurado: DocMatch
+2026-03-03 08:43:37,043 - INFO - Pasta CSV: issues
+2026-03-03 08:43:37,044 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:43:37,044 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:43:37,044 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:43:37,045 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:43:37,045 - INFO -    ↳ template_issues.csv
+2026-03-03 08:43:37,045 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:43:37,046 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:43:37,047 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:43:37,047 - INFO - 
+============================================================
+2026-03-03 08:43:37,047 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:43:37,047 - INFO - ============================================================
+2026-03-03 08:43:37,048 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:43:37,048 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:43:37,051 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260303_084337.json
+2026-03-03 08:43:37,161 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-03 08:43:37,162 - ERROR - Resposta: {"issues":[],"errors":[{"status":400,"elementErrors":{"errorMessages":[],"errors":{"summary":"Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10401":"Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.","description":"Field 'description' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10100":"Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.","...
+2026-03-03 08:43:37,162 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 1
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 2
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 3
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 4
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 5
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 6
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 7
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 8
+    }
+  ]
+}
+2026-03-03 08:43:37,165 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:43:37,165 - INFO - 
+======================================================================
+2026-03-03 08:43:37,165 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:43:37,165 - INFO - ======================================================================
+2026-03-03 08:43:37,166 - INFO - Total de arquivos: 1
+2026-03-03 08:43:37,166 - INFO - Issues criadas: 0
+2026-03-03 08:43:37,166 - INFO - Erros: 1
+2026-03-03 08:50:29,687 - INFO - 
+======================================================================
+2026-03-03 08:50:29,687 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-03 08:50:29,687 - INFO - ======================================================================
+2026-03-03 08:50:29,688 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-03 08:50:29,688 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:50:29,689 - INFO - Projeto: PLTFAT
+2026-03-03 08:50:29,689 - INFO - Team configurado: DocMatch
+2026-03-03 08:50:29,689 - INFO - Pasta CSV: issues
+2026-03-03 08:50:29,690 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:50:29,690 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:50:29,690 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:50:29,691 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:50:29,691 - INFO -    ↳ template_issues.csv
+2026-03-03 08:50:29,691 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:50:29,691 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:50:29,691 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:50:29,691 - INFO - 
+============================================================
+2026-03-03 08:50:29,691 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:50:29,692 - INFO - ============================================================
+2026-03-03 08:50:29,692 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:50:29,692 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:50:29,698 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260303_085029.json
+2026-03-03 08:50:29,698 - INFO - 
+======================================================================
+2026-03-03 08:50:29,698 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-03 08:50:29,699 - INFO - ======================================================================
+2026-03-03 08:50:29,701 - INFO - 
+======================================================================
+2026-03-03 08:50:29,701 - INFO - 📊 Total de issues no payload: 9
+2026-03-03 08:50:29,702 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-03 08:50:29,702 - INFO - ======================================================================
+2026-03-03 08:50:29,704 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:50:29,704 - INFO - 
+======================================================================
+2026-03-03 08:50:29,705 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:50:29,705 - INFO - ======================================================================
+2026-03-03 08:50:29,705 - INFO - Total de arquivos: 1
+2026-03-03 08:50:29,706 - INFO - Issues criadas: 9
+2026-03-03 08:50:29,706 - INFO - Erros: 0
+2026-03-03 08:51:05,014 - INFO - 
+======================================================================
+2026-03-03 08:51:05,014 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-03 08:51:05,015 - INFO - ======================================================================
+2026-03-03 08:51:05,016 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:51:05,016 - INFO - Projeto: PLTFAT
+2026-03-03 08:51:05,016 - INFO - Team configurado: DocMatch
+2026-03-03 08:51:05,016 - INFO - Pasta CSV: issues
+2026-03-03 08:51:05,016 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:51:05,017 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:51:05,017 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:51:05,017 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:51:05,017 - INFO -    ↳ template_issues.csv
+2026-03-03 08:51:05,017 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:51:05,017 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:51:05,017 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:51:05,017 - INFO - 
+============================================================
+2026-03-03 08:51:05,017 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:51:05,018 - INFO - ============================================================
+2026-03-03 08:51:05,018 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:51:05,018 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:51:05,019 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260303_085105.json
+2026-03-03 08:51:05,122 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-03 08:51:05,123 - ERROR - Resposta: {"issues":[],"errors":[{"status":400,"elementErrors":{"errorMessages":[],"errors":{"summary":"Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10401":"Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.","description":"Field 'description' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10100":"Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.","...
+2026-03-03 08:51:05,123 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 1
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 2
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 3
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 4
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 5
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 6
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 7
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 8
+    }
+  ]
+}
+2026-03-03 08:51:05,126 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:51:05,126 - INFO - 
+======================================================================
+2026-03-03 08:51:05,126 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:51:05,127 - INFO - ======================================================================
+2026-03-03 08:51:05,127 - INFO - Total de arquivos: 1
+2026-03-03 08:51:05,127 - INFO - Issues criadas: 0
+2026-03-03 08:51:05,127 - INFO - Erros: 1
+2026-03-03 08:52:32,616 - INFO - 
+======================================================================
+2026-03-03 08:52:32,617 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-03 08:52:32,617 - INFO - ======================================================================
+2026-03-03 08:52:32,619 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:52:32,619 - INFO - Projeto: PLTFAT
+2026-03-03 08:52:32,619 - INFO - Team configurado: DocMatch
+2026-03-03 08:52:32,619 - INFO - Pasta CSV: issues
+2026-03-03 08:52:32,620 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:52:32,620 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:52:32,620 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:52:32,620 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:52:32,620 - INFO -    ↳ template_issues.csv
+2026-03-03 08:52:32,621 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:52:32,621 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:52:32,621 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:52:32,622 - INFO - 
+============================================================
+2026-03-03 08:52:32,622 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 08:52:32,623 - INFO - ============================================================
+2026-03-03 08:52:32,624 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 08:52:32,624 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:52:32,628 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260303_085232.json
+2026-03-03 08:52:32,727 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-03 08:52:32,728 - ERROR - Resposta: {"issues":[],"errors":[{"status":400,"elementErrors":{"errorMessages":[],"errors":{"summary":"Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10401":"Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.","description":"Field 'description' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10100":"Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.","...
+2026-03-03 08:52:32,728 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 1
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 2
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 3
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 4
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 5
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 6
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 7
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 8
+    }
+  ]
+}
+2026-03-03 08:52:32,732 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:52:32,732 - INFO - 
+======================================================================
+2026-03-03 08:52:32,732 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:52:32,733 - INFO - ======================================================================
+2026-03-03 08:52:32,733 - INFO - Total de arquivos: 1
+2026-03-03 08:52:32,733 - INFO - Issues criadas: 0
+2026-03-03 08:52:32,733 - INFO - Erros: 1
+2026-03-03 08:59:47,329 - INFO - 
+======================================================================
+2026-03-03 08:59:47,330 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-03 08:59:47,330 - INFO - ======================================================================
+2026-03-03 08:59:47,330 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-03 08:59:47,331 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:59:47,331 - INFO - Projeto: PLTFAT
+2026-03-03 08:59:47,331 - INFO - Team configurado: DocMatch
+2026-03-03 08:59:47,331 - INFO - Pasta CSV: issues
+2026-03-03 08:59:47,332 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:59:47,332 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:59:47,332 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:59:47,332 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:59:47,332 - INFO -    ↳ template_issues.csv
+2026-03-03 08:59:47,332 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:59:47,333 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:59:47,333 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:59:47,333 - INFO - 
+============================================================
+2026-03-03 08:59:47,333 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_1772538985868.csv
+2026-03-03 08:59:47,333 - INFO - ============================================================
+2026-03-03 08:59:47,333 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_1772538985868.csv: 9 issues mapeadas
+2026-03-03 08:59:47,333 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:59:47,335 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260303_085947.json
+2026-03-03 08:59:47,335 - INFO - 
+======================================================================
+2026-03-03 08:59:47,335 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-03 08:59:47,335 - INFO - ======================================================================
+2026-03-03 08:59:47,337 - INFO - 
+======================================================================
+2026-03-03 08:59:47,338 - INFO - 📊 Total de issues no payload: 9
+2026-03-03 08:59:47,338 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-03 08:59:47,338 - INFO - ======================================================================
+2026-03-03 08:59:47,341 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:59:47,341 - INFO - 
+======================================================================
+2026-03-03 08:59:47,342 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:59:47,342 - INFO - ======================================================================
+2026-03-03 08:59:47,342 - INFO - Total de arquivos: 1
+2026-03-03 08:59:47,343 - INFO - Issues criadas: 9
+2026-03-03 08:59:47,343 - INFO - Erros: 0
+2026-03-03 08:59:59,570 - INFO - 
+======================================================================
+2026-03-03 08:59:59,570 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-03 08:59:59,571 - INFO - ======================================================================
+2026-03-03 08:59:59,572 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 08:59:59,572 - INFO - Projeto: PLTFAT
+2026-03-03 08:59:59,573 - INFO - Team configurado: DocMatch
+2026-03-03 08:59:59,573 - INFO - Pasta CSV: issues
+2026-03-03 08:59:59,574 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 08:59:59,574 - INFO - Projeto configurado: PLTFAT
+2026-03-03 08:59:59,575 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 08:59:59,575 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 08:59:59,576 - INFO -    ↳ template_issues.csv
+2026-03-03 08:59:59,576 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 08:59:59,577 - INFO -    ↳ template_vazio.csv
+2026-03-03 08:59:59,577 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 08:59:59,577 - INFO - 
+============================================================
+2026-03-03 08:59:59,578 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_1772538985868.csv
+2026-03-03 08:59:59,578 - INFO - ============================================================
+2026-03-03 08:59:59,579 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_1772538985868.csv: 9 issues mapeadas
+2026-03-03 08:59:59,580 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 08:59:59,582 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260303_085959.json
+2026-03-03 08:59:59,698 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-03 08:59:59,699 - ERROR - Resposta: {"issues":[],"errors":[{"status":400,"elementErrors":{"errorMessages":[],"errors":{"summary":"Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10401":"Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.","description":"Field 'description' cannot be set. It is not on the appropriate screen, or unknown.","customfield_10100":"Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.","...
+2026-03-03 08:59:59,700 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 1
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 2
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 3
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 4
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 5
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 6
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 7
+    },
+    {
+      "status": 400,
+      "elementErrors": {
+        "errorMessages": [],
+        "errors": {
+          "summary": "Field 'summary' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10401": "Field 'customfield_10401' cannot be set. It is not on the appropriate screen, or unknown.",
+          "description": "Field 'description' cannot be set. It is not on the appropriate screen, or unknown.",
+          "customfield_10100": "Field 'customfield_10100' cannot be set. It is not on the appropriate screen, or unknown.",
+          "timetracking": "Field 'timetracking' cannot be set. It is not on the appropriate screen, or unknown."
+        }
+      },
+      "failedElementNumber": 8
+    }
+  ]
+}
+2026-03-03 08:59:59,702 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 08:59:59,702 - INFO - 
+======================================================================
+2026-03-03 08:59:59,703 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 08:59:59,703 - INFO - ======================================================================
+2026-03-03 08:59:59,703 - INFO - Total de arquivos: 1
+2026-03-03 08:59:59,704 - INFO - Issues criadas: 0
+2026-03-03 08:59:59,704 - INFO - Erros: 1
+2026-03-03 09:01:10,511 - INFO - 
+======================================================================
+2026-03-03 09:01:10,511 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-03 09:01:10,512 - INFO - ======================================================================
+2026-03-03 09:01:10,513 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 09:01:10,513 - INFO - Projeto: PLTFAT
+2026-03-03 09:01:10,513 - INFO - Team configurado: DocMatch
+2026-03-03 09:01:10,513 - INFO - Pasta CSV: issues
+2026-03-03 09:01:10,514 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 09:01:10,514 - INFO - Projeto configurado: PLTFAT
+2026-03-03 09:01:10,514 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 09:01:10,515 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 09:01:10,515 - INFO -    ↳ template_issues.csv
+2026-03-03 09:01:10,515 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 09:01:10,515 - INFO -    ↳ template_vazio.csv
+2026-03-03 09:01:10,515 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 09:01:10,515 - INFO - 
+============================================================
+2026-03-03 09:01:10,516 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv
+2026-03-03 09:01:10,516 - INFO - ============================================================
+2026-03-03 09:01:10,516 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc.csv: 9 issues mapeadas
+2026-03-03 09:01:10,516 - INFO - Preparando criação em lote de 9 issues
+2026-03-03 09:01:10,518 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260303_090110.json
+2026-03-03 09:01:29,341 - INFO - ✓ Bulk create concluído: 7 issues criadas
+2026-03-03 09:01:29,341 - WARNING - ⚠ Erros durante bulk create: 2 falhas
+2026-03-03 09:01:29,342 - ERROR -   Erro 1: {'status': 403, 'elementErrors': {'errorMessages': ['You do not have the permission to see the specified issue.'], 'errors': {}}, 'failedElementNumber': 3}
+2026-03-03 09:01:29,343 - ERROR -   Erro 2: {'status': 403, 'elementErrors': {'errorMessages': ['You do not have the permission to see the specified issue.'], 'errors': {}}, 'failedElementNumber': 7}
+2026-03-03 09:01:29,345 - INFO - ✓ Issue criada: PLTFAT-12909
+2026-03-03 09:01:29,346 - INFO - ✓ Issue criada: PLTFAT-12910
+2026-03-03 09:01:29,347 - INFO - ✓ Issue criada: PLTFAT-12911
+2026-03-03 09:01:29,348 - INFO - ✓ Issue criada: PLTFAT-12912
+2026-03-03 09:01:29,349 - INFO - ✓ Issue criada: PLTFAT-12913
+2026-03-03 09:01:29,349 - INFO - ✓ Issue criada: PLTFAT-12914
+2026-03-03 09:01:29,350 - INFO - ✓ Issue criada: PLTFAT-12915
+2026-03-03 09:01:29,350 - WARNING - ⚠ 2 issues falharam
+2026-03-03 09:01:29,356 - INFO - ✓ Arquivo movido para Processados/ como: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc_prc.csv
+2026-03-03 09:01:29,358 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 09:01:29,359 - INFO - 
+======================================================================
+2026-03-03 09:01:29,361 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 09:01:29,361 - INFO - ======================================================================
+2026-03-03 09:01:29,363 - INFO - Total de arquivos: 1
+2026-03-03 09:01:29,364 - INFO - Issues criadas: 7
+2026-03-03 09:01:29,364 - INFO - Erros: 2
+2026-03-03 09:05:38,078 - INFO - 
+======================================================================
+2026-03-03 09:05:38,079 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-03 09:05:38,079 - INFO - ======================================================================
+2026-03-03 09:05:38,080 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-03 09:05:38,080 - INFO - Projeto: PLTFAT
+2026-03-03 09:05:38,080 - INFO - Team configurado: DocMatch
+2026-03-03 09:05:38,081 - INFO - Pasta CSV: issues
+2026-03-03 09:05:38,081 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-03 09:05:38,082 - INFO - Projeto configurado: PLTFAT
+2026-03-03 09:05:38,082 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-03 09:05:38,082 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-03 09:05:38,082 - INFO -    ↳ template_issues.csv
+2026-03-03 09:05:38,083 - INFO -    ↳ template_issues_completo.csv
+2026-03-03 09:05:38,083 - INFO -    ↳ template_vazio.csv
+2026-03-03 09:05:38,083 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-03 09:05:38,083 - INFO - 
+============================================================
+2026-03-03 09:05:38,083 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc_prc_v2.csv
+2026-03-03 09:05:38,083 - INFO - ============================================================
+2026-03-03 09:05:38,084 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT1SP5_ritos_proc_prc_v2.csv: 2 issues mapeadas
+2026-03-03 09:05:38,084 - INFO - Preparando criação em lote de 2 issues
+2026-03-03 09:05:38,086 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260303_090538.json
+2026-03-03 09:05:38,264 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-03 09:05:38,264 - ERROR - Resposta: {"issues":[],"errors":[{"status":403,"elementErrors":{"errorMessages":["You do not have the permission to see the specified issue."],"errors":{}},"failedElementNumber":0},{"status":403,"elementErrors":{"errorMessages":["You do not have the permission to see the specified issue."],"errors":{}},"failedElementNumber":1}]}...
+2026-03-03 09:05:38,265 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 403,
+      "elementErrors": {
+        "errorMessages": [
+          "You do not have the permission to see the specified issue."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 403,
+      "elementErrors": {
+        "errorMessages": [
+          "You do not have the permission to see the specified issue."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 1
+    }
+  ]
+}
+2026-03-03 09:05:38,267 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-03 09:05:38,267 - INFO - 
+======================================================================
+2026-03-03 09:05:38,268 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-03 09:05:38,268 - INFO - ======================================================================
+2026-03-03 09:05:38,268 - INFO - Total de arquivos: 1
+2026-03-03 09:05:38,269 - INFO - Issues criadas: 0
+2026-03-03 09:05:38,269 - INFO - Erros: 1
+2026-03-10 14:45:21,384 - INFO - 
+======================================================================
+2026-03-10 14:45:21,385 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-10 14:45:21,385 - INFO - ======================================================================
+2026-03-10 14:45:21,386 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-10 14:45:21,388 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-10 14:45:21,388 - INFO - Projeto: PLTFAT
+2026-03-10 14:45:21,389 - INFO - Team configurado: DocMatch
+2026-03-10 14:45:21,389 - INFO - Pasta CSV: issues
+2026-03-10 14:45:21,391 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-10 14:45:21,391 - INFO - Projeto configurado: PLTFAT
+2026-03-10 14:45:21,392 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-10 14:45:21,392 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-10 14:45:21,393 - INFO -    ↳ template_issues.csv
+2026-03-10 14:45:21,393 - INFO -    ↳ template_issues_completo.csv
+2026-03-10 14:45:21,393 - INFO -    ↳ template_vazio.csv
+2026-03-10 14:45:21,394 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-10 14:45:21,394 - INFO - 
+============================================================
+2026-03-10 14:45:21,394 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_1773164529999.csv
+2026-03-10 14:45:21,394 - INFO - ============================================================
+2026-03-10 14:45:21,396 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_1773164529999.csv: 9 issues mapeadas
+2026-03-10 14:45:21,396 - INFO - Preparando criação em lote de 9 issues
+2026-03-10 14:45:21,399 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260310_144521.json
+2026-03-10 14:45:21,400 - INFO - 
+======================================================================
+2026-03-10 14:45:21,400 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-10 14:45:21,401 - INFO - ======================================================================
+2026-03-10 14:45:21,403 - INFO - 
+======================================================================
+2026-03-10 14:45:21,405 - INFO - 📊 Total de issues no payload: 9
+2026-03-10 14:45:21,406 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-10 14:45:21,406 - INFO - ======================================================================
+2026-03-10 14:45:21,408 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-10 14:45:21,409 - INFO - 
+======================================================================
+2026-03-10 14:45:21,410 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-10 14:45:21,410 - INFO - ======================================================================
+2026-03-10 14:45:21,410 - INFO - Total de arquivos: 1
+2026-03-10 14:45:21,411 - INFO - Issues criadas: 9
+2026-03-10 14:45:21,411 - INFO - Erros: 0
+2026-03-10 14:46:59,283 - INFO - 
+======================================================================
+2026-03-10 14:46:59,283 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-10 14:46:59,284 - INFO - ======================================================================
+2026-03-10 14:46:59,285 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-10 14:46:59,285 - INFO - Projeto: PLTFAT
+2026-03-10 14:46:59,285 - INFO - Team configurado: DocMatch
+2026-03-10 14:46:59,286 - INFO - Pasta CSV: issues
+2026-03-10 14:46:59,286 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-10 14:46:59,286 - INFO - Projeto configurado: PLTFAT
+2026-03-10 14:46:59,286 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-10 14:46:59,287 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-10 14:46:59,287 - INFO -    ↳ template_issues.csv
+2026-03-10 14:46:59,287 - INFO -    ↳ template_issues_completo.csv
+2026-03-10 14:46:59,288 - INFO -    ↳ template_vazio.csv
+2026-03-10 14:46:59,288 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-10 14:46:59,288 - INFO - 
+============================================================
+2026-03-10 14:46:59,288 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_1773164529999.csv
+2026-03-10 14:46:59,288 - INFO - ============================================================
+2026-03-10 14:46:59,289 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_1773164529999.csv: 9 issues mapeadas
+2026-03-10 14:46:59,290 - INFO - Preparando criação em lote de 9 issues
+2026-03-10 14:46:59,294 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260310_144659.json
+2026-03-10 14:47:32,433 - INFO - ✓ Bulk create concluído: 9 issues criadas
+2026-03-10 14:47:32,436 - INFO - ✓ Issue criada: PLTFAT-13122
+2026-03-10 14:47:32,437 - INFO - ✓ Issue criada: PLTFAT-13123
+2026-03-10 14:47:32,437 - INFO - ✓ Issue criada: PLTFAT-13124
+2026-03-10 14:47:32,438 - INFO - ✓ Issue criada: PLTFAT-13125
+2026-03-10 14:47:32,438 - INFO - ✓ Issue criada: PLTFAT-13126
+2026-03-10 14:47:32,439 - INFO - ✓ Issue criada: PLTFAT-13127
+2026-03-10 14:47:32,439 - INFO - ✓ Issue criada: PLTFAT-13128
+2026-03-10 14:47:32,439 - INFO - ✓ Issue criada: PLTFAT-13129
+2026-03-10 14:47:32,439 - INFO - ✓ Issue criada: PLTFAT-13130
+2026-03-10 14:47:32,442 - INFO - ✓ Arquivo movido para Processados/ como: [pltfat]_docmatch_-_import-jira_csv_1773164529999_prc.csv
+2026-03-10 14:47:32,446 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-10 14:47:32,447 - INFO - 
+======================================================================
+2026-03-10 14:47:32,447 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-10 14:47:32,448 - INFO - ======================================================================
+2026-03-10 14:47:32,449 - INFO - Total de arquivos: 1
+2026-03-10 14:47:32,449 - INFO - Issues criadas: 9
+2026-03-10 14:47:32,450 - INFO - Erros: 0

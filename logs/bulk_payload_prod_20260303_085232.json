@@ -1,0 +1,171 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Daily and Alignments"
+        },
+        "description": "{panel:title=Daily e Alignments} Registro do esforço gasto em daily meetings e outros alinhamentos relacionados ao projeto, que ocorram durante a sprint. Período => 02/03/26 a 13/03/26 {panel}",
+        "timetracking": {
+          "originalEstimate": "24h",
+          "remainingEstimate": "24h"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Daily e Reuniões de alinhamento",
+        "customfield_10401": "DocMatch",
+        "customfield_10100": 234779
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Rituals"
+        },
+        "description": "{panel:title=Planning} Registro do esforço gasto na preparação e realização de planning meetings. Período => 02/03/26 a 13/03/26 {panel}",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Planning",
+        "customfield_10401": "DocMatch",
+        "customfield_10100": 234779
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Rituals"
+        },
+        "description": "{panel:title=Sprint Demo/Review/Retrospective} Registro do esforço gasto na preparação e realização de Sprint Demo/Review/Retrospective meetings. Período => 02/03/26 a 13/03/26 {panel}",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Demo, Review e Retrospective",
+        "customfield_10401": "DocMatch",
+        "customfield_10100": 234779
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Training"
+        },
+        "description": "{panel:title=Training} Atividades de treinamento no início do projeto/célula, onboarding de novos membros do time, capacitação em geral. Período => 02/03/26 a 13/03/26 {panel}",
+        "parent": {
+          "key": "234779"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Treinamento / Workshop / Onboarding",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Agile Mastering"
+        },
+        "description": "{panel:title=Agile Mastering} Registro do esforço gasto pelo SL na condução do time e coaching no processo. Período => 02/03/26 a 13/03/26 {panel}",
+        "timetracking": {
+          "originalEstimate": "80h",
+          "remainingEstimate": "80h"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Atividades Gestão SM",
+        "customfield_10401": "DocMatch",
+        "customfield_10100": 234779
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Management"
+        },
+        "description": "{panel:title=Management} Registro do esforço gasto pelo TL e ARQ na condução do time e coaching no processo. Período => 02/03/26 a 13/03/26 {panel}",
+        "timetracking": {
+          "originalEstimate": "80h",
+          "remainingEstimate": "80h"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Atividades Gerais TL",
+        "customfield_10401": "DocMatch",
+        "customfield_10100": 234779
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Rituals"
+        },
+        "description": "{panel:title=Planning} Registro do esforço gasto nos Refinamentos das histórias previstas para as próximas Sprints. Período => 02/03/26 a 13/03/26 {panel}",
+        "timetracking": {
+          "originalEstimate": "24h",
+          "remainingEstimate": "24h"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Refinamento",
+        "customfield_10401": "DocMatch",
+        "customfield_10100": 234779
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Rituals"
+        },
+        "description": "{panel:title=Outras Cerimônias e Ritos do Safe } Registro do esforço gasto na preparação e realização de Outras Cerimônias e Ritos do Safe . Período => 02/03/26 a 13/03/26 {panel}",
+        "parent": {
+          "key": "234779"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Outras Cerimônias e Ritos do Safe (Chapters, PI Planning, System Demo, Portifólio Review, PDCA e etc)",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Service Request"
+        },
+        "description": "{panel:title=Service Request} Registro do esforço gasto no Suporte, Sustentação e Apoio a outros times. Período => 02/03/26 a 13/03/26 {panel}",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "summary": "[DocMatch-RT1/2026 S5] - Suporte, Sustentação e Apoio a outros times",
+        "customfield_10401": "DocMatch",
+        "customfield_10100": 234779
+      },
+      "update": {}
+    }
+  ]
+}

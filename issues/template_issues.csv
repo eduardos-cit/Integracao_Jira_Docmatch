@@ -1,0 +1,8 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Story,Implementar autenticação biométrica,"Como usuário do sistema, quero poder fazer login usando biometria para ter mais segurança e conveniência no acesso.",DocMatch,5d,F568572,,235,PLTFAT-1234,autenticacao;biometria;seguranca
+Story,Criar dashboard de métricas ágeis,"Como gestor, quero visualizar métricas ágeis do projeto em um dashboard para acompanhar o desempenho do time.",DocMatch,3d,F568572,,235,PLTFAT-1234,metricas;dashboard;gestao
+Tech Solution,Configurar pipeline de CI/CD,"Configurar pipeline automatizado de CI/CD no GitLab para garantir qualidade e agilidade nas entregas.",DocMatch,8d,F568572,,235,PLTFAT-1235,devops;pipeline;automacao
+Bug,Corrigir erro de timeout na API,"Usuários relatam erro de timeout ao fazer requisições para o endpoint /api/v2/authenticate. Investigar e corrigir.",DocMatch,2d,F568572,,235,PLTFAT-1234,bug;api;performance
+Non Functional Task,Atualizar documentação técnica,"Atualizar a documentação técnica do projeto com as mudanças recentes da arquitetura e novos endpoints da API.",DocMatch,1d,F568572,,235,PLTFAT-1235,documentacao;manutencao
+Story,Implementar notificações push,"Como usuário, quero receber notificações push no aplicativo para ser informado sobre eventos importantes em tempo real.",DocMatch,4d,F568572,,236,PLTFAT-1234,notificacoes;mobile;ux
+Incidente,Resolver falha no ambiente de produção,"Sistema apresentou indisponibilidade no ambiente de produção por 2 horas. Identificar causa raiz e implementar solução definitiva.",DocMatch,1d,F568572,,235,PLTFAT-1234,incidente;producao;criticidade-alta

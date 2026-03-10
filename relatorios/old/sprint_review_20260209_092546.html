@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Review - DocMatch-RT1_Platafo-S3</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: #f5f5f5; color: #333; line-height: 1.6; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #cc092f, #e31837); color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; box-shadow: 0 4px 12px rgba(204, 9, 47, 0.2); }
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header .subtitle { font-size: 1.1rem; opacity: 0.9; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); border-left: 4px solid #cc092f; }
+        .stat-number { font-size: 2rem; font-weight: bold; color: #cc092f; }
+        .stat-label { color: #666; font-size: 0.9rem; margin-top: 5px; }
+        .section { background: white; margin-bottom: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .section-header { padding: 15px 20px; font-size: 1.3rem; font-weight: 600; color: white; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+        .section-header.entregues { background-color: #cc092f; }
+        .section-header.homologacao { background-color: #f39c12; }
+        .section-header.deploy { background-color: #e67e22; }
+        .section-header.producao { background-color: #27ae60; }
+        .section-header.progresso { background-color: #3498db; }
+        .section-header.aguardando { background-color: #95a5a6; }
+        .section-content { padding: 0; transition: max-height 0.3s ease; overflow: hidden; }
+        .section-content.collapsed { max-height: 0 !important; }
+        .issue-item { padding: 15px 20px; border-bottom: 1px solid #eee; transition: background 0.2s; }
+        .issue-item:hover { background-color: #f8f9fa; }
+        .issue-item:last-child { border-bottom: none; }
+        .issue-key { font-weight: bold; color: #cc092f; text-decoration: none; margin-right: 10px; }
+        .issue-key:hover { text-decoration: underline; }
+        .issue-type { display: inline-block; color: white; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 500; margin-right: 8px; }
+        .issue-type.story { background-color: #09ab47; }
+        .issue-type.tech-solution { background-color: #ffbc01; color: #333; }
+        .issue-type.bug { background-color: #b00f2f; }
+        .issue-summary { margin: 5px 0; font-size: 0.95rem; }
+        .issue-status { display: inline-block; background-color: #e9ecef; color: #495057; padding: 3px 8px; border-radius: 12px; font-size: 0.8rem; }
+        .company-tag { display: inline-block; color: white; padding: 3px 8px; border-radius: 12px; font-size: 0.8rem; margin-left: 8px; }
+        .company-tag.cit { background-color: #e1173f; }
+        .company-tag.mckinsey { background-color: #3b69ff; }
+        .company-tag.default { background-color: #ff6b35; }
+        .age-tag { background-color: #f39c12; color: white; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem; margin-left: 8px; }
+        .age-tag.old { background-color: #e74c3c; }
+        .age-tag.very-old { background-color: #8b0000; }
+        .counter { background-color: rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 12px; font-size: 0.9rem; }
+        .footer { text-align: center; color: #666; margin-top: 40px; padding: 20px; }
+        .toggle-icon { transition: transform 0.3s ease; }
+        .toggle-icon.collapsed { transform: rotate(180deg); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Sprint Review - DocMatch-RT1_Platafo-S3</h1>
+            <div class="subtitle">📅 Período: 02/02/2026 a 15/02/2026</div>
+            <div class="subtitle">Gerado em: 09/02/2026 às 09:25</div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">1</div>
+                <div class="stat-label">Itens Entregues</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">13.7</div>
+                <div class="stat-label">Lead Time Médio (dias)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Work in Progress</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10.0%</div>
+                <div class="stat-label">Eficiência de Entrega</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">10</div>
+                <div class="stat-label">Total de Issues</div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <div class="section-header entregues" onclick="toggleSection(this)">
+                <div>
+                    Itens Entregues
+                    <span class="counter">1 itens</span>
+                </div>
+                <span class="toggle-icon collapsed">▲</span>
+            </div>
+            <div class="section-content collapsed">
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11469" class="issue-key" target="_blank">PLTFAT-11469</a>
+                    <div class="issue-summary">Captar e apresentar taxa de erro por tipo de documento</div>
+                    <span class="issue-status">Em homologação</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header deploy" onclick="toggleSection(this)">
+                <div>
+                    Em Deploy para Produção
+                    <span class="counter">1 itens</span>
+                </div>
+                <span class="toggle-icon collapsed">▲</span>
+            </div>
+            <div class="section-content collapsed">
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11428" class="issue-key" target="_blank">PLTFAT-11428</a>
+                    <div class="issue-summary">Captar e apresentar taxa de conversão da jornada com DocMatch</div>
+                    <span class="issue-status">Em deploy para produção</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header homologacao" onclick="toggleSection(this)">
+                <div>
+                    Itens em Homologação
+                    <span class="counter">1 itens</span>
+                </div>
+                <span class="toggle-icon collapsed">▲</span>
+            </div>
+            <div class="section-content collapsed">
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11466" class="issue-key" target="_blank">PLTFAT-11466</a>
+                    <div class="issue-summary">Captar e apresentar taxa de sucesso do OCR</div>
+                    <span class="issue-status">Em deploy para homologação</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header progresso" onclick="toggleSection(this)">
+                <div>
+                    Em Progresso
+                    <span class="counter">6 itens</span>
+                </div>
+                <span class="toggle-icon collapsed">▲</span>
+            </div>
+            <div class="section-content collapsed">
+
+                <div class="issue-item">
+                    <span class="issue-type tech-solution">Tech Solution</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11624" class="issue-key" target="_blank">PLTFAT-11624</a>
+                    <div class="issue-summary">Preparação da Estrutura - Portal DocMatch (Storage account)</div>
+                    <span class="issue-status">Em Progresso</span><span class="age-tag">0 dias</span>
+                </div>
+
+                <div class="issue-item">
+                    <span class="issue-type tech-solution">Tech Solution</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11623" class="issue-key" target="_blank">PLTFAT-11623</a>
+                    <div class="issue-summary">Preparação da estrutura - Portal DocMatch ( EntraID)</div>
+                    <span class="issue-status">Em Progresso</span><span class="age-tag">0 dias</span>
+                </div>
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11432" class="issue-key" target="_blank">PLTFAT-11432</a>
+                    <div class="issue-summary">Migrar credenciais da plataforma de Biometria para plataforma DocMatch</div>
+                    <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">0 dias</span>
+                </div>
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11431" class="issue-key" target="_blank">PLTFAT-11431</a>
+                    <div class="issue-summary">Criar novo repositório para comunicação com entidades externas</div>
+                    <span class="issue-status">Em Desenvolvimento</span><span class="age-tag">0 dias</span>
+                </div>
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12247" class="issue-key" target="_blank">PLTFAT-12247</a>
+                    <div class="issue-summary">Agrupar frente e verso de documento, gerando arquivo PDF de documento completo</div>
+                    <span class="issue-status">Em teste</span><span class="age-tag">0 dias</span>
+                </div>
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11470" class="issue-key" target="_blank">PLTFAT-11470</a>
+                    <div class="issue-summary">Captar e apresentar volume de documentos processados</div>
+                    <span class="issue-status">Disponivel para Teste</span><span class="age-tag">0 dias</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header aguardando" onclick="toggleSection(this)">
+                <div>
+                    Aguardando Desenvolvimento
+                    <span class="counter">1 itens</span>
+                </div>
+                <span class="toggle-icon collapsed">▲</span>
+            </div>
+            <div class="section-content collapsed">
+
+                <div class="issue-item">
+                    <span class="issue-type story">Story</span>
+                    <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11434" class="issue-key" target="_blank">PLTFAT-11434</a>
+                    <div class="issue-summary">Desenvolver serviço para análise Facematch</div>
+                    <span class="issue-status">Pronta para Desenvolvimento</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Relatório gerado automaticamente pelo sistema de integração Jira</p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSection(header) {
+            const section = header.parentElement;
+            const content = section.querySelector('.section-content');
+            const icon = header.querySelector('.toggle-icon');
+            
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.classList.remove('collapsed');
+                icon.innerHTML = '▼';
+            } else {
+                content.classList.add('collapsed');
+                content.style.maxHeight = '0px';
+                icon.classList.add('collapsed');
+                icon.innerHTML = '▲';
+            }
+        }
+    </script>
+</body>
+</html>

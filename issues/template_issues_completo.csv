@@ -1,0 +1,146 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Story,Implementar autenticação com token JWT,"Como desenvolvedor de API, quero implementar autenticação JWT para garantir segurança nas requisições REST.
+
+Critérios de Aceitação:
+- Token gerado no login com validade de 24h
+- Middleware de validação em todas as rotas protegidas
+- Refresh token implementado
+- Testes unitários e de integração
+
+Notas Técnicas:
+- Usar biblioteca jsonwebtoken
+- Armazenar secret no .env
+- Implementar rotate de tokens a cada 6 horas",DocMatch,5d,F568572,,235,PLTFAT-1234,autenticacao;jwt;api;seguranca
+Story,Criar tela de dashboard executivo,"Como gestor, quero visualizar KPIs do projeto em um dashboard para acompanhar performance em tempo real.
+
+Features:
+- Gráfico de burndown da sprint
+- Métricas de throughput e lead time
+- Distribuição de tipos de issue
+- Bugs abertos vs resolvidos
+- Filtros por período e time
+
+Design:
+- Seguir padrão Bradesco Liquid Design System
+- Responsivo para mobile e desktop",DocMatch,8d,F568572,,235,PLTFAT-1234,dashboard;metricas;frontend;ux
+Tech Solution,Configurar cluster Kubernetes para produção,"Provisionar e configurar cluster Kubernetes em produção para hospedar microserviços da plataforma.
+
+Escopo:
+- 3 nodes workers + 1 master
+- Configurar Load Balancer
+- Setup de storage persistente
+- Configurar secrets e configmaps
+- Implementar health checks
+- Configurar autoscaling horizontal
+- Documentar runbooks de operação
+
+Infraestrutura:
+- Cloud: AWS EKS
+- Region: us-east-1
+- Instance type: t3.large",DocMatch,10d,F568572,,235,PLTFAT-1235,kubernetes;devops;infra;cloud
+Bug,Sistema não valida CPF inválido no cadastro,"DESCRIÇÃO DO PROBLEMA:
+O formulário de cadastro de cliente está aceitando CPFs inválidos (ex: 111.111.111-11, 000.000.000-00).
+
+PASSOS PARA REPRODUZIR:
+1. Acessar tela de cadastro (/clientes/novo)
+2. Preencher campo CPF com '111.111.111-11'
+3. Clicar em Salvar
+4. Sistema aceita e salva no banco
+
+COMPORTAMENTO ESPERADO:
+- Validar dígitos verificadores do CPF
+- Rejeitar CPFs com todos dígitos iguais
+- Mostrar mensagem de erro clara
+
+COMPORTAMENTO ATUAL:
+- Aceita qualquer sequência de 11 dígitos
+
+IMPACTO:
+- Alto - Permite criação de cadastros inválidos
+- Afeta conformidade com LGPD
+
+AMBIENTE:
+- Browser: Chrome 120
+- Ambiente: Homologação
+- Versão: 2.3.1",DocMatch,2d,F568572,,235,PLTFAT-1234,bug;validacao;frontend;criticidade-alta
+Non Functional Task,Atualizar dependências NPM do projeto,"Atualizar todas as dependências NPM do projeto para versões mais recentes, priorizando correções de segurança.
+
+Atividades:
+- Executar npm audit
+- Atualizar dependências com vulnerabilidades
+- Atualizar major versions de libs principais:
+  * React 17 → 18
+  * Next.js 12 → 13
+  * TypeScript 4.8 → 5.0
+- Executar todos os testes
+- Atualizar documentação de setup
+
+Riscos:
+- Breaking changes em React 18
+- Ajustes necessários no código
+
+Validação:
+- Todos os testes passando
+- Build sem erros
+- Smoke test em homologação",DocMatch,3d,F568572,,235,PLTFAT-1235,manutencao;dependencias;seguranca
+Incidente,Falha crítica no serviço de autenticação,"GRAVIDADE: P1 - CRÍTICA
+
+SITUAÇÃO:
+Sistema de autenticação apresentou indisponibilidade total por 2h15min no dia 18/02/2026 entre 14:30 e 16:45.
+
+IMPACTO:
+- 100% dos usuários impossibilitados de fazer login
+- ~3.500 usuários afetados
+- Perda estimada de R$ 50.000 em transações
+
+CAUSA RAIZ (preliminar):
+- Pool de conexões do banco esgotado
+- Memory leak no serviço auth-service
+- Falta de circuit breaker
+
+AÇÕES IMEDIATAS (já executadas):
+✓ Restart do serviço auth-service (14:45)
+✓ Aumento temporário de conexões no pool (15:00)
+✓ Scale horizontal de 2 para 6 pods (15:15)
+
+AÇÕES CORRETIVAS (a fazer):
+- Identificar e corrigir memory leak
+- Implementar circuit breaker
+- Adicionar alertas de pool de conexões
+- Melhorar health checks
+- Documentar runbook de recuperação
+
+PREVENÇÃO:
+- Load tests semanais
+- Monitoring de memory usage
+- Alertas proativos",DocMatch,5d,F568572,,235,PLTFAT-1234,incidente;producao;p1;postmortem
+Epic,Portal de Autoatendimento do Cliente,"Desenvolver portal web de autoatendimento para clientes realizarem operações sem necessidade de atendente.
+
+OBJETIVO:
+Reduzir em 40% a carga de atendimento humano e melhorar experiência do cliente.
+
+FUNCIONALIDADES:
+- Consulta de saldo e extrato
+- Transferências (TED/PIX)
+- Pagamento de contas
+- Investimentos
+- Empréstimos
+- Cartões (solicitação, bloqueio, 2ª via)
+- Atualização cadastral
+- Abertura de conta digital
+
+MÉTRICAS DE SUCESSO:
+- 60% dos clientes usando o portal em 6 meses
+- NPS > 8.0
+- Redução de 40% em tickets de suporte
+- Tempo médio de operação < 2min
+
+STACK TÉCNICA:
+- Frontend: React + Next.js
+- Backend: Node.js + Express
+- Database: PostgreSQL
+- Cache: Redis
+- Cloud: AWS",DocMatch,40d,F568572,,236,,epic;portal;autoatendimento;cliente
+Story,Implementar filtros avançados no relatório,Como analista de dados quero filtrar relatórios por múltiplos critérios para obter insights específicos do negócio.,,4d,,,236,PLTFAT-1234,relatorios;filtros;ux
+Bug,Erro 500 ao salvar formulário com caracteres especiais,Sistema retorna erro 500 ao tentar salvar formulário contendo caracteres acentuados ou símbolos. Corrigir encoding UTF-8.,DocMatch,1d,F568572,,235,PLTFAT-1234,bug;encoding;backend
+Tech Solution,Implementar cache Redis para consultas frequentes,Implementar camada de cache Redis para reduzir carga no banco e melhorar performance das consultas mais frequentes em 70%.,DocMatch,6d,F568572,,236,PLTFAT-1235,performance;cache;redis

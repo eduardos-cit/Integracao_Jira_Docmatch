@@ -1,0 +1,12 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,"Preparar documentos de teste (RG antigo + selfie)","Criar/validar arquivos sintéticos (frente/verso + selfie).\nArmazenar no repositório de QA com a convenção de nomes.\nCritério: documentos disponíveis e versionados.",DocMatch,4h,M586590,PLTFAT-12868,,,
+Sub-Imp,"Implementação do código – FaceMatch","Expor função de comparação com limiar configurável.\nRetornar score e flag de aprovação.",DocMatch,8h,M586590,PLTFAT-12868,,,
+Sub-Imp,"Implementação do código – Análise de Documento","Parser/validador dos campos obrigatórios (nome, RG, data nasc., órgão emissor, UF).\nRetornar estrutura padronizada com status/erros.",DocMatch,8h,M586590,PLTFAT-12868,,,
+Sub-Imp,"Criar teste automatizado e2e do cenário RG (formato antigo)","Encadear etapas: frente → verso → análise → FaceMatch → assert de sucesso/erro.\nCritério: teste executa localmente e em CI.",DocMatch,12h,M586590,PLTFAT-12868,,,
+Sub-Imp,"Testes unitários e mocks/stubs","Cobrir cenários de sucesso/erro, limiar do FaceMatch e campos faltantes.\nCritério: pipeline exibe cobertura mínima acordada.",DocMatch,12h,M586590,PLTFAT-12868,,,
+Sub-Imp,"Configuração da esteira (CI/CD)","Instalar dependências, executar testes, publicar relatórios (JUnit/Allure).\nCritério: job automatizado em PR e job agendado diário.",DocMatch,12h,M586590,PLTFAT-12868,,,
+Sub-Imp,"Docummentação e Validação final - Dashboard Qualidade","Documentar toda jornada num 'Diário de bordo' no Confluence (caso necessite, solicitar apoio SM e/ou PO) exemplo: https://confluence.bradesco.com.br:8443/pages/viewpage.action?pageId=2512814531\nRevisão do QA, anexar logs e screenshots/artefatos.\nVerificação se o teste reflete no Dashboard Qualidade no Power BI",DocMatch,8h,M586590,PLTFAT-12868,,,
+
+
+
+

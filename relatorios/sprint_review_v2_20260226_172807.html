@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Review v2 - DocMatch-RT1_Platafo-S4</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@bradesco/liquid-design-system@latest/dist/liquid.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background: linear-gradient(135deg, #cc092f, #e31837);
+            color: white;
+            padding: 28px;
+            border-radius: 8px;
+            margin-bottom: 24px;
+        }
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+        }
+        .subtitle {
+            opacity: 0.95;
+            margin-top: 4px;
+            font-size: 0.98rem;
+        }
+        .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 999px;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            margin-bottom: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .stat-card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            border-left: 4px solid #cc092f;
+        }
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #cc092f;
+            margin-bottom: 4px;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .chart-card {
+            background: white;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+        }
+        .chart-card h3 {
+            margin: 0 0 10px 0;
+            font-size: 1rem;
+            color: #333;
+        }
+        .chart-wrapper {
+            height: 260px;
+        }
+        .section {
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .section-header {
+            background-color: #cc092f;
+            color: white;
+            padding: 12px 16px;
+            font-weight: 600;
+        }
+        .issue-item {
+            padding: 12px 16px;
+            border-bottom: 1px solid #eee;
+        }
+        .issue-item:last-child {
+            border-bottom: none;
+        }
+        .issue-key {
+            color: #cc092f;
+            font-weight: 700;
+            text-decoration: none;
+        }
+        .issue-key:hover {
+            text-decoration: underline;
+        }
+        .issue-meta {
+            margin-top: 4px;
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 28px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="badge">NOVA VERSÃO (v2)</div>
+            <h1>Sprint Review</h1>
+            <div class="subtitle">DocMatch-RT1_Platafo-S4</div>
+            <div class="subtitle">Período da sprint: 16/02/2026 a 01/03/2026</div>
+            <div class="subtitle"></div>
+            <div class="subtitle">Gerado em: 26/02/2026 às 17:28</div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Velocity (itens entregues)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0.0</div>
+                <div class="stat-label">Velocity (story points)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">27.3%</div>
+                <div class="stat-label">Commitment Achievement</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">5</div>
+                <div class="stat-label">Itens em Risco</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">0</div>
+                <div class="stat-label">Bugs Encontrados</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">100.0%</div>
+                <div class="stat-label">Quality Score (features/bugs)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">57.3</div>
+                <div class="stat-label">Sprint Health Score</div>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-card">
+                <h3>Gráfico de Velocity</h3>
+                <div class="chart-wrapper"><canvas id="velocityChart"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3>Burndown Chart</h3>
+                <div class="chart-wrapper"><canvas id="burndownChart"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3>Distribuição por Tipo</h3>
+                <div class="chart-wrapper"><canvas id="typeDistributionChart"></canvas></div>
+            </div>
+            <div class="chart-card">
+                <h3>Timeline de Entregas</h3>
+                <div class="chart-wrapper"><canvas id="timelineChart"></canvas></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Itens Entregues (3 itens)</div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11467" class="issue-key" target="_blank">PLTFAT-11467</a>
+                - Captar e apresentar taxa de sucesso do Facematch
+                <div class="issue-meta">Story • Em produção</div>
+            </div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11434" class="issue-key" target="_blank">PLTFAT-11434</a>
+                - Desenvolver serviço para análise Facematch
+                <div class="issue-meta">Story • Em deploy para homologação</div>
+            </div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11438" class="issue-key" target="_blank">PLTFAT-11438</a>
+                - [Portal][BACK/FRONT] Criar BFF para portal administrativo
+                <div class="issue-meta">Story • Em deploy para produção</div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <div class="section-header">Itens em Produção (1 itens)</div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12247" class="issue-key" target="_blank">PLTFAT-12247</a>
+                - Agrupar frente e verso de documento, gerando arquivo PDF de documento completo
+                <div class="issue-meta">Story • Em produção</div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <div class="section-header">Em Progresso (5 itens)</div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12787" class="issue-key" target="_blank">PLTFAT-12787</a>
+                - [DocMatch] Elaboração de novos documentos para Testes Funcionais
+                <div class="issue-meta">Tech Solution • Em Progresso • Idade: 0 dias</div>
+            </div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11439" class="issue-key" target="_blank">PLTFAT-11439</a>
+                - [Portal][FRONT] Desenvolver integração entre login e EntraID
+                <div class="issue-meta">Story • Em Desenvolvimento • Idade: 0 dias</div>
+            </div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-11433" class="issue-key" target="_blank">PLTFAT-11433</a>
+                - Desenvolver serviço para captação de OCR
+                <div class="issue-meta">Story • Desenvolvida • Idade: 0 dias</div>
+            </div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12457" class="issue-key" target="_blank">PLTFAT-12457</a>
+                - [Portal][BACK] Construir endpoints para realizar cadastro de canal via Portal Administrativo
+                <div class="issue-meta">Story • Em teste • Idade: 0 dias</div>
+            </div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12459" class="issue-key" target="_blank">PLTFAT-12459</a>
+                - [Portal][BACK] Construir endpoints para realizar edição de canal existente via Portal Administrativo
+                <div class="issue-meta">Story • Disponivel para Teste • Idade: 0 dias</div>
+            </div>
+
+        </div>
+
+        <div class="section">
+            <div class="section-header">Aguardando Desenvolvimento (2 itens)</div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12468" class="issue-key" target="_blank">PLTFAT-12468</a>
+                - Ajuste de retorno em caso de timeout do fornecedor
+                <div class="issue-meta">Story • Pronta para Desenvolvimento • Idade: 0 dias</div>
+            </div>
+
+            <div class="issue-item">
+                <a href="https://jira.bradesco.com.br:8443/browse/PLTFAT-12460" class="issue-key" target="_blank">PLTFAT-12460</a>
+                - [Portal][BACK] Construir serviço e endpoints para aperesentação do histórico de fluxos via Portal Administrativo
+                <div class="issue-meta">Story • Pronta para Desenvolvimento • Idade: 0 dias</div>
+            </div>
+
+        </div>
+
+        <div class="footer">
+            <p>Relatório Sprint Review v2 gerado automaticamente</p>
+        </div>
+    </div>
+
+    <script>
+        const velocityItems = 3;
+        const velocityStoryPoints = 0.0;
+
+        const burndownLabels = ["10/02", "20/02", "25/02"];
+        const burndownReal = [10, 9, 7];
+        const burndownIdeal = [7.3, 3.7, 0.0];
+
+        const issueTypeLabels = ["Tech Solution", "Story"];
+        const issueTypeValues = [1, 10];
+
+        const timelineLabels = ["10/02", "20/02", "25/02"];
+        const timelineValues = [1, 1, 2];
+
+        new Chart(document.getElementById('velocityChart'), {
+            type: 'bar',
+            data: {
+                labels: ['Itens Entregues', 'Story Points Entregues'],
+                datasets: [{
+                    label: 'Velocity',
+                    data: [velocityItems, velocityStoryPoints],
+                    backgroundColor: ['#cc092f', '#f39c12']
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        new Chart(document.getElementById('burndownChart'), {
+            type: 'line',
+            data: {
+                labels: burndownLabels,
+                datasets: [
+                    { label: 'Real', data: burndownReal, borderColor: '#cc092f', fill: false },
+                    { label: 'Ideal', data: burndownIdeal, borderColor: '#3498db', borderDash: [6, 4], fill: false }
+                ]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        new Chart(document.getElementById('typeDistributionChart'), {
+            type: 'doughnut',
+            data: {
+                labels: issueTypeLabels,
+                datasets: [{
+                    data: issueTypeValues,
+                    backgroundColor: ['#cc092f', '#e67e22', '#27ae60', '#3498db', '#9b59b6', '#95a5a6']
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        new Chart(document.getElementById('timelineChart'), {
+            type: 'bar',
+            data: {
+                labels: timelineLabels,
+                datasets: [{
+                    label: 'Entregas por data',
+                    data: timelineValues,
+                    backgroundColor: '#cc092f'
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+    </script>
+</body>
+</html>
