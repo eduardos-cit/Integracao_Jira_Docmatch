@@ -1,0 +1,118 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "Implementar OCR v2 no entidades-externas",
+        "timetracking": {
+          "originalEstimate": "16h",
+          "remainingEstimate": "16h"
+        },
+        "parent": {
+          "key": "PLTFAT-12771"
+        },
+        "summary": "Implementar OCR v2 no entidades-externas",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "Integrar novo contrato de OCR no orquestrador",
+        "timetracking": {
+          "originalEstimate": "16h",
+          "remainingEstimate": "16h"
+        },
+        "parent": {
+          "key": "PLTFAT-12771"
+        },
+        "summary": "Integrar novo contrato de OCR no orquestrador",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "Implementar testes unitários",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-12771"
+        },
+        "summary": "Implementar testes unitários",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12771"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "parent": {
+          "key": "PLTFAT-12771"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    }
+  ]
+}

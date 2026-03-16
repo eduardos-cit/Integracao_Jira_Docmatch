@@ -1471,3 +1471,86 @@ Processando arquivos da pasta: issues
 2026-03-10 14:47:32,449 - INFO - Total de arquivos: 1
 2026-03-10 14:47:32,449 - INFO - Issues criadas: 9
 2026-03-10 14:47:32,450 - INFO - Erros: 0
+2026-03-16 15:17:46,990 - INFO - 
+======================================================================
+2026-03-16 15:17:46,991 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-16 15:17:46,991 - INFO - ======================================================================
+2026-03-16 15:17:46,991 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-16 15:17:46,992 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-16 15:17:46,993 - INFO - Projeto: PLTFAT
+2026-03-16 15:17:46,993 - INFO - Team configurado: DocMatch
+2026-03-16 15:17:46,993 - INFO - Pasta CSV: issues
+2026-03-16 15:17:46,993 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-16 15:17:46,994 - INFO - Projeto configurado: PLTFAT
+2026-03-16 15:17:46,994 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-16 15:17:46,995 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-16 15:17:46,995 - INFO -    ↳ template_issues.csv
+2026-03-16 15:17:46,995 - INFO -    ↳ template_issues_completo.csv
+2026-03-16 15:17:46,995 - INFO -    ↳ template_vazio.csv
+2026-03-16 15:17:46,995 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-16 15:17:46,996 - INFO - 
+============================================================
+2026-03-16 15:17:46,996 - INFO - Processando arquivo: alex_ocrv2_PLTFAT-12771.csv
+2026-03-16 15:17:46,996 - INFO - ============================================================
+2026-03-16 15:17:46,997 - INFO - Arquivo issues\alex_ocrv2_PLTFAT-12771.csv: 5 issues mapeadas
+2026-03-16 15:17:46,998 - INFO - Preparando criação em lote de 5 issues
+2026-03-16 15:17:47,000 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260316_151746.json
+2026-03-16 15:17:47,000 - INFO - 
+======================================================================
+2026-03-16 15:17:47,000 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-16 15:17:47,001 - INFO - ======================================================================
+2026-03-16 15:17:47,002 - INFO - 
+======================================================================
+2026-03-16 15:17:47,003 - INFO - 📊 Total de issues no payload: 5
+2026-03-16 15:17:47,003 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-16 15:17:47,004 - INFO - ======================================================================
+2026-03-16 15:17:47,005 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-16 15:17:47,005 - INFO - 
+======================================================================
+2026-03-16 15:17:47,006 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-16 15:17:47,006 - INFO - ======================================================================
+2026-03-16 15:17:47,006 - INFO - Total de arquivos: 1
+2026-03-16 15:17:47,007 - INFO - Issues criadas: 5
+2026-03-16 15:17:47,007 - INFO - Erros: 0
+2026-03-16 15:18:24,931 - INFO - 
+======================================================================
+2026-03-16 15:18:24,931 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-16 15:18:24,932 - INFO - ======================================================================
+2026-03-16 15:18:24,933 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-16 15:18:24,933 - INFO - Projeto: PLTFAT
+2026-03-16 15:18:24,934 - INFO - Team configurado: DocMatch
+2026-03-16 15:18:24,934 - INFO - Pasta CSV: issues
+2026-03-16 15:18:24,935 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-16 15:18:24,935 - INFO - Projeto configurado: PLTFAT
+2026-03-16 15:18:24,935 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-16 15:18:24,936 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-16 15:18:24,936 - INFO -    ↳ template_issues.csv
+2026-03-16 15:18:24,936 - INFO -    ↳ template_issues_completo.csv
+2026-03-16 15:18:24,937 - INFO -    ↳ template_vazio.csv
+2026-03-16 15:18:24,937 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-16 15:18:24,937 - INFO - 
+============================================================
+2026-03-16 15:18:24,938 - INFO - Processando arquivo: alex_ocrv2_PLTFAT-12771.csv
+2026-03-16 15:18:24,938 - INFO - ============================================================
+2026-03-16 15:18:24,939 - INFO - Arquivo issues\alex_ocrv2_PLTFAT-12771.csv: 5 issues mapeadas
+2026-03-16 15:18:24,940 - INFO - Preparando criação em lote de 5 issues
+2026-03-16 15:18:24,942 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260316_151824.json
+2026-03-16 15:18:41,716 - INFO - ✓ Bulk create concluído: 5 issues criadas
+2026-03-16 15:18:41,718 - INFO - ✓ Issue criada: PLTFAT-13237
+2026-03-16 15:18:41,719 - INFO - ✓ Issue criada: PLTFAT-13238
+2026-03-16 15:18:41,719 - INFO - ✓ Issue criada: PLTFAT-13239
+2026-03-16 15:18:41,719 - INFO - ✓ Issue criada: PLTFAT-13240
+2026-03-16 15:18:41,719 - INFO - ✓ Issue criada: PLTFAT-13241
+2026-03-16 15:18:41,721 - INFO - ✓ Arquivo movido para Processados/ como: alex_ocrv2_PLTFAT-12771_prc.csv
+2026-03-16 15:18:41,722 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-16 15:18:41,722 - INFO - 
+======================================================================
+2026-03-16 15:18:41,722 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-16 15:18:41,723 - INFO - ======================================================================
+2026-03-16 15:18:41,723 - INFO - Total de arquivos: 1
+2026-03-16 15:18:41,724 - INFO - Issues criadas: 5
+2026-03-16 15:18:41,724 - INFO - Erros: 0

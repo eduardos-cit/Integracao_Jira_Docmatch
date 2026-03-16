@@ -1,0 +1,6 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,"Implementar OCR v2 no entidades-externas","Implementar OCR v2 no entidades-externas",DocMatch,16h,I453044,PLTFAT-12771,,,
+Sub-Imp,"Integrar novo contrato de OCR no orquestrador","Integrar novo contrato de OCR no orquestrador",DocMatch,16h,I453044,PLTFAT-12771,,,
+Sub-Imp,"Implementar testes unitários","Implementar testes unitários",DocMatch,8h,I453044,PLTFAT-12771,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-12771,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,12h,,PLTFAT-12771,,
