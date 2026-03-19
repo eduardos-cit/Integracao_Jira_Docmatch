@@ -1,0 +1,13 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,"Implementar biblioteca do PEP no orquestrador","Implementar biblioteca do PEP no orquestrador",DocMatch,2d,I453044,PLTFAT-11443,,,
+Sub-Imp,"Criar configurações do PEP do repositório de infra - orquestrador","Criar configurações do PEP do repositório de infra - orquestrador",DocMatch,4h,I453044,PLTFAT-11443,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-11443,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,8h,,PLTFAT-11443,,,
+Sub-Imp,"Implementar biblioteca do PEP no entidades-externas","Implementar biblioteca do PEP no entidades-externas",DocMatch,2d,,PLTFAT-12469,,,
+Sub-Imp,"Criar configurações do PEP do repositório de infra - entidades-externas","Criar configurações do PEP do repositório de infra - entidades-externas",DocMatch,4h,,PLTFAT-12469,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-12469,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,8h,,PLTFAT-12469,,,
+Sub-Imp,"Implementar biblioteca do PEP no config","Implementar biblioteca do PEP no config",DocMatch,2d,,PLTFAT-11444,,,
+Sub-Imp,"Criar configurações do PEP do repositório de infra - config","Criar configurações do PEP do repositório de infra - config",DocMatch,4h,,PLTFAT-11444,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-11444,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,8h,,PLTFAT-11444,,,

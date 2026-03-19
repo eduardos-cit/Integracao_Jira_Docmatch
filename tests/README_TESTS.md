@@ -508,11 +508,11 @@ Quando um teste falha, investigue:
    - Verifique `.env` e `BulkCreate_configuration.txt`
    - Confira se os arquivos existem e estão no formato correto
 
-2. **Erro de conectividade**
+1. **Erro de conectividade**
    - Teste conexão com o Jira
    - Verifique se o token está válido
 
-3. **Erro de estrutura**
+1. **Erro de estrutura**
    - Confira se o CSV tem todas as colunas esperadas
    - Valide se os valores estão no formato correto
 

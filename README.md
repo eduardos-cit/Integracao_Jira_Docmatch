@@ -1018,4 +1018,5 @@ Após a refatoração: Altere apenas 1 linha em `jira_utils.py` e todos os scrip
 
 **Desenvolvido por:** GitHub Copilot
 **Última atualização:** 09/02/2026
+
 # Integracao_Jira_Docmatch

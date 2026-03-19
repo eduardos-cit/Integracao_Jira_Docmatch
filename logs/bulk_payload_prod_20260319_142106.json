@@ -1,0 +1,262 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "Implementar biblioteca do PEP no orquestrador",
+        "timetracking": {
+          "originalEstimate": "2d",
+          "remainingEstimate": "2d"
+        },
+        "parent": {
+          "key": "PLTFAT-11443"
+        },
+        "summary": "Implementar biblioteca do PEP no orquestrador",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "Criar configurações do PEP do repositório de infra - orquestrador",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-11443"
+        },
+        "summary": "Criar configurações do PEP do repositório de infra - orquestrador",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-11443"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-11443"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Implementar biblioteca do PEP no entidades-externas",
+        "timetracking": {
+          "originalEstimate": "2d",
+          "remainingEstimate": "2d"
+        },
+        "parent": {
+          "key": "PLTFAT-12469"
+        },
+        "summary": "Implementar biblioteca do PEP no entidades-externas",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Criar configurações do PEP do repositório de infra - entidades-externas",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12469"
+        },
+        "summary": "Criar configurações do PEP do repositório de infra - entidades-externas",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12469"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-12469"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Implementar biblioteca do PEP no config",
+        "timetracking": {
+          "originalEstimate": "2d",
+          "remainingEstimate": "2d"
+        },
+        "parent": {
+          "key": "PLTFAT-11444"
+        },
+        "summary": "Implementar biblioteca do PEP no config",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "description": "Criar configurações do PEP do repositório de infra - config",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-11444"
+        },
+        "summary": "Criar configurações do PEP do repositório de infra - config",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-11444"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-11444"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    }
+  ]
+}

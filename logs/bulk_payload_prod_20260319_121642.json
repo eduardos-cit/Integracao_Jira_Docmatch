@@ -1,0 +1,286 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Mapeamento dos cenários de teste",
+        "timetracking": {
+          "originalEstimate": "2d",
+          "remainingEstimate": "2d"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "Mapeamento dos cenários de teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Testes exploratórios no Orquestrador",
+        "timetracking": {
+          "originalEstimate": "2d",
+          "remainingEstimate": "2d"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "Testes exploratórios no Orquestrador",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Setup o framework",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "Setup o framework",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "CT001 - OCR RG SUCESSO ORQUESTRADOR",
+        "timetracking": {
+          "originalEstimate": "1d",
+          "remainingEstimate": "1d"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "CT001 - OCR RG SUCESSO ORQUESTRADOR",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "CT002 - OCR RG INSUCESSO ORQUESTRADOR",
+        "timetracking": {
+          "originalEstimate": "1d",
+          "remainingEstimate": "1d"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "CT002 - OCR RG INSUCESSO ORQUESTRADOR",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Documentação CT001 + CT002 Orquestraor",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "Documentação CT001 + CT002 Orquestraor",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "CT003 - FACEMATCH SUCESSO ORQUESTRADOR",
+        "timetracking": {
+          "originalEstimate": "1d",
+          "remainingEstimate": "1d"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "CT003 - FACEMATCH SUCESSO ORQUESTRADOR",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "CT004 - FACEMATCH INSUCESSO ORQUESTRADOR",
+        "timetracking": {
+          "originalEstimate": "1d",
+          "remainingEstimate": "1d"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "CT004 - FACEMATCH INSUCESSO ORQUESTRADOR",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Documentação CT003 + CT003 Orquestrador",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "Documentação CT003 + CT003 Orquestrador",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "M586590"
+        },
+        "description": "Buffer de Segurança [Ajustes]",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "Buffer de Segurança [Ajustes]",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-13273"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    }
+  ]
+}

@@ -2,28 +2,35 @@
 ======================================================================
     RELATÓRIO DE PROCESSAMENTO CSV → JIRA
 ======================================================================
-Data/Hora: 16/03/2026 15:18:41
+Data/Hora: 19/03/2026 14:21:49
 
 ======================================================================
 RESUMO
 ======================================================================
 Total de arquivos processados: 1
-Total de issues criadas: 5
+Total de issues criadas: 12
 Total de erros: 0
 
 ======================================================================
 ISSUES CRIADAS COM SUCESSO
 ======================================================================
 
-Arquivo: alex_ocrv2_PLTFAT-12771.csv
-Issues criadas: 5
+Arquivo: alex_PEP.csv
+Issues criadas: 12
 Erros durante criação: 0
 
 Issue Keys:
-  - PLTFAT-13237: https://jira.bradesco.com.br:8443/browse/PLTFAT-13237
-  - PLTFAT-13238: https://jira.bradesco.com.br:8443/browse/PLTFAT-13238
-  - PLTFAT-13239: https://jira.bradesco.com.br:8443/browse/PLTFAT-13239
-  - PLTFAT-13240: https://jira.bradesco.com.br:8443/browse/PLTFAT-13240
-  - PLTFAT-13241: https://jira.bradesco.com.br:8443/browse/PLTFAT-13241
+  - PLTFAT-13385: https://jira.bradesco.com.br:8443/browse/PLTFAT-13385
+  - PLTFAT-13386: https://jira.bradesco.com.br:8443/browse/PLTFAT-13386
+  - PLTFAT-13387: https://jira.bradesco.com.br:8443/browse/PLTFAT-13387
+  - PLTFAT-13388: https://jira.bradesco.com.br:8443/browse/PLTFAT-13388
+  - PLTFAT-13389: https://jira.bradesco.com.br:8443/browse/PLTFAT-13389
+  - PLTFAT-13390: https://jira.bradesco.com.br:8443/browse/PLTFAT-13390
+  - PLTFAT-13391: https://jira.bradesco.com.br:8443/browse/PLTFAT-13391
+  - PLTFAT-13392: https://jira.bradesco.com.br:8443/browse/PLTFAT-13392
+  - PLTFAT-13393: https://jira.bradesco.com.br:8443/browse/PLTFAT-13393
+  - PLTFAT-13394: https://jira.bradesco.com.br:8443/browse/PLTFAT-13394
+  - PLTFAT-13395: https://jira.bradesco.com.br:8443/browse/PLTFAT-13395
+  - PLTFAT-13396: https://jira.bradesco.com.br:8443/browse/PLTFAT-13396
 
 ----------------------------------------------------------------------

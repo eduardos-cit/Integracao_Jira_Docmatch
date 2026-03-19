@@ -1,0 +1,13 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,"Mapeamento dos cenários de teste","Mapeamento dos cenários de teste",DocMatch,2d,M586590,PLTFAT-13273,,,
+Sub-Imp,"Testes exploratórios no Orquestrador","Testes exploratórios no Orquestrador",DocMatch,2d,M586590,PLTFAT-13273,,,
+Sub-Imp,"Setup o framework","Setup o framework",DocMatch,4h,M586590,PLTFAT-13273,,,
+Sub-Imp,"CT001 - OCR RG SUCESSO ORQUESTRADOR","CT001 - OCR RG SUCESSO ORQUESTRADOR",DocMatch,1d,M586590,PLTFAT-13273,,,
+Sub-Imp,"CT002 - OCR RG INSUCESSO ORQUESTRADOR","CT002 - OCR RG INSUCESSO ORQUESTRADOR",DocMatch,1d,M586590,PLTFAT-13273,,,
+Sub-Imp,"Documentação CT001 + CT002 Orquestraor","Documentação CT001 + CT002 Orquestraor",DocMatch,4h,M586590,PLTFAT-13273,,,
+Sub-Imp,"CT003 - FACEMATCH SUCESSO ORQUESTRADOR","CT003 - FACEMATCH SUCESSO ORQUESTRADOR",DocMatch,1d,M586590,PLTFAT-13273,,,
+Sub-Imp,"CT004 - FACEMATCH INSUCESSO ORQUESTRADOR","CT004 - FACEMATCH INSUCESSO ORQUESTRADOR",DocMatch,1d,M586590,PLTFAT-13273,,,
+Sub-Imp,"Documentação CT003 + CT003 Orquestrador","Documentação CT003 + CT003 Orquestrador",DocMatch,4h,M586590,PLTFAT-13273,,,
+Sub-Imp,"Buffer de Segurança [Ajustes]","Buffer de Segurança [Ajustes]",DocMatch,4h,M586590,PLTFAT-13273,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-13273,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,8h,,PLTFAT-13273,,
