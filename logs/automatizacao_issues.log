@@ -1734,3 +1734,990 @@ Processando arquivos da pasta: issues
 2026-03-19 14:21:49,827 - INFO - Total de arquivos: 1
 2026-03-19 14:21:49,828 - INFO - Issues criadas: 12
 2026-03-19 14:21:49,829 - INFO - Erros: 0
+2026-03-30 09:53:24,492 - INFO - 
+======================================================================
+2026-03-30 09:53:24,493 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-30 09:53:24,493 - INFO - ======================================================================
+2026-03-30 09:53:24,493 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-30 09:53:24,494 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 09:53:24,494 - INFO - Projeto: PLTFAT
+2026-03-30 09:53:24,494 - INFO - Team configurado: DocMatch
+2026-03-30 09:53:24,494 - INFO - Pasta CSV: issues
+2026-03-30 09:53:24,495 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 09:53:24,495 - INFO - Projeto configurado: PLTFAT
+2026-03-30 09:53:24,495 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 09:53:24,496 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 09:53:24,496 - INFO -    ↳ template_issues.csv
+2026-03-30 09:53:24,496 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 09:53:24,497 - INFO -    ↳ template_vazio.csv
+2026-03-30 09:53:24,497 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 09:53:24,497 - INFO - 
+============================================================
+2026-03-30 09:53:24,497 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos.csv
+2026-03-30 09:53:24,497 - INFO - ============================================================
+2026-03-30 09:53:24,498 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos.csv: 9 issues mapeadas
+2026-03-30 09:53:24,498 - INFO - Preparando criação em lote de 9 issues
+2026-03-30 09:53:24,499 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260330_095324.json
+2026-03-30 09:53:24,500 - INFO - 
+======================================================================
+2026-03-30 09:53:24,500 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-30 09:53:24,500 - INFO - ======================================================================
+2026-03-30 09:53:24,502 - INFO - 
+======================================================================
+2026-03-30 09:53:24,503 - INFO - 📊 Total de issues no payload: 9
+2026-03-30 09:53:24,503 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-30 09:53:24,503 - INFO - ======================================================================
+2026-03-30 09:53:24,506 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 09:53:24,506 - INFO - 
+======================================================================
+2026-03-30 09:53:24,506 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 09:53:24,507 - INFO - ======================================================================
+2026-03-30 09:53:24,507 - INFO - Total de arquivos: 1
+2026-03-30 09:53:24,507 - INFO - Issues criadas: 9
+2026-03-30 09:53:24,507 - INFO - Erros: 0
+2026-03-30 09:55:38,747 - INFO - 
+======================================================================
+2026-03-30 09:55:38,748 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-30 09:55:38,748 - INFO - ======================================================================
+2026-03-30 09:55:38,749 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 09:55:38,749 - INFO - Projeto: PLTFAT
+2026-03-30 09:55:38,749 - INFO - Team configurado: DocMatch
+2026-03-30 09:55:38,750 - INFO - Pasta CSV: issues
+2026-03-30 09:55:38,750 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 09:55:38,750 - INFO - Projeto configurado: PLTFAT
+2026-03-30 09:55:38,750 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 09:55:38,751 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 09:55:38,751 - INFO -    ↳ template_issues.csv
+2026-03-30 09:55:38,751 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 09:55:38,751 - INFO -    ↳ template_vazio.csv
+2026-03-30 09:55:38,751 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 09:55:38,752 - INFO - 
+============================================================
+2026-03-30 09:55:38,752 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos.csv
+2026-03-30 09:55:38,752 - INFO - ============================================================
+2026-03-30 09:55:38,752 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos.csv: 9 issues mapeadas
+2026-03-30 09:55:38,753 - INFO - Preparando criação em lote de 9 issues
+2026-03-30 09:55:38,754 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260330_095538.json
+2026-03-30 09:56:08,049 - INFO - ✓ Bulk create concluído: 7 issues criadas
+2026-03-30 09:56:08,050 - WARNING - ⚠ Erros durante bulk create: 2 falhas
+2026-03-30 09:56:08,050 - ERROR -   Erro 1: {'status': 404, 'elementErrors': {'errorMessages': ['The issue no longer exists.'], 'errors': {}}, 'failedElementNumber': 3}
+2026-03-30 09:56:08,050 - ERROR -   Erro 2: {'status': 404, 'elementErrors': {'errorMessages': ['The issue no longer exists.'], 'errors': {}}, 'failedElementNumber': 7}
+2026-03-30 09:56:08,051 - INFO - ✓ Issue criada: PLTFAT-13657
+2026-03-30 09:56:08,051 - INFO - ✓ Issue criada: PLTFAT-13658
+2026-03-30 09:56:08,052 - INFO - ✓ Issue criada: PLTFAT-13659
+2026-03-30 09:56:08,052 - INFO - ✓ Issue criada: PLTFAT-13660
+2026-03-30 09:56:08,052 - INFO - ✓ Issue criada: PLTFAT-13661
+2026-03-30 09:56:08,052 - INFO - ✓ Issue criada: PLTFAT-13662
+2026-03-30 09:56:08,052 - INFO - ✓ Issue criada: PLTFAT-13663
+2026-03-30 09:56:08,053 - WARNING - ⚠ 2 issues falharam
+2026-03-30 09:56:08,053 - INFO - ✓ Arquivo movido para Processados/ como: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_prc.csv
+2026-03-30 09:56:08,054 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 09:56:08,055 - INFO - 
+======================================================================
+2026-03-30 09:56:08,055 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 09:56:08,055 - INFO - ======================================================================
+2026-03-30 09:56:08,055 - INFO - Total de arquivos: 1
+2026-03-30 09:56:08,056 - INFO - Issues criadas: 7
+2026-03-30 09:56:08,056 - INFO - Erros: 2
+2026-03-30 09:59:18,867 - INFO - 
+======================================================================
+2026-03-30 09:59:18,868 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-30 09:59:18,868 - INFO - ======================================================================
+2026-03-30 09:59:18,868 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-30 09:59:18,869 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 09:59:18,870 - INFO - Projeto: PLTFAT
+2026-03-30 09:59:18,870 - INFO - Team configurado: DocMatch
+2026-03-30 09:59:18,870 - INFO - Pasta CSV: issues
+2026-03-30 09:59:18,871 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 09:59:18,871 - INFO - Projeto configurado: PLTFAT
+2026-03-30 09:59:18,871 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 09:59:18,872 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 09:59:18,872 - INFO -    ↳ template_issues.csv
+2026-03-30 09:59:18,872 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 09:59:18,872 - INFO -    ↳ template_vazio.csv
+2026-03-30 09:59:18,873 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 09:59:18,873 - INFO - 
+============================================================
+2026-03-30 09:59:18,873 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv
+2026-03-30 09:59:18,873 - INFO - ============================================================
+2026-03-30 09:59:18,874 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv: 2 issues mapeadas
+2026-03-30 09:59:18,875 - INFO - Preparando criação em lote de 2 issues
+2026-03-30 09:59:18,877 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260330_095918.json
+2026-03-30 09:59:18,877 - INFO - 
+======================================================================
+2026-03-30 09:59:18,878 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-30 09:59:18,878 - INFO - ======================================================================
+2026-03-30 09:59:18,879 - INFO - 
+======================================================================
+2026-03-30 09:59:18,879 - INFO - 📊 Total de issues no payload: 2
+2026-03-30 09:59:18,879 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-30 09:59:18,880 - INFO - ======================================================================
+2026-03-30 09:59:18,881 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 09:59:18,881 - INFO - 
+======================================================================
+2026-03-30 09:59:18,881 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 09:59:18,882 - INFO - ======================================================================
+2026-03-30 09:59:18,882 - INFO - Total de arquivos: 1
+2026-03-30 09:59:18,882 - INFO - Issues criadas: 2
+2026-03-30 09:59:18,882 - INFO - Erros: 0
+2026-03-30 09:59:22,600 - INFO - 
+======================================================================
+2026-03-30 09:59:22,600 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-30 09:59:22,601 - INFO - ======================================================================
+2026-03-30 09:59:22,602 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 09:59:22,602 - INFO - Projeto: PLTFAT
+2026-03-30 09:59:22,602 - INFO - Team configurado: DocMatch
+2026-03-30 09:59:22,602 - INFO - Pasta CSV: issues
+2026-03-30 09:59:22,603 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 09:59:22,603 - INFO - Projeto configurado: PLTFAT
+2026-03-30 09:59:22,603 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 09:59:22,604 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 09:59:22,604 - INFO -    ↳ template_issues.csv
+2026-03-30 09:59:22,604 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 09:59:22,604 - INFO -    ↳ template_vazio.csv
+2026-03-30 09:59:22,605 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 09:59:22,605 - INFO - 
+============================================================
+2026-03-30 09:59:22,605 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv
+2026-03-30 09:59:22,605 - INFO - ============================================================
+2026-03-30 09:59:22,606 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv: 2 issues mapeadas
+2026-03-30 09:59:22,606 - INFO - Preparando criação em lote de 2 issues
+2026-03-30 09:59:22,607 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260330_095922.json
+2026-03-30 09:59:22,765 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-30 09:59:22,765 - ERROR - Resposta: {"issues":[],"errors":[{"status":404,"elementErrors":{"errorMessages":["The issue no longer exists."],"errors":{}},"failedElementNumber":0},{"status":404,"elementErrors":{"errorMessages":["The issue no longer exists."],"errors":{}},"failedElementNumber":1}]}...
+2026-03-30 09:59:22,766 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 404,
+      "elementErrors": {
+        "errorMessages": [
+          "The issue no longer exists."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 404,
+      "elementErrors": {
+        "errorMessages": [
+          "The issue no longer exists."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 1
+    }
+  ]
+}
+2026-03-30 09:59:22,767 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 09:59:22,768 - INFO - 
+======================================================================
+2026-03-30 09:59:22,768 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 09:59:22,768 - INFO - ======================================================================
+2026-03-30 09:59:22,769 - INFO - Total de arquivos: 1
+2026-03-30 09:59:22,769 - INFO - Issues criadas: 0
+2026-03-30 09:59:22,769 - INFO - Erros: 1
+2026-03-30 10:01:59,442 - INFO - 
+======================================================================
+2026-03-30 10:01:59,443 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-30 10:01:59,443 - INFO - ======================================================================
+2026-03-30 10:01:59,444 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 10:01:59,444 - INFO - Projeto: PLTFAT
+2026-03-30 10:01:59,445 - INFO - Team configurado: DocMatch
+2026-03-30 10:01:59,445 - INFO - Pasta CSV: issues
+2026-03-30 10:01:59,446 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 10:01:59,446 - INFO - Projeto configurado: PLTFAT
+2026-03-30 10:01:59,446 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 10:01:59,446 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 10:01:59,446 - INFO -    ↳ template_issues.csv
+2026-03-30 10:01:59,447 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 10:01:59,447 - INFO -    ↳ template_vazio.csv
+2026-03-30 10:01:59,447 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 10:01:59,447 - INFO - 
+============================================================
+2026-03-30 10:01:59,447 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv
+2026-03-30 10:01:59,448 - INFO - ============================================================
+2026-03-30 10:01:59,448 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv: 2 issues mapeadas
+2026-03-30 10:01:59,449 - INFO - Preparando criação em lote de 2 issues
+2026-03-30 10:01:59,451 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260330_100159.json
+2026-03-30 10:01:59,637 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-30 10:01:59,637 - ERROR - Resposta: {"issues":[],"errors":[{"status":404,"elementErrors":{"errorMessages":["The issue no longer exists."],"errors":{}},"failedElementNumber":0},{"status":404,"elementErrors":{"errorMessages":["The issue no longer exists."],"errors":{}},"failedElementNumber":1}]}...
+2026-03-30 10:01:59,637 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 404,
+      "elementErrors": {
+        "errorMessages": [
+          "The issue no longer exists."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 404,
+      "elementErrors": {
+        "errorMessages": [
+          "The issue no longer exists."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 1
+    }
+  ]
+}
+2026-03-30 10:01:59,639 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 10:01:59,640 - INFO - 
+======================================================================
+2026-03-30 10:01:59,640 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 10:01:59,640 - INFO - ======================================================================
+2026-03-30 10:01:59,640 - INFO - Total de arquivos: 1
+2026-03-30 10:01:59,640 - INFO - Issues criadas: 0
+2026-03-30 10:01:59,641 - INFO - Erros: 1
+2026-03-30 10:06:06,231 - INFO - 
+======================================================================
+2026-03-30 10:06:06,232 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-30 10:06:06,232 - INFO - ======================================================================
+2026-03-30 10:06:06,233 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 10:06:06,233 - INFO - Projeto: PLTFAT
+2026-03-30 10:06:06,233 - INFO - Team configurado: DocMatch
+2026-03-30 10:06:06,233 - INFO - Pasta CSV: issues
+2026-03-30 10:06:06,233 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 10:06:06,233 - INFO - Projeto configurado: PLTFAT
+2026-03-30 10:06:06,233 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 10:06:06,234 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 10:06:06,234 - INFO -    ↳ template_issues.csv
+2026-03-30 10:06:06,234 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 10:06:06,234 - INFO -    ↳ template_vazio.csv
+2026-03-30 10:06:06,234 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 10:06:06,235 - INFO - 
+============================================================
+2026-03-30 10:06:06,235 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv
+2026-03-30 10:06:06,235 - INFO - ============================================================
+2026-03-30 10:06:06,236 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv: 2 issues mapeadas
+2026-03-30 10:06:06,236 - INFO - Preparando criação em lote de 2 issues
+2026-03-30 10:06:06,238 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260330_100606.json
+2026-03-30 10:06:06,404 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-30 10:06:06,404 - ERROR - Resposta: {"issues":[],"errors":[{"status":404,"elementErrors":{"errorMessages":["The issue no longer exists."],"errors":{}},"failedElementNumber":0},{"status":404,"elementErrors":{"errorMessages":["The issue no longer exists."],"errors":{}},"failedElementNumber":1}]}...
+2026-03-30 10:06:06,404 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 404,
+      "elementErrors": {
+        "errorMessages": [
+          "The issue no longer exists."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 404,
+      "elementErrors": {
+        "errorMessages": [
+          "The issue no longer exists."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 1
+    }
+  ]
+}
+2026-03-30 10:06:06,407 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 10:06:06,407 - INFO - 
+======================================================================
+2026-03-30 10:06:06,407 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 10:06:06,407 - INFO - ======================================================================
+2026-03-30 10:06:06,408 - INFO - Total de arquivos: 1
+2026-03-30 10:06:06,408 - INFO - Issues criadas: 0
+2026-03-30 10:06:06,408 - INFO - Erros: 1
+2026-03-30 10:07:33,376 - INFO - 
+======================================================================
+2026-03-30 10:07:33,376 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-30 10:07:33,377 - INFO - ======================================================================
+2026-03-30 10:07:33,378 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 10:07:33,378 - INFO - Projeto: PLTFAT
+2026-03-30 10:07:33,378 - INFO - Team configurado: DocMatch
+2026-03-30 10:07:33,378 - INFO - Pasta CSV: issues
+2026-03-30 10:07:33,378 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 10:07:33,378 - INFO - Projeto configurado: PLTFAT
+2026-03-30 10:07:33,379 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 10:07:33,379 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 10:07:33,379 - INFO -    ↳ template_issues.csv
+2026-03-30 10:07:33,379 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 10:07:33,379 - INFO -    ↳ template_vazio.csv
+2026-03-30 10:07:33,380 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 10:07:33,380 - INFO - 
+============================================================
+2026-03-30 10:07:33,380 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv
+2026-03-30 10:07:33,380 - INFO - ============================================================
+2026-03-30 10:07:33,381 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv: 2 issues mapeadas
+2026-03-30 10:07:33,381 - INFO - Preparando criação em lote de 2 issues
+2026-03-30 10:07:33,383 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260330_100733.json
+2026-03-30 10:07:33,525 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-30 10:07:33,525 - ERROR - Resposta: {"issues":[],"errors":[{"status":403,"elementErrors":{"errorMessages":["Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. To gain application access you need to be a member of a group assigned to an application."],"errors":{}},"failedElementNumber":0},{"status":403,"elementErrors":{"errorMessages":["Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. T...
+2026-03-30 10:07:33,526 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 403,
+      "elementErrors": {
+        "errorMessages": [
+          "Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. To gain application access you need to be a member of a group assigned to an application."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 403,
+      "elementErrors": {
+        "errorMessages": [
+          "Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. To gain application access you need to be a member of a group assigned to an application."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 1
+    }
+  ]
+}
+2026-03-30 10:07:33,527 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 10:07:33,528 - INFO - 
+======================================================================
+2026-03-30 10:07:33,528 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 10:07:33,528 - INFO - ======================================================================
+2026-03-30 10:07:33,528 - INFO - Total de arquivos: 1
+2026-03-30 10:07:33,529 - INFO - Issues criadas: 0
+2026-03-30 10:07:33,529 - INFO - Erros: 1
+2026-03-30 10:09:04,494 - INFO - 
+======================================================================
+2026-03-30 10:09:04,495 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-30 10:09:04,495 - INFO - ======================================================================
+2026-03-30 10:09:04,496 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 10:09:04,496 - INFO - Projeto: PLTFAT
+2026-03-30 10:09:04,497 - INFO - Team configurado: DocMatch
+2026-03-30 10:09:04,497 - INFO - Pasta CSV: issues
+2026-03-30 10:09:04,497 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 10:09:04,497 - INFO - Projeto configurado: PLTFAT
+2026-03-30 10:09:04,497 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 10:09:04,498 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 10:09:04,498 - INFO -    ↳ template_issues.csv
+2026-03-30 10:09:04,498 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 10:09:04,498 - INFO -    ↳ template_vazio.csv
+2026-03-30 10:09:04,499 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 10:09:04,499 - INFO - 
+============================================================
+2026-03-30 10:09:04,499 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv
+2026-03-30 10:09:04,499 - INFO - ============================================================
+2026-03-30 10:09:04,500 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv: 2 issues mapeadas
+2026-03-30 10:09:04,500 - INFO - Preparando criação em lote de 2 issues
+2026-03-30 10:09:04,502 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260330_100904.json
+2026-03-30 10:09:04,638 - ERROR - ✗ Erro ao criar issues em lote: HTTP 400
+2026-03-30 10:09:04,638 - ERROR - Resposta: {"issues":[],"errors":[{"status":403,"elementErrors":{"errorMessages":["Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. To gain application access you need to be a member of a group assigned to an application."],"errors":{}},"failedElementNumber":0},{"status":403,"elementErrors":{"errorMessages":["Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. T...
+2026-03-30 10:09:04,639 - ERROR - Detalhes do erro: {
+  "issues": [],
+  "errors": [
+    {
+      "status": 403,
+      "elementErrors": {
+        "errorMessages": [
+          "Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. To gain application access you need to be a member of a group assigned to an application."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 0
+    },
+    {
+      "status": 403,
+      "elementErrors": {
+        "errorMessages": [
+          "Sorry, you can't create any issues right now, as you need to have access to a Jira application to be able to create issues. To gain application access you need to be a member of a group assigned to an application."
+        ],
+        "errors": {}
+      },
+      "failedElementNumber": 1
+    }
+  ]
+}
+2026-03-30 10:09:04,640 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 10:09:04,641 - INFO - 
+======================================================================
+2026-03-30 10:09:04,641 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 10:09:04,641 - INFO - ======================================================================
+2026-03-30 10:09:04,642 - INFO - Total de arquivos: 1
+2026-03-30 10:09:04,642 - INFO - Issues criadas: 0
+2026-03-30 10:09:04,642 - INFO - Erros: 1
+2026-03-30 10:11:08,182 - INFO - 
+======================================================================
+2026-03-30 10:11:08,182 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-30 10:11:08,182 - INFO - ======================================================================
+2026-03-30 10:11:08,183 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-30 10:11:08,183 - INFO - Projeto: PLTFAT
+2026-03-30 10:11:08,183 - INFO - Team configurado: DocMatch
+2026-03-30 10:11:08,183 - INFO - Pasta CSV: issues
+2026-03-30 10:11:08,184 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-30 10:11:08,184 - INFO - Projeto configurado: PLTFAT
+2026-03-30 10:11:08,184 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-30 10:11:08,184 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-30 10:11:08,184 - INFO -    ↳ template_issues.csv
+2026-03-30 10:11:08,185 - INFO -    ↳ template_issues_completo.csv
+2026-03-30 10:11:08,185 - INFO -    ↳ template_vazio.csv
+2026-03-30 10:11:08,185 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-30 10:11:08,185 - INFO - 
+============================================================
+2026-03-30 10:11:08,186 - INFO - Processando arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv
+2026-03-30 10:11:08,186 - INFO - ============================================================
+2026-03-30 10:11:08,186 - INFO - Arquivo issues\[pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2.csv: 2 issues mapeadas
+2026-03-30 10:11:08,187 - INFO - Preparando criação em lote de 2 issues
+2026-03-30 10:11:08,190 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260330_101108.json
+2026-03-30 10:11:17,889 - INFO - ✓ Bulk create concluído: 2 issues criadas
+2026-03-30 10:11:17,890 - INFO - ✓ Issue criada: PLTFAT-13664
+2026-03-30 10:11:17,890 - INFO - ✓ Issue criada: PLTFAT-13665
+2026-03-30 10:11:17,891 - INFO - ✓ Arquivo movido para Processados/ como: [pltfat]_docmatch_-_import-jira_csv_RT2SP1_ritos_v2_prc.csv
+2026-03-30 10:11:17,892 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-30 10:11:17,892 - INFO - 
+======================================================================
+2026-03-30 10:11:17,893 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-30 10:11:17,893 - INFO - ======================================================================
+2026-03-30 10:11:17,893 - INFO - Total de arquivos: 1
+2026-03-30 10:11:17,893 - INFO - Issues criadas: 2
+2026-03-30 10:11:17,894 - INFO - Erros: 0
+2026-03-31 10:44:58,954 - INFO - 
+======================================================================
+2026-03-31 10:44:58,954 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-31 10:44:58,955 - INFO - ======================================================================
+2026-03-31 10:44:58,955 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-31 10:44:58,956 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-31 10:44:58,956 - INFO - Projeto: PLTFAT
+2026-03-31 10:44:58,956 - INFO - Team configurado: DocMatch
+2026-03-31 10:44:58,956 - INFO - Pasta CSV: issues
+2026-03-31 10:44:58,957 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-31 10:44:58,957 - INFO - Projeto configurado: PLTFAT
+2026-03-31 10:44:58,957 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-31 10:44:58,957 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-31 10:44:58,958 - INFO -    ↳ template_issues.csv
+2026-03-31 10:44:58,958 - INFO -    ↳ template_issues_completo.csv
+2026-03-31 10:44:58,958 - INFO -    ↳ template_vazio.csv
+2026-03-31 10:44:58,958 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-31 10:44:58,958 - INFO - 
+============================================================
+2026-03-31 10:44:58,958 - INFO - Processando arquivo: alex_ciam_base_13436.csv
+2026-03-31 10:44:58,959 - INFO - ============================================================
+2026-03-31 10:44:58,959 - INFO - Arquivo issues\alex_ciam_base_13436.csv: 6 issues mapeadas
+2026-03-31 10:44:58,959 - INFO - Preparando criação em lote de 6 issues
+2026-03-31 10:44:58,961 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260331_104458.json
+2026-03-31 10:44:58,961 - INFO - 
+======================================================================
+2026-03-31 10:44:58,961 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-31 10:44:58,961 - INFO - ======================================================================
+2026-03-31 10:44:58,962 - INFO - 
+======================================================================
+2026-03-31 10:44:58,963 - INFO - 📊 Total de issues no payload: 6
+2026-03-31 10:44:58,963 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-31 10:44:58,964 - INFO - ======================================================================
+2026-03-31 10:44:58,966 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-31 10:44:58,967 - INFO - 
+======================================================================
+2026-03-31 10:44:58,967 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-31 10:44:58,967 - INFO - ======================================================================
+2026-03-31 10:44:58,968 - INFO - Total de arquivos: 1
+2026-03-31 10:44:58,968 - INFO - Issues criadas: 6
+2026-03-31 10:44:58,969 - INFO - Erros: 0
+2026-03-31 10:45:35,773 - INFO - 
+======================================================================
+2026-03-31 10:45:35,774 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-31 10:45:35,774 - INFO - ======================================================================
+2026-03-31 10:45:35,775 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-31 10:45:35,776 - INFO - Projeto: PLTFAT
+2026-03-31 10:45:35,776 - INFO - Team configurado: DocMatch
+2026-03-31 10:45:35,776 - INFO - Pasta CSV: issues
+2026-03-31 10:45:35,776 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-31 10:45:35,777 - INFO - Projeto configurado: PLTFAT
+2026-03-31 10:45:35,777 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-31 10:45:35,777 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-31 10:45:35,777 - INFO -    ↳ template_issues.csv
+2026-03-31 10:45:35,778 - INFO -    ↳ template_issues_completo.csv
+2026-03-31 10:45:35,778 - INFO -    ↳ template_vazio.csv
+2026-03-31 10:45:35,778 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-31 10:45:35,778 - INFO - 
+============================================================
+2026-03-31 10:45:35,778 - INFO - Processando arquivo: alex_ciam_base_13436.csv
+2026-03-31 10:45:35,778 - INFO - ============================================================
+2026-03-31 10:45:35,779 - INFO - Arquivo issues\alex_ciam_base_13436.csv: 6 issues mapeadas
+2026-03-31 10:45:35,779 - INFO - Preparando criação em lote de 6 issues
+2026-03-31 10:45:35,782 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260331_104535.json
+2026-03-31 10:46:11,177 - INFO - ✓ Bulk create concluído: 6 issues criadas
+2026-03-31 10:46:11,178 - INFO - ✓ Issue criada: PLTFAT-13685
+2026-03-31 10:46:11,178 - INFO - ✓ Issue criada: PLTFAT-13686
+2026-03-31 10:46:11,179 - INFO - ✓ Issue criada: PLTFAT-13687
+2026-03-31 10:46:11,179 - INFO - ✓ Issue criada: PLTFAT-13688
+2026-03-31 10:46:11,179 - INFO - ✓ Issue criada: PLTFAT-13689
+2026-03-31 10:46:11,179 - INFO - ✓ Issue criada: PLTFAT-13690
+2026-03-31 10:46:11,180 - INFO - ✓ Arquivo movido para Processados/ como: alex_ciam_base_13436_prc.csv
+2026-03-31 10:46:11,182 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-31 10:46:11,182 - INFO - 
+======================================================================
+2026-03-31 10:46:11,182 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-31 10:46:11,182 - INFO - ======================================================================
+2026-03-31 10:46:11,183 - INFO - Total de arquivos: 1
+2026-03-31 10:46:11,183 - INFO - Issues criadas: 6
+2026-03-31 10:46:11,183 - INFO - Erros: 0
+2026-03-31 10:47:39,430 - INFO - 
+======================================================================
+2026-03-31 10:47:39,431 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-31 10:47:39,431 - INFO - ======================================================================
+2026-03-31 10:47:39,432 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-31 10:47:39,433 - INFO - Projeto: PLTFAT
+2026-03-31 10:47:39,433 - INFO - Team configurado: DocMatch
+2026-03-31 10:47:39,433 - INFO - Pasta CSV: issues
+2026-03-31 10:47:39,433 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-31 10:47:39,434 - INFO - Projeto configurado: PLTFAT
+2026-03-31 10:47:39,434 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-31 10:47:39,434 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-31 10:47:39,434 - INFO -    ↳ template_issues.csv
+2026-03-31 10:47:39,435 - INFO -    ↳ template_issues_completo.csv
+2026-03-31 10:47:39,435 - INFO -    ↳ template_vazio.csv
+2026-03-31 10:47:39,435 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-31 10:47:39,435 - INFO - 
+============================================================
+2026-03-31 10:47:39,435 - INFO - Processando arquivo: alex_ciam_base_13436_testes.csv
+2026-03-31 10:47:39,436 - INFO - ============================================================
+2026-03-31 10:47:39,436 - INFO - Arquivo issues\alex_ciam_base_13436_testes.csv: 2 issues mapeadas
+2026-03-31 10:47:39,437 - INFO - Preparando criação em lote de 2 issues
+2026-03-31 10:47:39,438 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260331_104739.json
+2026-03-31 10:47:53,095 - INFO - ✓ Bulk create concluído: 2 issues criadas
+2026-03-31 10:47:53,097 - INFO - ✓ Issue criada: PLTFAT-13691
+2026-03-31 10:47:53,097 - INFO - ✓ Issue criada: PLTFAT-13692
+2026-03-31 10:47:53,099 - INFO - ✓ Arquivo movido para Processados/ como: alex_ciam_base_13436_testes_prc.csv
+2026-03-31 10:47:53,101 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-31 10:47:53,101 - INFO - 
+======================================================================
+2026-03-31 10:47:53,101 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-31 10:47:53,101 - INFO - ======================================================================
+2026-03-31 10:47:53,101 - INFO - Total de arquivos: 1
+2026-03-31 10:47:53,102 - INFO - Issues criadas: 2
+2026-03-31 10:47:53,102 - INFO - Erros: 0
+2026-03-31 15:32:09,729 - INFO - 
+======================================================================
+2026-03-31 15:32:09,730 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-03-31 15:32:09,730 - INFO - ======================================================================
+2026-03-31 15:32:09,730 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-03-31 15:32:09,731 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-31 15:32:09,732 - INFO - Projeto: PLTFAT
+2026-03-31 15:32:09,732 - INFO - Team configurado: DocMatch
+2026-03-31 15:32:09,732 - INFO - Pasta CSV: issues
+2026-03-31 15:32:09,732 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-31 15:32:09,732 - INFO - Projeto configurado: PLTFAT
+2026-03-31 15:32:09,733 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-31 15:32:09,733 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-31 15:32:09,733 - INFO -    ↳ template_issues.csv
+2026-03-31 15:32:09,734 - INFO -    ↳ template_issues_completo.csv
+2026-03-31 15:32:09,734 - INFO -    ↳ template_vazio.csv
+2026-03-31 15:32:09,734 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-31 15:32:09,734 - INFO - 
+============================================================
+2026-03-31 15:32:09,734 - INFO - Processando arquivo: fernando_ta_orquestrador.csv
+2026-03-31 15:32:09,734 - INFO - ============================================================
+2026-03-31 15:32:09,735 - INFO - Arquivo issues\fernando_ta_orquestrador.csv: 18 issues mapeadas
+2026-03-31 15:32:09,735 - INFO - Preparando criação em lote de 18 issues
+2026-03-31 15:32:09,737 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260331_153209.json
+2026-03-31 15:32:09,737 - INFO - 
+======================================================================
+2026-03-31 15:32:09,737 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-03-31 15:32:09,738 - INFO - ======================================================================
+2026-03-31 15:32:09,741 - INFO - 
+======================================================================
+2026-03-31 15:32:09,741 - INFO - 📊 Total de issues no payload: 18
+2026-03-31 15:32:09,741 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-03-31 15:32:09,742 - INFO - ======================================================================
+2026-03-31 15:32:09,743 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-31 15:32:09,744 - INFO - 
+======================================================================
+2026-03-31 15:32:09,744 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-31 15:32:09,744 - INFO - ======================================================================
+2026-03-31 15:32:09,745 - INFO - Total de arquivos: 1
+2026-03-31 15:32:09,745 - INFO - Issues criadas: 18
+2026-03-31 15:32:09,745 - INFO - Erros: 0
+2026-03-31 15:32:34,792 - INFO - 
+======================================================================
+2026-03-31 15:32:34,793 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-03-31 15:32:34,794 - INFO - ======================================================================
+2026-03-31 15:32:34,795 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-03-31 15:32:34,795 - INFO - Projeto: PLTFAT
+2026-03-31 15:32:34,796 - INFO - Team configurado: DocMatch
+2026-03-31 15:32:34,796 - INFO - Pasta CSV: issues
+2026-03-31 15:32:34,796 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-03-31 15:32:34,796 - INFO - Projeto configurado: PLTFAT
+2026-03-31 15:32:34,797 - INFO - 
+Processando arquivos da pasta: issues
+2026-03-31 15:32:34,797 - INFO - 📋 Arquivos template ignorados: 3
+2026-03-31 15:32:34,797 - INFO -    ↳ template_issues.csv
+2026-03-31 15:32:34,797 - INFO -    ↳ template_issues_completo.csv
+2026-03-31 15:32:34,797 - INFO -    ↳ template_vazio.csv
+2026-03-31 15:32:34,798 - INFO - Encontrados 1 arquivos .csv para processar
+2026-03-31 15:32:34,798 - INFO - 
+============================================================
+2026-03-31 15:32:34,798 - INFO - Processando arquivo: fernando_ta_orquestrador.csv
+2026-03-31 15:32:34,798 - INFO - ============================================================
+2026-03-31 15:32:34,799 - INFO - Arquivo issues\fernando_ta_orquestrador.csv: 18 issues mapeadas
+2026-03-31 15:32:34,800 - INFO - Preparando criação em lote de 18 issues
+2026-03-31 15:32:34,801 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260331_153234.json
+2026-03-31 15:33:34,907 - ERROR - ✗ Timeout ao criar issues - servidor demorou muito para responder
+2026-03-31 15:33:34,908 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-03-31 15:33:34,909 - INFO - 
+======================================================================
+2026-03-31 15:33:34,909 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-03-31 15:33:34,909 - INFO - ======================================================================
+2026-03-31 15:33:34,910 - INFO - Total de arquivos: 1
+2026-03-31 15:33:34,910 - INFO - Issues criadas: 0
+2026-03-31 15:33:34,910 - INFO - Erros: 1
+2026-04-01 11:20:28,938 - INFO - 
+======================================================================
+2026-04-01 11:20:28,939 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-04-01 11:20:28,939 - INFO - ======================================================================
+2026-04-01 11:20:28,939 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-04-01 11:20:28,940 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:20:28,941 - INFO - Projeto: PLTFAT
+2026-04-01 11:20:28,941 - INFO - Team configurado: DocMatch
+2026-04-01 11:20:28,941 - INFO - Pasta CSV: issues
+2026-04-01 11:20:28,942 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:20:28,942 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:20:28,943 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:20:28,944 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:20:28,944 - INFO -    ↳ template_issues.csv
+2026-04-01 11:20:28,944 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:20:28,944 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:20:28,945 - INFO - Encontrados 2 arquivos .csv para processar
+2026-04-01 11:20:28,945 - INFO - 
+============================================================
+2026-04-01 11:20:28,945 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:20:28,945 - INFO - ============================================================
+2026-04-01 11:20:28,946 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:20:28,946 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:20:28,949 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260401_112028.json
+2026-04-01 11:20:28,949 - INFO - 
+======================================================================
+2026-04-01 11:20:28,949 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-04-01 11:20:28,950 - INFO - ======================================================================
+2026-04-01 11:20:28,951 - INFO - 
+======================================================================
+2026-04-01 11:20:28,951 - INFO - 📊 Total de issues no payload: 5
+2026-04-01 11:20:28,952 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-04-01 11:20:28,952 - INFO - ======================================================================
+2026-04-01 11:20:28,953 - INFO - 
+============================================================
+2026-04-01 11:20:28,953 - INFO - Processando arquivo: fernando_ta_orquestrador.csv
+2026-04-01 11:20:28,953 - INFO - ============================================================
+2026-04-01 11:20:28,955 - INFO - Arquivo issues\fernando_ta_orquestrador.csv: 18 issues mapeadas
+2026-04-01 11:20:28,955 - INFO - Preparando criação em lote de 18 issues
+2026-04-01 11:20:28,957 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260401_112028.json
+2026-04-01 11:20:28,957 - INFO - 
+======================================================================
+2026-04-01 11:20:28,958 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-04-01 11:20:28,958 - INFO - ======================================================================
+2026-04-01 11:20:28,961 - INFO - 
+======================================================================
+2026-04-01 11:20:28,961 - INFO - 📊 Total de issues no payload: 18
+2026-04-01 11:20:28,962 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-04-01 11:20:28,962 - INFO - ======================================================================
+2026-04-01 11:20:28,964 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:20:28,965 - INFO - 
+======================================================================
+2026-04-01 11:20:28,965 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:20:28,966 - INFO - ======================================================================
+2026-04-01 11:20:28,966 - INFO - Total de arquivos: 2
+2026-04-01 11:20:28,966 - INFO - Issues criadas: 23
+2026-04-01 11:20:28,967 - INFO - Erros: 0
+2026-04-01 11:21:36,474 - INFO - 
+======================================================================
+2026-04-01 11:21:36,475 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-04-01 11:21:36,475 - INFO - ======================================================================
+2026-04-01 11:21:36,475 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-04-01 11:21:36,476 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:21:36,476 - INFO - Projeto: PLTFAT
+2026-04-01 11:21:36,476 - INFO - Team configurado: DocMatch
+2026-04-01 11:21:36,476 - INFO - Pasta CSV: issues
+2026-04-01 11:21:36,476 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:21:36,477 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:21:36,477 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:21:36,477 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:21:36,477 - INFO -    ↳ template_issues.csv
+2026-04-01 11:21:36,477 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:21:36,478 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:21:36,478 - INFO - Encontrados 1 arquivos .csv para processar
+2026-04-01 11:21:36,478 - INFO - 
+============================================================
+2026-04-01 11:21:36,478 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:21:36,478 - INFO - ============================================================
+2026-04-01 11:21:36,479 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:21:36,479 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:21:36,481 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260401_112136.json
+2026-04-01 11:21:36,482 - INFO - 
+======================================================================
+2026-04-01 11:21:36,482 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-04-01 11:21:36,482 - INFO - ======================================================================
+2026-04-01 11:21:36,483 - INFO - 
+======================================================================
+2026-04-01 11:21:36,483 - INFO - 📊 Total de issues no payload: 5
+2026-04-01 11:21:36,484 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-04-01 11:21:36,484 - INFO - ======================================================================
+2026-04-01 11:21:36,486 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:21:36,486 - INFO - 
+======================================================================
+2026-04-01 11:21:36,486 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:21:36,486 - INFO - ======================================================================
+2026-04-01 11:21:36,487 - INFO - Total de arquivos: 1
+2026-04-01 11:21:36,487 - INFO - Issues criadas: 5
+2026-04-01 11:21:36,487 - INFO - Erros: 0
+2026-04-01 11:22:22,054 - INFO - 
+======================================================================
+2026-04-01 11:22:22,055 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-04-01 11:22:22,055 - INFO - ======================================================================
+2026-04-01 11:22:22,056 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:22:22,057 - INFO - Projeto: PLTFAT
+2026-04-01 11:22:22,057 - INFO - Team configurado: DocMatch
+2026-04-01 11:22:22,057 - INFO - Pasta CSV: issues
+2026-04-01 11:22:22,058 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:22:22,058 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:22:22,058 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:22:22,059 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:22:22,059 - INFO -    ↳ template_issues.csv
+2026-04-01 11:22:22,059 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:22:22,060 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:22:22,060 - INFO - Encontrados 1 arquivos .csv para processar
+2026-04-01 11:22:22,060 - INFO - 
+============================================================
+2026-04-01 11:22:22,060 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:22:22,061 - INFO - ============================================================
+2026-04-01 11:22:22,061 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:22:22,062 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:22:22,064 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260401_112222.json
+2026-04-01 11:22:22,258 - ERROR - ✗ Erro ao criar issues em lote: HTTP 429
+2026-04-01 11:22:22,258 - ERROR - Resposta: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> Ra...
+2026-04-01 11:22:22,260 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:22:22,261 - INFO - 
+======================================================================
+2026-04-01 11:22:22,261 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:22:22,261 - INFO - ======================================================================
+2026-04-01 11:22:22,262 - INFO - Total de arquivos: 1
+2026-04-01 11:22:22,262 - INFO - Issues criadas: 0
+2026-04-01 11:22:22,262 - INFO - Erros: 1
+2026-04-01 11:23:07,961 - INFO - 
+======================================================================
+2026-04-01 11:23:07,961 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-04-01 11:23:07,962 - INFO - ======================================================================
+2026-04-01 11:23:07,962 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:23:07,963 - INFO - Projeto: PLTFAT
+2026-04-01 11:23:07,963 - INFO - Team configurado: DocMatch
+2026-04-01 11:23:07,963 - INFO - Pasta CSV: issues
+2026-04-01 11:23:07,964 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:23:07,964 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:23:07,964 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:23:07,965 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:23:07,965 - INFO -    ↳ template_issues.csv
+2026-04-01 11:23:07,965 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:23:07,965 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:23:07,965 - INFO - Encontrados 1 arquivos .csv para processar
+2026-04-01 11:23:07,965 - INFO - 
+============================================================
+2026-04-01 11:23:07,965 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:23:07,966 - INFO - ============================================================
+2026-04-01 11:23:07,966 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:23:07,966 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:23:07,971 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260401_112307.json
+2026-04-01 11:23:08,093 - ERROR - ✗ Erro ao criar issues em lote: HTTP 429
+2026-04-01 11:23:08,094 - ERROR - Resposta: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> Ra...
+2026-04-01 11:23:08,096 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:23:08,097 - INFO - 
+======================================================================
+2026-04-01 11:23:08,097 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:23:08,098 - INFO - ======================================================================
+2026-04-01 11:23:08,098 - INFO - Total de arquivos: 1
+2026-04-01 11:23:08,098 - INFO - Issues criadas: 0
+2026-04-01 11:23:08,099 - INFO - Erros: 1
+2026-04-01 11:23:49,303 - INFO - 
+======================================================================
+2026-04-01 11:23:49,304 - INFO -     AUTOMATIZAÇÃO CSV → JIRA (MODO DRY-RUN)
+2026-04-01 11:23:49,304 - INFO - ======================================================================
+2026-04-01 11:23:49,305 - INFO - ⚠️  MODO DRY-RUN ATIVO: API não será chamada, apenas JSON será exibido
+2026-04-01 11:23:49,306 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:23:49,306 - INFO - Projeto: PLTFAT
+2026-04-01 11:23:49,306 - INFO - Team configurado: DocMatch
+2026-04-01 11:23:49,306 - INFO - Pasta CSV: issues
+2026-04-01 11:23:49,307 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:23:49,307 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:23:49,307 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:23:49,308 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:23:49,308 - INFO -    ↳ template_issues.csv
+2026-04-01 11:23:49,308 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:23:49,309 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:23:49,309 - INFO - Encontrados 1 arquivos .csv para processar
+2026-04-01 11:23:49,309 - INFO - 
+============================================================
+2026-04-01 11:23:49,310 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:23:49,310 - INFO - ============================================================
+2026-04-01 11:23:49,311 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:23:49,311 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:23:49,313 - INFO - 📄 JSON salvo em: logs/bulk_payload_test_20260401_112349.json
+2026-04-01 11:23:49,313 - INFO - 
+======================================================================
+2026-04-01 11:23:49,313 - INFO - 🔍 MODO DRY-RUN - JSON que seria enviado à API:
+2026-04-01 11:23:49,314 - INFO - ======================================================================
+2026-04-01 11:23:49,315 - INFO - 
+======================================================================
+2026-04-01 11:23:49,316 - INFO - 📊 Total de issues no payload: 5
+2026-04-01 11:23:49,316 - INFO - ⚠️  API NÃO FOI CHAMADA (modo dry-run)
+2026-04-01 11:23:49,316 - INFO - ======================================================================
+2026-04-01 11:23:49,317 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:23:49,318 - INFO - 
+======================================================================
+2026-04-01 11:23:49,318 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:23:49,318 - INFO - ======================================================================
+2026-04-01 11:23:49,318 - INFO - Total de arquivos: 1
+2026-04-01 11:23:49,318 - INFO - Issues criadas: 5
+2026-04-01 11:23:49,318 - INFO - Erros: 0
+2026-04-01 11:23:52,779 - INFO - 
+======================================================================
+2026-04-01 11:23:52,780 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-04-01 11:23:52,780 - INFO - ======================================================================
+2026-04-01 11:23:52,781 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:23:52,781 - INFO - Projeto: PLTFAT
+2026-04-01 11:23:52,781 - INFO - Team configurado: DocMatch
+2026-04-01 11:23:52,782 - INFO - Pasta CSV: issues
+2026-04-01 11:23:52,782 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:23:52,782 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:23:52,783 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:23:52,783 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:23:52,783 - INFO -    ↳ template_issues.csv
+2026-04-01 11:23:52,784 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:23:52,784 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:23:52,784 - INFO - Encontrados 1 arquivos .csv para processar
+2026-04-01 11:23:52,784 - INFO - 
+============================================================
+2026-04-01 11:23:52,784 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:23:52,784 - INFO - ============================================================
+2026-04-01 11:23:52,785 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:23:52,785 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:23:52,787 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260401_112352.json
+2026-04-01 11:23:52,906 - ERROR - ✗ Erro ao criar issues em lote: HTTP 429
+2026-04-01 11:23:52,906 - ERROR - Resposta: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> Ra...
+2026-04-01 11:23:52,908 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:23:52,909 - INFO - 
+======================================================================
+2026-04-01 11:23:52,909 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:23:52,910 - INFO - ======================================================================
+2026-04-01 11:23:52,910 - INFO - Total de arquivos: 1
+2026-04-01 11:23:52,910 - INFO - Issues criadas: 0
+2026-04-01 11:23:52,910 - INFO - Erros: 1
+2026-04-01 11:25:00,090 - INFO - 
+======================================================================
+2026-04-01 11:25:00,091 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-04-01 11:25:00,091 - INFO - ======================================================================
+2026-04-01 11:25:00,092 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:25:00,092 - INFO - Projeto: PLTFAT
+2026-04-01 11:25:00,093 - INFO - Team configurado: DocMatch
+2026-04-01 11:25:00,093 - INFO - Pasta CSV: issues
+2026-04-01 11:25:00,093 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:25:00,093 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:25:00,094 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:25:00,094 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:25:00,094 - INFO -    ↳ template_issues.csv
+2026-04-01 11:25:00,095 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:25:00,095 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:25:00,095 - INFO - Encontrados 1 arquivos .csv para processar
+2026-04-01 11:25:00,095 - INFO - 
+============================================================
+2026-04-01 11:25:00,096 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:25:00,096 - INFO - ============================================================
+2026-04-01 11:25:00,096 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:25:00,097 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:25:00,098 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260401_112500.json
+2026-04-01 11:25:00,236 - ERROR - ✗ Erro ao criar issues em lote: HTTP 429
+2026-04-01 11:25:00,236 - ERROR - Resposta: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> Ra...
+2026-04-01 11:25:00,238 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:25:00,239 - INFO - 
+======================================================================
+2026-04-01 11:25:00,239 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:25:00,239 - INFO - ======================================================================
+2026-04-01 11:25:00,240 - INFO - Total de arquivos: 1
+2026-04-01 11:25:00,240 - INFO - Issues criadas: 0
+2026-04-01 11:25:00,240 - INFO - Erros: 1
+2026-04-01 11:32:51,378 - INFO - 
+======================================================================
+2026-04-01 11:32:51,379 - INFO -     AUTOMATIZAÇÃO CSV → JIRA
+2026-04-01 11:32:51,379 - INFO - ======================================================================
+2026-04-01 11:32:51,380 - INFO - Conectando ao Jira: https://jira.bradesco.com.br:8443
+2026-04-01 11:32:51,381 - INFO - Projeto: PLTFAT
+2026-04-01 11:32:51,381 - INFO - Team configurado: DocMatch
+2026-04-01 11:32:51,381 - INFO - Pasta CSV: issues
+2026-04-01 11:32:51,381 - INFO - Configuração carregada de BulkCreate_configuration.txt
+2026-04-01 11:32:51,381 - INFO - Projeto configurado: PLTFAT
+2026-04-01 11:32:51,382 - INFO - 
+Processando arquivos da pasta: issues
+2026-04-01 11:32:51,382 - INFO - 📋 Arquivos template ignorados: 3
+2026-04-01 11:32:51,383 - INFO -    ↳ template_issues.csv
+2026-04-01 11:32:51,383 - INFO -    ↳ template_issues_completo.csv
+2026-04-01 11:32:51,383 - INFO -    ↳ template_vazio.csv
+2026-04-01 11:32:51,383 - INFO - Encontrados 1 arquivos .csv para processar
+2026-04-01 11:32:51,383 - INFO - 
+============================================================
+2026-04-01 11:32:51,383 - INFO - Processando arquivo: alex_ciam_base_13439.csv
+2026-04-01 11:32:51,383 - INFO - ============================================================
+2026-04-01 11:32:51,383 - INFO - Arquivo issues\alex_ciam_base_13439.csv: 5 issues mapeadas
+2026-04-01 11:32:51,384 - INFO - Preparando criação em lote de 5 issues
+2026-04-01 11:32:51,385 - INFO - 📄 JSON salvo em: logs/bulk_payload_prod_20260401_113251.json
+2026-04-01 11:32:51,525 - ERROR - ✗ Erro ao criar issues em lote: HTTP 429
+2026-04-01 11:32:51,526 - ERROR - Resposta: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 429 – Too Many Requests</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> Ra...
+2026-04-01 11:32:51,529 - INFO - 
+📄 Relatório salvo em: issues/relatorio_processamento_csv.txt
+2026-04-01 11:32:51,529 - INFO - 
+======================================================================
+2026-04-01 11:32:51,529 - INFO -     PROCESSAMENTO CONCLUÍDO
+2026-04-01 11:32:51,529 - INFO - ======================================================================
+2026-04-01 11:32:51,529 - INFO - Total de arquivos: 1
+2026-04-01 11:32:51,530 - INFO - Issues criadas: 0
+2026-04-01 11:32:51,530 - INFO - Erros: 1

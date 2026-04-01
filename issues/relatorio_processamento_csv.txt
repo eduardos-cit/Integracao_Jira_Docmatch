@@ -2,35 +2,23 @@
 ======================================================================
     RELATÓRIO DE PROCESSAMENTO CSV → JIRA
 ======================================================================
-Data/Hora: 19/03/2026 14:21:49
+Data/Hora: 01/04/2026 11:32:51
 
 ======================================================================
 RESUMO
 ======================================================================
 Total de arquivos processados: 1
-Total de issues criadas: 12
-Total de erros: 0
+Total de issues criadas: 0
+Total de erros: 1
 
 ======================================================================
 ISSUES CRIADAS COM SUCESSO
 ======================================================================
 
-Arquivo: alex_PEP.csv
-Issues criadas: 12
-Erros durante criação: 0
+======================================================================
+FALHAS NO PROCESSAMENTO
+======================================================================
 
-Issue Keys:
-  - PLTFAT-13385: https://jira.bradesco.com.br:8443/browse/PLTFAT-13385
-  - PLTFAT-13386: https://jira.bradesco.com.br:8443/browse/PLTFAT-13386
-  - PLTFAT-13387: https://jira.bradesco.com.br:8443/browse/PLTFAT-13387
-  - PLTFAT-13388: https://jira.bradesco.com.br:8443/browse/PLTFAT-13388
-  - PLTFAT-13389: https://jira.bradesco.com.br:8443/browse/PLTFAT-13389
-  - PLTFAT-13390: https://jira.bradesco.com.br:8443/browse/PLTFAT-13390
-  - PLTFAT-13391: https://jira.bradesco.com.br:8443/browse/PLTFAT-13391
-  - PLTFAT-13392: https://jira.bradesco.com.br:8443/browse/PLTFAT-13392
-  - PLTFAT-13393: https://jira.bradesco.com.br:8443/browse/PLTFAT-13393
-  - PLTFAT-13394: https://jira.bradesco.com.br:8443/browse/PLTFAT-13394
-  - PLTFAT-13395: https://jira.bradesco.com.br:8443/browse/PLTFAT-13395
-  - PLTFAT-13396: https://jira.bradesco.com.br:8443/browse/PLTFAT-13396
-
+Arquivo: alex_ciam_base_13439.csv
+Erro: Erro HTTP 429: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#5
 ----------------------------------------------------------------------

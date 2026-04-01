@@ -1,0 +1,12 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,"[DEV] Criar script para adicionar propriedade na collection do MongoDB chamado canal_procurador na tabela de jornadas e inserir tipo CREATE_JOURNEY na tabela de operações", "[DEV] Criar script para adicionar propriedade na collection do MongoDB chamado canal_procurador na tabela de jornadas e inserir tipo CREATE_JOURNEY na tabela de operações",DocMatch,2h,I453044,PLTFAT-13436,,,
+Sub-Imp,"[DEV] Ajustar docm-srv-entidades-externas }}para persistir {{canal_procurador no registro da jornada — identificar canal automaticamente conforme fluxo de origem (GACB Light ou CIAM)", "[DEV] Ajustar docm-srv-entidades-externas }}para persistir {{canal_procurador no registro da jornada — identificar canal automaticamente conforme fluxo de origem (GACB Light ou CIAM)",DocMatch,2h,I453044,PLTFAT-13436,,,
+Sub-Imp,"[DEV] Validar e ajustar handlers de log para garantir que canal_procurador não exponha dados sensíveis","[DEV] Validar e ajustar handlers de log para garantir que canal_procurador não exponha dados sensíveis",DocMatch,2h,I453044,PLTFAT-13436,,,
+Sub-Imp,"[DEV] Teste funcional (fluxo GACB Light, fluxo CIAM, leitura de jornada legada)","[DEV] Teste funcional (fluxo GACB Light, fluxo CIAM, leitura de jornada legada)",DocMatch,2h,I453044,PLTFAT-13436,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,4h,,PLTFAT-12771,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,8h,,PLTFAT-12771,,
+
+
+
+
+

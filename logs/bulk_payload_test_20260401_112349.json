@@ -1,0 +1,118 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "[DEV] Criar classe IntegrationModelProperties (@ConfigurationProperties) e adicionar bloco docmatch.integracao.modelos no application.yml com os canais mapeados (kbnt, pdpj, mbpf e demais confirmados)",
+        "timetracking": {
+          "originalEstimate": "3h",
+          "remainingEstimate": "3h"
+        },
+        "parent": {
+          "key": "PLTFAT-13439"
+        },
+        "summary": "[DEV] Criar classe IntegrationModelProperties",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "[DEV] Criar componente IntegrationModelResolver com fallback GACB_LIGHT para canais não mapeados e validação de valores na inicialização",
+        "timetracking": {
+          "originalEstimate": "3h",
+          "remainingEstimate": "3h"
+        },
+        "parent": {
+          "key": "PLTFAT-13439"
+        },
+        "summary": "[DEV] Criar componente IntegrationModelResolver",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "[DEV] Testes unitários (canal CIAM, canal GACB_LIGHT, canal não mapeado)",
+        "timetracking": {
+          "originalEstimate": "3h",
+          "remainingEstimate": "3h"
+        },
+        "parent": {
+          "key": "PLTFAT-13439"
+        },
+        "summary": "[DEV] Testes unitários",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-13439"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "8h",
+          "remainingEstimate": "8h"
+        },
+        "parent": {
+          "key": "PLTFAT-13439"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    }
+  ]
+}

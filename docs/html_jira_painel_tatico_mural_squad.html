@@ -1,0 +1,321 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Painel de acompanhamento da Release Train com sprints e progresso">
+<meta name="author" content="Bradesco A3C">
+<title>Release Train</title>
+<link rel="icon" type="image/x-icon" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;📊&lt;/text&gt;&lt;/svg&gt;">
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: 'Roboto', Arial, sans-serif;
+        background-color: #f4f6f8;
+        color: #333;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    h1 {
+        font-weight: bold;
+        font-size: 2rem;
+        color: #c8102e;
+        text-align: center;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        transition: transform 0.2s;
+    }
+
+    .card.rt {
+        grid-column: span 2;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+    .info h2, .sprints h2, .progress-container h2 {
+        font-size: 1.25rem;
+        color: #555;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #c8102e;
+        padding-bottom: 5px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .info li, .sprint {
+        margin: 10px 0;
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .date {
+        font-weight: bold;
+        color: #c8102e;
+    }
+
+    .progress-container {
+        text-align: center;
+        grid-column: span 2;
+    }
+
+    .progress-bar {
+        height: 25px;
+        background-color: #c8102e;
+        border-radius: 12px;
+        color: white;
+        line-height: 25px;
+        text-align: center;
+        transition: width 0.5s ease-in-out;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .progress-track {
+        background-color: #e0e0e0;
+        border-radius: 12px;
+        height: 25px;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .sprint-highlight {
+        background-color: rgba(255, 255, 0, 0.3);
+        border-radius: 4px;
+    }
+
+    /* Animação de entrada suave */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .container {
+        animation: fadeIn 0.5s ease-in;
+    }
+
+    /* Melhorias de acessibilidade */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    /* Responsividade */
+    @media (max-width: 768px) {
+        .container {
+            grid-template-columns: 1fr;
+            padding: 10px;
+        }
+        h1 {
+            grid-column: span 1;
+            font-size: 1.5rem;
+        }
+        .card {
+            padding: 15px;
+        }
+    }
+</style>
+
+<!-- Painel da Squad -->
+<div class="container">
+    <div class="card rt">        
+        <h1 id="tituloRT"></h1>
+    </div>    
+
+    <!-- Card de informações da Release -->
+    <div class="card info">
+        <h2>Informações da Release Atual</h2>
+        <ul id="infoRT">
+            <!-- informações ser&atilde;o geradas dinamicamente via JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Card de Sprints -->
+    <div class="card sprints">
+        <h2>Sprints</h2>
+        <ul id="sprintList" role="list">
+            <!-- Sprints ser&atilde;o geradas dinamicamente via JavaScript -->
+        </ul>
+    </div>
+
+    <!-- Card de Progresso -->
+    <div class="card progress-container">
+        <h2>Progresso do Tempo</h2>
+        <p id="statusMessage"><strong>Hoje é dia <span id="dataAtual"></span> e estamos na Sprint <span id="sprintAtual"></span>.</strong></p>            
+        <br>
+        <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da Sprint">
+            <div class="progress-bar" id="barraSP">0%</div>
+        </div>
+        <p id="statusMessage"><strong>Faltam <span id="diasRestantesSP"></span> dias corridos para acabar a Sprint.</strong></p>
+        <br> 
+        <div class="progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Progresso da Release Train">
+            <div class="progress-bar" id="barraRT">0%</div>
+        </div>
+        <p id="statusMessage"><strong>Faltam <span id="diasRestantesRT"></span> dias corridos para acabar a RT.</strong></p>
+    </div>
+</div>
+
+<script>
+    // configuração da Release Train
+    const NOME_RT = 'RT2-2026';
+    
+    // configuração das datas da Release Train
+    // Usando new Date(ano, m&ecirc;s-1, dia) para fuso local (m&ecirc;s &eacute; 0-indexed: 0=jan, 1=fev...)
+    const inicio_rt = new Date(2026, 2, 30);  // 30/03/2026
+    const fim_rt = new Date(2026, 5, 19);    // 19/06/2026
+    const hoje = new Date();
+    hoje.setHours(0, 0, 0, 0);
+
+    // Array de sprints para facilitar manutenção
+    const sprints = [
+        { numero: 1, inicio: new Date(2026, 2, 30),  fim: new Date(2026, 3, 10) },  // 30/03 - 10/04
+        { numero: 2, inicio: new Date(2026, 3, 13), fim: new Date(2026, 3, 24) },  // 13/04 - 24/04
+        { numero: 3, inicio: new Date(2026, 3, 27),  fim: new Date(2026, 4, 8) },  // 27/04 - 08/05
+        { numero: 4, inicio: new Date(2026, 4, 11), fim: new Date(2026, 4, 22) },  // 11/05 - 22/05
+        { numero: 5, inicio: new Date(2026, 4, 25),  fim: new Date(2026, 5, 5) },  // 25/05 - 05/06
+        { numero: 6, inicio: new Date(2026, 5, 8), fim: new Date(2026, 5, 19) }   // 08/06 - 19/06
+    ];
+
+    // Calcula o progresso
+    function calcularProgresso(inicio, fim ) {
+        const totalTempo = fim - inicio;
+        const tempoPassado = hoje - inicio;
+        let percentual = (tempoPassado / totalTempo) * 100;
+        
+        // Limita o percentual entre 0 e 100
+        percentual = Math.min(Math.max(percentual, 0), 100);
+        return percentual.toFixed(1);
+    }
+
+    // Atualiza a barra de progresso
+    function atualizarBarraProgresso(barra, inicio, fim) {
+        const percentual = calcularProgresso(inicio, fim);
+        const barraElement = document.getElementById(barra);
+        const progressTrack = barraElement.parentElement;
+        
+        barraElement.style.width = percentual + '%';
+        barraElement.innerText = percentual + '%';
+        
+        // Atualiza atributos ARIA
+        progressTrack.setAttribute('aria-valuenow', percentual);
+    }
+
+    // Renderiza as informações da Release Train dinamicamente
+    function renderizarInfoRT() {
+        // Atualiza o t&iacute;tulo
+        document.getElementById('tituloRT').innerText = `Release Train - ${NOME_RT}`;
+        document.title = `Release Train - ${NOME_RT}`;
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute('content', `Painel de acompanhamento da Release Train ${NOME_RT} com sprints e progresso`);
+        }
+        
+        // Renderiza as informações
+        const infoRT = document.getElementById('infoRT');
+        const dataInicio = inicio_rt.toLocaleDateString('pt-BR');
+        const dataFim = fim_rt.toLocaleDateString('pt-BR');
+        
+        infoRT.innerHTML = `
+            <li>Nome: <strong>${NOME_RT}</strong></li>
+            <li>In&iacute;cio: <time datetime="${inicio_rt.toISOString().split('T')[0]}" class="date">${dataInicio}</time></li>
+            <li>Fim: <time datetime="${fim_rt.toISOString().split('T')[0]}" class="date">${dataFim}</time></li>
+            <li>component: ${NOME_RT}</li>
+        `;
+    }
+
+    // Renderiza a lista de sprints dinamicamente
+    function renderizarSprints() {
+        const sprintList = document.getElementById('sprintList');
+        sprintList.innerHTML = ''; // Limpa a lista
+        
+        sprints.forEach(sprint => {
+            const li = document.createElement('li');
+            li.className = 'sprint';
+            
+            const dataInicio = sprint.inicio.toLocaleDateString('pt-BR');
+            const dataFim = sprint.fim.toLocaleDateString('pt-BR');
+            
+            li.innerHTML = `<strong>Sprint ${sprint.numero}:</strong> <span class="date">${dataInicio} at&eacute; ${dataFim}</span>`;
+            
+            sprintList.appendChild(li);
+        });
+    }
+
+    // Identifica a sprint atual
+    function identificarSprintAtual() {
+        const sprintList = document.getElementById('sprintList').getElementsByClassName('sprint');
+        let currentSprint = '';
+        let diasRestantes = '';
+        
+        // Itera sobre as sprints para encontrar a atual
+        sprints.forEach((sprint, index) => {
+            if (hoje >= sprint.inicio && hoje <= sprint.fim) {
+                currentSprint = sprint.numero.toString();
+                sprintList[index].classList.add('sprint-highlight');
+                diasRestantes = calcularDiasRestantes(sprint.fim);
+                atualizarBarraProgresso('barraSP', sprint.inicio, sprint.fim);                
+            }
+        });
+
+        return [currentSprint, diasRestantes];
+    }
+
+    // Calcula dias restantes
+    function calcularDiasRestantes(fim) {
+        const diasRestantes = Math.ceil((fim - hoje) / (1000 * 60 * 60 * 24));
+        return Math.max(diasRestantes, 0);
+    }
+
+    // Atualiza a mensagem de status
+    function atualizarStatus() {
+        debugger; // Pausa aqui quando DevTools estiver aberto
+        const dataAtual = document.getElementById('dataAtual');
+        dataAtual.innerText = hoje.toLocaleDateString('pt-BR');
+
+        const sprintAtual = document.getElementById('sprintAtual');
+        const diasRestantesSP = document.getElementById('diasRestantesSP');        
+        [sprintAtual.innerText, diasRestantesSP.innerText] = identificarSprintAtual();
+
+        const diasRestantesRT = document.getElementById('diasRestantesRT');
+        diasRestantesRT.innerText = calcularDiasRestantes(fim_rt);  
+    }
+
+    // Inicialização
+    renderizarInfoRT();   // Gera as informações da RT
+    renderizarSprints();  // Gera a lista de sprints
+    atualizarStatus();    
+    atualizarBarraProgresso('barraRT', inicio_rt, fim_rt);
+    
+</script>

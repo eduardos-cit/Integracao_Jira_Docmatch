@@ -1,0 +1,142 @@
+{
+  "issueUpdates": [
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "\"[DEV] Criar script para adicionar propriedade na collection do MongoDB chamado canal_procurador na tabela de jornadas e inserir tipo CREATE_JOURNEY na tabela de operações\"",
+        "timetracking": {
+          "originalEstimate": "2h",
+          "remainingEstimate": "2h"
+        },
+        "parent": {
+          "key": "PLTFAT-13436"
+        },
+        "summary": "[DEV] Criar script para adicionar propriedade na collection do MongoDB chamado canal_procurador na tabela de jornadas e inserir tipo CREATE_JOURNEY na tabela de operações",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "\"[DEV] Ajustar docm-srv-entidades-externas }}para persistir {{canal_procurador no registro da jornada — identificar canal automaticamente conforme fluxo de origem (GACB Light ou CIAM)\"",
+        "timetracking": {
+          "originalEstimate": "2h",
+          "remainingEstimate": "2h"
+        },
+        "parent": {
+          "key": "PLTFAT-13436"
+        },
+        "summary": "[DEV] Ajustar docm-srv-entidades-externas }}para persistir {{canal_procurador no registro da jornada — identificar canal automaticamente conforme fluxo de origem (GACB Light ou CIAM)",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "[DEV] Validar e ajustar handlers de log para garantir que canal_procurador não exponha dados sensíveis",
+        "timetracking": {
+          "originalEstimate": "2h",
+          "remainingEstimate": "2h"
+        },
+        "parent": {
+          "key": "PLTFAT-13436"
+        },
+        "summary": "[DEV] Validar e ajustar handlers de log para garantir que canal_procurador não exponha dados sensíveis",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Imp"
+        },
+        "assignee": {
+          "name": "I453044"
+        },
+        "description": "[DEV] Teste funcional (fluxo GACB Light, fluxo CIAM, leitura de jornada legada)",
+        "timetracking": {
+          "originalEstimate": "2h",
+          "remainingEstimate": "2h"
+        },
+        "parent": {
+          "key": "PLTFAT-13436"
+        },
+        "summary": "[DEV] Teste funcional (fluxo GACB Light, fluxo CIAM, leitura de jornada legada)",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Cenário Teste",
+        "timetracking": {
+          "originalEstimate": "4h",
+          "remainingEstimate": "4h"
+        },
+        "parent": {
+          "key": "PLTFAT-12771"
+        },
+        "summary": "[QA]Cenário Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    },
+    {
+      "fields": {
+        "project": {
+          "key": "PLTFAT"
+        },
+        "issuetype": {
+          "name": "Sub-Test"
+        },
+        "description": "[QA]Execução Teste",
+        "timetracking": {
+          "originalEstimate": "12h",
+          "remainingEstimate": "12h"
+        },
+        "parent": {
+          "key": "PLTFAT-12771"
+        },
+        "summary": "[QA]Execução Teste",
+        "customfield_10401": "DocMatch"
+      },
+      "update": {}
+    }
+  ]
+}
