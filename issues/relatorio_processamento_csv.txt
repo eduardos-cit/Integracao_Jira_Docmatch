@@ -2,7 +2,7 @@
 ======================================================================
     RELATÓRIO DE PROCESSAMENTO CSV → JIRA
 ======================================================================
-Data/Hora: 01/04/2026 11:32:51
+Data/Hora: 02/04/2026 15:22:17
 
 ======================================================================
 RESUMO
@@ -19,6 +19,6 @@ ISSUES CRIADAS COM SUCESSO
 FALHAS NO PROCESSAMENTO
 ======================================================================
 
-Arquivo: alex_ciam_base_13439.csv
+Arquivo: alex_ciam_endpoint_13433.csv
 Erro: Erro HTTP 429: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#5
 ----------------------------------------------------------------------

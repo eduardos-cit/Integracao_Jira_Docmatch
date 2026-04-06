@@ -1,0 +1,8 @@
+Issue Type,Summary,Description,Team,Original Estimate,Assignee,Parent Id,Sprint ID,Epic Link,Labels
+Sub-Imp,"[DEV] Criar endpoint POST /v1/ciam/jornadas no docm-srv-orquestrador","[DEV] Criar endpoint POST /v1/ciam/jornadas no docm-srv-orquestrador com validação de token CIAM (JWKS) e integração ao pipeline interno existente",DocMatch,648000,I453044,PLTFAT-13433,,,
+Sub-Imp,"[DEV] Aplicar configuração de PEP no novo endpoint","[DEV] Aplicar configuração de PEP no novo endpoint — liberar canais habilitados conforme validação Dynatrace",DocMatch,648000,I453044,PLTFAT-13433,,,
+Sub-Imp,"[DEV] Atualizar contrato Swagger do docm-srv-orquestrador","[DEV] Atualizar contrato Swagger do docm-srv-orquestrador com novo endpoint e header Authorization CIAM",DocMatch,648000,I453044,PLTFAT-13433,,,
+Sub-Imp,"[DEV] Teste funcional (token válido, inválido, canal sem permissão)","[DEV] Teste funcional (token válido, inválido, canal sem permissão)",DocMatch,648000,I453044,PLTFAT-13433,,,
+Sub-Imp,"[SEC] Confirmar URL do JWKS do CIAM Bradesco","[SEC] Confirmar URL do JWKS do CIAM Bradesco e validar necessidade de aprovação formal para abertura do endpoint",DocMatch,648000,I453044,PLTFAT-13433,,,
+Sub-Test,[QA]Cenário Teste,[QA]Cenário Teste,DocMatch,864000,,PLTFAT-13433,,,
+Sub-Test,[QA]Execução Teste,[QA]Execução Teste,DocMatch,1728000,,PLTFAT-13433,,,
