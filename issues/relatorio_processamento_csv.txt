@@ -2,23 +2,32 @@
 ======================================================================
     RELATÓRIO DE PROCESSAMENTO CSV → JIRA
 ======================================================================
-Data/Hora: 02/04/2026 15:22:17
+Data/Hora: 06/04/2026 16:39:08
 
 ======================================================================
 RESUMO
 ======================================================================
 Total de arquivos processados: 1
-Total de issues criadas: 0
-Total de erros: 1
+Total de issues criadas: 9
+Total de erros: 0
 
 ======================================================================
 ISSUES CRIADAS COM SUCESSO
 ======================================================================
 
-======================================================================
-FALHAS NO PROCESSAMENTO
-======================================================================
+Arquivo: [pltfat]_docmatch_-_import-jira_csv_RT2SP2_ritos.csv
+Issues criadas: 9
+Erros durante criação: 0
 
-Arquivo: alex_ciam_endpoint_13433.csv
-Erro: Erro HTTP 429: <!doctype html><html lang="en"><head><title>HTTP Status 429 – Too Many Requests</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#5
+Issue Keys:
+  - DRY-RUN-1: https://jira.bradesco.com.br:8443/browse/DRY-RUN-1
+  - DRY-RUN-2: https://jira.bradesco.com.br:8443/browse/DRY-RUN-2
+  - DRY-RUN-3: https://jira.bradesco.com.br:8443/browse/DRY-RUN-3
+  - DRY-RUN-4: https://jira.bradesco.com.br:8443/browse/DRY-RUN-4
+  - DRY-RUN-5: https://jira.bradesco.com.br:8443/browse/DRY-RUN-5
+  - DRY-RUN-6: https://jira.bradesco.com.br:8443/browse/DRY-RUN-6
+  - DRY-RUN-7: https://jira.bradesco.com.br:8443/browse/DRY-RUN-7
+  - DRY-RUN-8: https://jira.bradesco.com.br:8443/browse/DRY-RUN-8
+  - DRY-RUN-9: https://jira.bradesco.com.br:8443/browse/DRY-RUN-9
+
 ----------------------------------------------------------------------
